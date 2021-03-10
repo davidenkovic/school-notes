@@ -6,4 +6,4 @@
 
 == JPA
 
-link:https://github.com/davidenkovic/school-notes/tree/master/docs[Test am 16.03.2021]
+link:https://davidenkovic.github.io/school-notes/jpa-test.html[Test am 16.03.2021]
