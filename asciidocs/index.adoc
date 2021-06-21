@@ -7,3 +7,7 @@
 == JPA
 
 link:https://davidenkovic.github.io/school-notes/jpa-test.html[Test am 16.03.2021]
+
+== Mongo
+
+link:https://davidenkovic.github.io/school-notes/mongo.html[Test am 22.06.2021]
