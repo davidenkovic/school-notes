@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Daves Index</title>
+<title>Asciidoc Zusammenfassung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,37 +440,552 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Daves Index</h1>
+<h1>Asciidoc Zusammenfassung</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_jpa">1. JPA</a></li>
-<li><a href="#_mongo">2. Mongo</a></li>
+<li><a href="#_asciidocs">1. Asciidocs</a>
+<ul class="sectlevel2">
+<li><a href="#_gute_links">1.1. Gute Links</a></li>
+<li><a href="#_document_header_attributes">1.2. Document Header &amp; Attributes</a></li>
+<li><a href="#_this_is_a_document_by_dave_output">1.3. This is a Document by Dave (output)</a></li>
+<li><a href="#_heders">1.4. Heders</a></li>
+<li><a href="#_paragraphs">1.5. Paragraphs</a></li>
+<li><a href="#_text_font">1.6. Text Font</a></li>
+<li><a href="#_images">1.7. Images</a></li>
+<li><a href="#_links">1.8. Links</a></li>
+<li><a href="#_bullet">1.9. Bullet</a></li>
+<li><a href="#_tables">1.10. Tables</a></li>
+<li><a href="#_checklist">1.11. Checklist</a></li>
+</ul>
+</li>
+<li><a href="#_plantuml">2. PlantUML</a>
+<ul class="sectlevel2">
+<li><a href="#_plantuml_in_adoc_file">2.1. PlantUML in .adoc file</a></li>
+<li><a href="#_plantuml_syntax">2.2. PlantUML Syntax</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_jpa"><a class="anchor" href="#_jpa"></a>1. JPA</h2>
+<h2 id="_asciidocs"><a class="anchor" href="#_asciidocs"></a>1. Asciidocs</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_gute_links"><a class="anchor" href="#_gute_links"></a>1.1. Gute Links</h3>
 <div class="paragraph">
-<p><a href="https://davidenkovic.github.io/school-notes/jpa-test.html">Test am 16.03.2021</a></p>
+<p><a href="https://powerman.name/doc/asciidoc" class="bare">https://powerman.name/doc/asciidoc</a>
+<a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/" class="bare">https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_document_header_attributes"><a class="anchor" href="#_document_header_attributes"></a>1.2. Document Header &amp; Attributes</h3>
+<div class="paragraph">
+<p>Ist quasi der Header der Dokumentation. Man kann Attribute oder Pfade erstellen die man in der gesamten <strong>.adoc</strong> File verwenden kann.</p>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">:name: Dave
+
+=== This is a Document by {name} (output)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Output</strong> von dem <strong>.adoc</strong> Code</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_this_is_a_document_by_dave_output"><a class="anchor" href="#_this_is_a_document_by_dave_output"></a>1.3. This is a Document by Dave (output)</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_heders"><a class="anchor" href="#_heders"></a>1.4. Heders</h3>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">== Level 1
+Text.
+
+=== Level 2
+Text.
+
+==== Level 3
+Text.
+
+===== Level 4
+Text.</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paragraphs"><a class="anchor" href="#_paragraphs"></a>1.5. Paragraphs</h3>
+<div class="sect3">
+<h4 id="_optionale_title_code"><a class="anchor" href="#_optionale_title_code"></a>1.5.1. Optionale Title &amp; Code</h4>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">.raw code
+[source,java]
+....
+String name = "Dave";
+....</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">output</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Dave"</span><span class="o">;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_text_font"><a class="anchor" href="#_text_font"></a>1.6. Text Font</h3>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">normal, _italic_, *bold*, +mono+.
+
+``double quoted'', `single quoted'.
+
+normal, ^super^, ~sub~.</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Output</strong> von dem <strong>.adoc</strong> Code</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>normal, <em>italic</em>, <strong>bold</strong>, mono.</p>
+</div>
+<div class="paragraph">
+<p>``double quoted'', `single quoted'.</p>
+</div>
+<div class="paragraph">
+<p>normal, <sup>super</sup>, <sub>sub</sub>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_images"><a class="anchor" href="#_images"></a>1.7. Images</h3>
+<div class="paragraph">
+<div class="title">Dennis Rodman</div>
+<p><span class="image"><img src="images/images/dennis.jpg" alt="Dennis Rodman"></span></p>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">.Dennis Rodman
+image:images/dennis.jpg[Dennis Rodman]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_links"><a class="anchor" href="#_links"></a>1.8. Links</h3>
+<div class="paragraph">
+<p><a href="https://davidenkovic.github.io">Daves Index</a></p>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">link:https://davidenkovic.github.io[Daves Index]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bullet"><a class="anchor" href="#_bullet"></a>1.9. Bullet</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>one</p>
+<div class="ulist">
+<ul>
+<li>
+<p>two</p>
+<div class="ulist">
+<ul>
+<li>
+<p>three</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">* one
+** two
+*** three</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tables"><a class="anchor" href="#_tables"></a>1.10. Tables</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. An example table</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Col 1</th>
+<th class="tableblock halign-left valign-top">Col 2</th>
+<th class="tableblock halign-left valign-top">Col 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c</p></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Three items</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">d</p></td>
+</tr>
+</tfoot>
+</table>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">.An example table
+[options="header,footer"]
+|=======================
+|Col 1|Col 2      |Col 3
+|1    |Item 1     |a
+|2    |Item 2     |b
+|3    |Item 3     |c
+|6    |Three items|d
+|=======================</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_checklist"><a class="anchor" href="#_checklist"></a>1.11. Checklist</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Not Checked</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Cehcekd</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">* [ ] Not Checked
+* [x] Cehcekd</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mongo"><a class="anchor" href="#_mongo"></a>2. Mongo</h2>
+<h2 id="_plantuml"><a class="anchor" href="#_plantuml"></a>2. PlantUML</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_plantuml_in_adoc_file"><a class="anchor" href="#_plantuml_in_adoc_file"></a>2.1. PlantUML in .adoc file</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/png.png" alt="png" width="79" height="65">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">raw code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="asciidoc">[plantuml, png]
+....
+@startuml
+class dave {}
+@enduml
+....</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plantuml_syntax"><a class="anchor" href="#_plantuml_syntax"></a>2.2. PlantUML Syntax</h3>
+<div class="sect3">
+<h4 id="_gute_links_2"><a class="anchor" href="#_gute_links_2"></a>2.2.1. Gute Links</h4>
 <div class="paragraph">
-<p><a href="https://davidenkovic.github.io/school-notes/mongo.html">Test am 22.06.2021</a></p>
+<p><a href="https://ogom.github.io/draw_uml/plantuml/" class="bare">https://ogom.github.io/draw_uml/plantuml/</a>
+<a href="https://plantuml.com/de/sequence-diagram" class="bare">https://plantuml.com/de/sequence-diagram</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_online_editor"><a class="anchor" href="#_online_editor"></a>2.2.2. Online Editor</h4>
+<div class="paragraph">
+<p><a href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" class="bare">http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_link"><a class="anchor" href="#_download_link"></a>2.2.3. Download Link</h4>
+<div class="paragraph">
+<p><a href="https://plantuml.com/de/download" class="bare">https://plantuml.com/de/download</a></p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-24 08:10:47 UTC
+Last updated 2021-06-24 08:53:34 UTC
 </div>
 </div>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .sa, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
 </body>
 </html>
