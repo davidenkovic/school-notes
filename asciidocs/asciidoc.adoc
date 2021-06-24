@@ -95,6 +95,7 @@ normal, _italic_, *bold*, +mono+.
 normal, ^super^, ~sub~.
 
 === Images
+
 .Dennis Rodman
 image:images/dennis.jpg[Dennis Rodman]
 

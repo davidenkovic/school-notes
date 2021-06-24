@@ -1,13 +1,13 @@
-BUILD_DIR="docs"
+3BUILD_DIR="docs"
 
-rm -rf -v $BUILD_DIR;
+rm -rf -v docs;
 
 mkdir -p docs;
 mkdir -p docs/images;
 
-cp -r -p -v asciidocs/docinfo.html $BUILD_DIR;
+cp -r -p -v asciidocs/docinfo.html docs;
 
-cp -r -p -v asciidocs/*.adoc $BUILD_DIR;
-cp -r -p -v asciidocs/*.adoc $BUILD_DIR;
+cp -r -p -v asciidocs/*.adoc docs;
+cp -r -p -v asciidocs/*.adoc docs;
 
-cp -r -p -v asciidocs/images/* $BUILD_DIR/images;
+cp -r -p -v asciidocs/images/* docs/images;
