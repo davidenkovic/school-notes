@@ -47,6 +47,12 @@ _Wahrscheinlichkeitsrechnung:_
 * [ ] Additions- und Multiplikationssatz für einander ausschließende bzw. unabhängige Ereignisse
 * [ ] bedingte Wahrscheinlichkeit.
 
+*Files:*
+
+* link:../files/8.2-8.3.pdf[Übungen 8.2 und 8.3]
+
+* link:../files/wrsl-teil1.pdf[Übungen 8.4 bis 8.7]
+
 == Stochastik
 
 === die Anzahl möglicher Anordnungen von unterscheidbaren und nicht unterscheidbaren Objekten mit und ohne Berücksichtigung der Reihenfolge bestimmen
