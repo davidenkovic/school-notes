@@ -1,0 +1,61 @@
+= Road2Goat - Mathe Nost 03.11.2021
+
+== Fehlerrechnung
+
+=== Die Grundlagen der Fehlerfortpflanzung verstehen und anwenden
+
+*Lehrstoff:*
+
+_Rechnen mit Zahlen und Größen:_
+[%interactive]
+* [ ] Fehlerquellen
+* [ ] Fehlerfortpflanzung
+
+== Analysis
+
+=== Begriffe der Differential- und Integralrechnung benennen und facheinschlägige Anwendungen berechnen und interpretieren
+
+*Lehrstoff:*
+
+_Differential- und Integralrechnung:_
+
+[%interactive]
+* [ ] Fachbezogene Anwendungen der Differential- und Integralrechnung
+
+== Funktionale Zusammenhänge
+
+=== Funktionen in zwei Variablen geometrisch als Flächen im Raum interpretieren und anhand von Beispielen veranschaulichen
+
+*Lehrstoff:*
+
+_Funktionen mehrerer Variablen:_
+
+[%interactive]
+* [ ] Darstellung von Funktionen von zwei Variablen.
+
+== Matrizen und Stochastik
+
+=== den Begriff Zufallsexperiment verstehen, die Wahrscheinlichkeit zufälliger Ereignisse mit Hilfe der Definition für Wahrscheinlichkeiten nach Laplace bestimmen und die Addition- und Multiplikationsregel anwenden
+
+*Lehrstoff:*
+
+_Wahrscheinlichkeitsrechnung:_
+
+[%interactive]
+* [ ] Zufallsexperimente
+* [ ] Laplace-Wahrscheinlichkeit
+* [ ] Additions- und Multiplikationssatz für einander ausschließende bzw. unabhängige Ereignisse
+* [ ] bedingte Wahrscheinlichkeit.
+
+== Stochastik
+
+=== die Anzahl möglicher Anordnungen von unterscheidbaren und nicht unterscheidbaren Objekten mit und ohne Berücksichtigung der Reihenfolge bestimmen
+
+*Lehrstoff:*
+
+_Kombinatorik:_
+
+[%interactive]
+* [ ] Permutationen
+* [ ] Kombinationen
+* [ ] Variationen.
