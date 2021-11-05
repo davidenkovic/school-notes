@@ -15,3 +15,7 @@ link:https://davidenkovic.github.io/school-notes/mongo.html[Test am 22.06.2021]
 == SYP
 
 link:https://davidenkovic.github.io/school-notes/asciidoc.html[Prüfung in SYP für Yimne]
+
+== Mathe
+
+link:https://davidenkovic.github.io/school-notes/mathe.html[Nost am 03.11.2021]

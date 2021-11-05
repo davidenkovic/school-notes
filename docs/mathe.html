@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>MongoDB Zusammenfassung</title>
+<title>Road2Goat - Mathe Nost 03.11.2021</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,34 +436,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="path/to/fontawesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>MongoDB Zusammenfassung</h1>
+<h1>Road2Goat - Mathe Nost 03.11.2021</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_basic_commands">1. Basic Commands</a>
+<li><a href="#_vertiefende_aufgaben">1. Vertiefende Aufgaben</a>
 <ul class="sectlevel2">
-<li><a href="#_db_anlegen">1.1. DB anlegen</a></li>
-<li><a href="#_db_hilfe">1.2. DB Hilfe</a></li>
-<li><a href="#_collection_erstellen">1.3. Collection erstellen</a></li>
-<li><a href="#_collection_hilfe">1.4. Collection Hilfe</a></li>
+<li><a href="#_wahrscheinlichkeit">1.1. Wahrscheinlichkeit:</a></li>
+<li><a href="#_reihenfolgen">1.2. Reihen/Folgen:</a></li>
+<li><a href="#_kombinatorik">1.3. Kombinatorik:</a></li>
+<li><a href="#_fehlerrechnung">1.4. Fehlerrechnung:</a></li>
 </ul>
 </li>
-<li><a href="#_crud">2. CRUD</a>
+<li><a href="#_fehlerrechnung_2">2. Fehlerrechnung</a>
 <ul class="sectlevel2">
-<li><a href="#_create">2.1. Create</a></li>
-<li><a href="#_read">2.2. Read</a></li>
-<li><a href="#_update">2.3. Update</a></li>
-<li><a href="#_delete">2.4. Delete</a></li>
+<li><a href="#_die_grundlagen_der_fehlerfortpflanzung_verstehen_und_anwenden">2.1. Die Grundlagen der Fehlerfortpflanzung verstehen und anwenden</a></li>
 </ul>
 </li>
-<li><a href="#_aggregationen">3. Aggregationen</a>
+<li><a href="#_analysis">3. Analysis</a>
 <ul class="sectlevel2">
-<li><a href="#_projektion">3.1. Projektion</a></li>
-<li><a href="#_gruppierung">3.2. Gruppierung</a></li>
+<li><a href="#_begriffe_der_differential_und_integralrechnung_benennen_und_facheinschlägige_anwendungen_berechnen_und_interpretieren">3.1. Begriffe der Differential- und Integralrechnung benennen und facheinschlägige Anwendungen berechnen und interpretieren</a></li>
+</ul>
+</li>
+<li><a href="#_funktionale_zusammenhänge">4. Funktionale Zusammenhänge</a>
+<ul class="sectlevel2">
+<li><a href="#_funktionen_in_zwei_variablen_geometrisch_als_flächen_im_raum_interpretieren_und_anhand_von_beispielen_veranschaulichen">4.1. Funktionen in zwei Variablen geometrisch als Flächen im Raum interpretieren und anhand von Beispielen veranschaulichen</a></li>
+</ul>
+</li>
+<li><a href="#_matrizen_und_stochastik">5. Matrizen und Stochastik</a>
+<ul class="sectlevel2">
+<li><a href="#_den_begriff_zufallsexperiment_verstehen_die_wahrscheinlichkeit_zufälliger_ereignisse_mit_hilfe_der_definition_für_wahrscheinlichkeiten_nach_laplace_bestimmen_und_die_addition_und_multiplikationsregel_anwenden">5.1. den Begriff Zufallsexperiment verstehen, die Wahrscheinlichkeit zufälliger Ereignisse mit Hilfe der Definition für Wahrscheinlichkeiten nach Laplace bestimmen und die Addition- und Multiplikationsregel anwenden</a></li>
+</ul>
+</li>
+<li><a href="#_stochastik">6. Stochastik</a>
+<ul class="sectlevel2">
+<li><a href="#_die_anzahl_möglicher_anordnungen_von_unterscheidbaren_und_nicht_unterscheidbaren_objekten_mit_und_ohne_berücksichtigung_der_reihenfolge_bestimmen">6.1. die Anzahl möglicher Anordnungen von unterscheidbaren und nicht unterscheidbaren Objekten mit und ohne Berücksichtigung der Reihenfolge bestimmen</a></li>
 </ul>
 </li>
 </ul>
@@ -471,185 +482,173 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_basic_commands"><a class="anchor" href="#_basic_commands"></a>1. Basic Commands</h2>
+<h2 id="_vertiefende_aufgaben"><a class="anchor" href="#_vertiefende_aufgaben"></a>1. Vertiefende Aufgaben</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_db_anlegen"><a class="anchor" href="#_db_anlegen"></a>1.1. DB anlegen</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">use mongodb // Erstellt oder wechselt auf die DB mitarbeiter
-db // Print -&gt; jetzige DB -&gt; mitarbeiter</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_db_hilfe"><a class="anchor" href="#_db_hilfe"></a>1.2. DB Hilfe</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.help(); // Funktionen des „db“-Objekts anzeigen lassen</code></pre>
-</div>
+<h3 id="_wahrscheinlichkeit"><a class="anchor" href="#_wahrscheinlichkeit"></a>1.1. Wahrscheinlichkeit:</h3>
+<div class="paragraph">
+<p><a href="https://github.com/davidenkovic/school-notes/blob/master/files/va-1.pdf">1</a>,
+2, 17, 19, 38, 39, 43, 44, 51, 52, 54, 62, 70, 71, 76, 78</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_collection_erstellen"><a class="anchor" href="#_collection_erstellen"></a>1.3. Collection erstellen</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.createCollection("mitarbeiter");</code></pre>
-</div>
+<h3 id="_reihenfolgen"><a class="anchor" href="#_reihenfolgen"></a>1.2. Reihen/Folgen:</h3>
+<div class="paragraph">
+<p>4, 14, 24, 25, 26, 27, 28, 29, 32, 63, 64</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_collection_hilfe"><a class="anchor" href="#_collection_hilfe"></a>1.4. Collection Hilfe</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.help();</code></pre>
+<h3 id="_kombinatorik"><a class="anchor" href="#_kombinatorik"></a>1.3. Kombinatorik:</h3>
+<div class="paragraph">
+<p>33, 40, 41, 48, 50, 70, 73, 75, 93, 94</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_fehlerrechnung"><a class="anchor" href="#_fehlerrechnung"></a>1.4. Fehlerrechnung:</h3>
+<div class="paragraph">
+<p>54, 58. 60</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_crud"><a class="anchor" href="#_crud"></a>2. CRUD</h2>
+<h2 id="_fehlerrechnung_2"><a class="anchor" href="#_fehlerrechnung_2"></a>2. Fehlerrechnung</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_create"><a class="anchor" href="#_create"></a>2.1. Create</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.insert({name : {"first": "Gerhard", "last" : "Wurdinger"}, "abteilung" : "Abteilung1", "gehalt" : 22000, "bonus": 5000});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_read"><a class="anchor" href="#_read"></a>2.2. Read</h3>
-<div class="listingblock">
-<div class="title">Alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.find({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ein Dokument mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.findOne({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Zählt alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.count({"abteilung":"Abteilung1"});</code></pre>
-</div>
+<h3 id="_die_grundlagen_der_fehlerfortpflanzung_verstehen_und_anwenden"><a class="anchor" href="#_die_grundlagen_der_fehlerfortpflanzung_verstehen_und_anwenden"></a>2.1. Die Grundlagen der Fehlerfortpflanzung verstehen und anwenden</h3>
+<div class="paragraph">
+<p><strong>Lehrstoff:</strong></p>
 </div>
 <div class="paragraph">
-<p>db.nuggets.find();</p>
+<p><em>Rechnen mit Zahlen und Größen:</em></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_update"><a class="anchor" href="#_update"></a>2.3. Update</h3>
-<div class="listingblock">
-<div class="title">Tabelle</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">{ "_id" : ObjectId("60d0c6c39e25483ad800688d"), "name" : { "first" : "Nikola", "last" : "Jokic" }, "position" : "Center" }
-{ "_id" : ObjectId("60d0c9ef9e25483ad800688e"), "name" : { "first" : "Jamal", "last" : "Murray" }, "position" : "Point Guard" }
-{ "_id" : ObjectId("60d0cacb9e25483ad800688f"), "name" : { "first" : "Facundo", "last" : "Campazzo" }, "position" : "Shooting Guard" }
-{ "_id" : ObjectId("60d0caf89e25483ad8006890"), "name" : { "first" : "Aaron", "last" : "Gordon" }, "position" : "Small Forward" }
-{ "_id" : ObjectId("60d0cb089e25483ad8006891"), "name" : { "first" : "Bol", "last" : "Bol" }, "position" : "Power Forward" }</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">var modObj = db.nuggets.findOne({"name" : { "first" : "Facundo", "last" : "Campazzo" }});
-modObj.newPosition = "Point Guard";
-Point Guard
-
-db.nuggets.update({"name":{"first":"Facundo", "last":"Campazzo"}},modObj);
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Upsert</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.update({"name":{"first":"Jamal", "last":"Murray"}}, {"name":{"first":"Jamal", "last":"Murray"}, "position":"Center"}, true);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_delete"><a class="anchor" href="#_delete"></a>2.4. Delete</h3>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.remove({});</code></pre>
-</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Fehlerquellen</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Fehlerfortpflanzung</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_aggregationen"><a class="anchor" href="#_aggregationen"></a>3. Aggregationen</h2>
+<h2 id="_analysis"><a class="anchor" href="#_analysis"></a>3. Analysis</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Suche: $match</p>
-</li>
-<li>
-<p>Projektion: $project</p>
-</li>
-<li>
-<p>Gruppierung: $group</p>
-</li>
-<li>
-<p>Sortierung, Skip, Limit, &#8230;&#8203;: $sort</p>
-</li>
-</ul>
-</div>
 <div class="sect2">
-<h3 id="_projektion"><a class="anchor" href="#_projektion"></a>3.1. Projektion</h3>
-<div class="listingblock">
-<div class="title">Nur Namen werden angezeigt</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$project" : {"name":1}});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gruppierung"><a class="anchor" href="#_gruppierung"></a>3.2. Gruppierung</h3>
+<h3 id="_begriffe_der_differential_und_integralrechnung_benennen_und_facheinschlägige_anwendungen_berechnen_und_interpretieren"><a class="anchor" href="#_begriffe_der_differential_und_integralrechnung_benennen_und_facheinschlägige_anwendungen_berechnen_und_interpretieren"></a>3.1. Begriffe der Differential- und Integralrechnung benennen und facheinschlägige Anwendungen berechnen und interpretieren</h3>
 <div class="paragraph">
-<p><strong>Verfügbare Operatoren</strong></p>
+<p><strong>Lehrstoff:</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Differential- und Integralrechnung:</em></p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Fachbezogene Anwendungen der Differential- und Integralrechnung</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_funktionale_zusammenhänge"><a class="anchor" href="#_funktionale_zusammenhänge"></a>4. Funktionale Zusammenhänge</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_funktionen_in_zwei_variablen_geometrisch_als_flächen_im_raum_interpretieren_und_anhand_von_beispielen_veranschaulichen"><a class="anchor" href="#_funktionen_in_zwei_variablen_geometrisch_als_flächen_im_raum_interpretieren_und_anhand_von_beispielen_veranschaulichen"></a>4.1. Funktionen in zwei Variablen geometrisch als Flächen im Raum interpretieren und anhand von Beispielen veranschaulichen</h3>
+<div class="paragraph">
+<p><strong>Lehrstoff:</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Funktionen mehrerer Variablen:</em></p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Darstellung von Funktionen von zwei Variablen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_matrizen_und_stochastik"><a class="anchor" href="#_matrizen_und_stochastik"></a>5. Matrizen und Stochastik</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_den_begriff_zufallsexperiment_verstehen_die_wahrscheinlichkeit_zufälliger_ereignisse_mit_hilfe_der_definition_für_wahrscheinlichkeiten_nach_laplace_bestimmen_und_die_addition_und_multiplikationsregel_anwenden"><a class="anchor" href="#_den_begriff_zufallsexperiment_verstehen_die_wahrscheinlichkeit_zufälliger_ereignisse_mit_hilfe_der_definition_für_wahrscheinlichkeiten_nach_laplace_bestimmen_und_die_addition_und_multiplikationsregel_anwenden"></a>5.1. den Begriff Zufallsexperiment verstehen, die Wahrscheinlichkeit zufälliger Ereignisse mit Hilfe der Definition für Wahrscheinlichkeiten nach Laplace bestimmen und die Addition- und Multiplikationsregel anwenden</h3>
+<div class="paragraph">
+<p><strong>Lehrstoff:</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Wahrscheinlichkeitsrechnung:</em></p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Zufallsexperimente</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Laplace-Wahrscheinlichkeit</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Additions- und Multiplikationssatz für einander ausschließende bzw. unabhängige Ereignisse</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> bedingte Wahrscheinlichkeit.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Files:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>$sum</p>
+<p><a href="https://github.com/davidenkovic/school-notes/blob/master/files/8.2-8.3.pdf">Übungen 8.2 und 8.3</a></p>
 </li>
 <li>
-<p>$avg</p>
+<p><a href="https://github.com/davidenkovic/school-notes/blob/master/files/wrsl-teil1.pdf">Übungen 8.4 bis 8.7</a></p>
 </li>
 <li>
-<p>$max</p>
+<p><a href="https://github.com/davidenkovic/school-notes/blob/master/files/8.12-8.14.pdf">Übungen 8.12 bis 8.14</a></p>
 </li>
 <li>
-<p>$min</p>
-</li>
-<li>
-<p>$first</p>
-</li>
-<li>
-<p>$last</p>
+<p><a href="https://github.com/davidenkovic/school-notes/blob/master/files/8.16.pdf">Übungen 8.16</a></p>
 </li>
 </ul>
 </div>
-<div class="listingblock">
-<div class="title">Gruppieren von Mitarbeitern nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung"}});</code></pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="title">Ausgabe des Durchschnittsverdiensts nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung", "Durchschnittsgehalt" : {"$avg" : "$gehalt"}}});</code></pre>
 </div>
+<div class="sect1">
+<h2 id="_stochastik"><a class="anchor" href="#_stochastik"></a>6. Stochastik</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_die_anzahl_möglicher_anordnungen_von_unterscheidbaren_und_nicht_unterscheidbaren_objekten_mit_und_ohne_berücksichtigung_der_reihenfolge_bestimmen"><a class="anchor" href="#_die_anzahl_möglicher_anordnungen_von_unterscheidbaren_und_nicht_unterscheidbaren_objekten_mit_und_ohne_berücksichtigung_der_reihenfolge_bestimmen"></a>6.1. die Anzahl möglicher Anordnungen von unterscheidbaren und nicht unterscheidbaren Objekten mit und ohne Berücksichtigung der Reihenfolge bestimmen</h3>
+<div class="paragraph">
+<p><strong>Lehrstoff:</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Kombinatorik:</em></p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> Permutationen</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Kombinationen</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> Variationen.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -657,219 +656,8 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-10-29 14:17:29 UTC
+Last updated 2021-10-29 14:36:18 UTC
 </div>
 </div>
-<style>
-pre.rouge table td { padding: 5px; }
-pre.rouge table pre { margin: 0; }
-pre.rouge .cm {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cp {
-  color: #999999;
-  font-weight: bold;
-}
-pre.rouge .c1 {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cs {
-  color: #999999;
-  font-weight: bold;
-  font-style: italic;
-}
-pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .err {
-  color: #a61717;
-  background-color: #e3d2d2;
-}
-pre.rouge .gd {
-  color: #000000;
-  background-color: #ffdddd;
-}
-pre.rouge .ge {
-  color: #000000;
-  font-style: italic;
-}
-pre.rouge .gr {
-  color: #aa0000;
-}
-pre.rouge .gh {
-  color: #999999;
-}
-pre.rouge .gi {
-  color: #000000;
-  background-color: #ddffdd;
-}
-pre.rouge .go {
-  color: #888888;
-}
-pre.rouge .gp {
-  color: #555555;
-}
-pre.rouge .gs {
-  font-weight: bold;
-}
-pre.rouge .gu {
-  color: #aaaaaa;
-}
-pre.rouge .gt {
-  color: #aa0000;
-}
-pre.rouge .kc {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kd {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kn {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kp {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kr {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kt {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .k, pre.rouge .kv {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .mf {
-  color: #009999;
-}
-pre.rouge .mh {
-  color: #009999;
-}
-pre.rouge .il {
-  color: #009999;
-}
-pre.rouge .mi {
-  color: #009999;
-}
-pre.rouge .mo {
-  color: #009999;
-}
-pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
-  color: #009999;
-}
-pre.rouge .sb {
-  color: #d14;
-}
-pre.rouge .sc {
-  color: #d14;
-}
-pre.rouge .sd {
-  color: #d14;
-}
-pre.rouge .s2 {
-  color: #d14;
-}
-pre.rouge .se {
-  color: #d14;
-}
-pre.rouge .sh {
-  color: #d14;
-}
-pre.rouge .si {
-  color: #d14;
-}
-pre.rouge .sx {
-  color: #d14;
-}
-pre.rouge .sr {
-  color: #009926;
-}
-pre.rouge .s1 {
-  color: #d14;
-}
-pre.rouge .ss {
-  color: #990073;
-}
-pre.rouge .s, pre.rouge .sa, pre.rouge .dl {
-  color: #d14;
-}
-pre.rouge .na {
-  color: #008080;
-}
-pre.rouge .bp {
-  color: #999999;
-}
-pre.rouge .nb {
-  color: #0086B3;
-}
-pre.rouge .nc {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .no {
-  color: #008080;
-}
-pre.rouge .nd {
-  color: #3c5d5d;
-  font-weight: bold;
-}
-pre.rouge .ni {
-  color: #800080;
-}
-pre.rouge .ne {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nf, pre.rouge .fm {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nl {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nn {
-  color: #555555;
-}
-pre.rouge .nt {
-  color: #000080;
-}
-pre.rouge .vc {
-  color: #008080;
-}
-pre.rouge .vg {
-  color: #008080;
-}
-pre.rouge .vi {
-  color: #008080;
-}
-pre.rouge .nv, pre.rouge .vm {
-  color: #008080;
-}
-pre.rouge .ow {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .o {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .w {
-  color: #bbbbbb;
-}
-pre.rouge {
-  background-color: #f8f8f8;
-}
-</style>
 </body>
 </html>
