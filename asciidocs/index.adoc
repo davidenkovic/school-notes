@@ -19,3 +19,7 @@ link:https://davidenkovic.github.io/school-notes/asciidoc.html[Prüfung in SYP f
 == Mathe
 
 link:https://davidenkovic.github.io/school-notes/mathe.html[Nost am 03.11.2021]
+
+== DBI
+
+link:https://davidenkovic.github.io/school-notes/datawarehouse.html[Datawarehouse notes am 11.11.2021]
