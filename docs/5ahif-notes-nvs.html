@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>MongoDB Zusammenfassung</title>
+<title>NVS 5AHIF Notes</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,217 +440,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>MongoDB Zusammenfassung</h1>
+<h1>NVS 5AHIF Notes</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_basic_commands">1. Basic Commands</a>
-<ul class="sectlevel2">
-<li><a href="#_db_anlegen">1.1. DB anlegen</a></li>
-<li><a href="#_db_hilfe">1.2. DB Hilfe</a></li>
-<li><a href="#_collection_erstellen">1.3. Collection erstellen</a></li>
-<li><a href="#_collection_hilfe">1.4. Collection Hilfe</a></li>
-</ul>
-</li>
-<li><a href="#_crud">2. CRUD</a>
-<ul class="sectlevel2">
-<li><a href="#_create">2.1. Create</a></li>
-<li><a href="#_read">2.2. Read</a></li>
-<li><a href="#_update">2.3. Update</a></li>
-<li><a href="#_delete">2.4. Delete</a></li>
-</ul>
-</li>
-<li><a href="#_aggregationen">3. Aggregationen</a>
-<ul class="sectlevel2">
-<li><a href="#_projektion">3.1. Projektion</a></li>
-<li><a href="#_gruppierung">3.2. Gruppierung</a></li>
-</ul>
-</li>
+<li><a href="#_8_10_2021_vintage_store_beispiel">1. 8.10.2021 Vintage Store Beispiel</a></li>
+<li><a href="#_11_10_2021_vintage_store_beispiel">2. 11.10.2021 Vintage Store Beispiel</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_basic_commands"><a class="anchor" href="#_basic_commands"></a>1. Basic Commands</h2>
+<h2 id="_8_10_2021_vintage_store_beispiel"><a class="anchor" href="#_8_10_2021_vintage_store_beispiel"></a>1. 8.10.2021 Vintage Store Beispiel</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_db_anlegen"><a class="anchor" href="#_db_anlegen"></a>1.1. DB anlegen</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">use mongodb // Erstellt oder wechselt auf die DB mitarbeiter
-db // Print -&gt; jetzige DB -&gt; mitarbeiter</code></pre>
+<div class="paragraph">
+<p><em>Geprüft wurde:</em> Was haben wir letzes mal gemacht.<br>
+<em>Antwort:</em> Swaggerpages</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_db_hilfe"><a class="anchor" href="#_db_hilfe"></a>1.2. DB Hilfe</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.help(); // Funktionen des „db“-Objekts anzeigen lassen</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_collection_erstellen"><a class="anchor" href="#_collection_erstellen"></a>1.3. Collection erstellen</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.createCollection("mitarbeiter");</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_collection_hilfe"><a class="anchor" href="#_collection_hilfe"></a>1.4. Collection Hilfe</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.help();</code></pre>
-</div>
-</div>
+<div class="paragraph">
+<p>Microservices with Quarkus weiter gemacht: <a href="https://htl-leonding-example.github.io/udemy-microservices-goncalves/#_monoliths_vs_microservices">Microservices with Quarkus</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_crud"><a class="anchor" href="#_crud"></a>2. CRUD</h2>
+<h2 id="_11_10_2021_vintage_store_beispiel"><a class="anchor" href="#_11_10_2021_vintage_store_beispiel"></a>2. 11.10.2021 Vintage Store Beispiel</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_create"><a class="anchor" href="#_create"></a>2.1. Create</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.insert({name : {"first": "Gerhard", "last" : "Wurdinger"}, "abteilung" : "Abteilung1", "gehalt" : 22000, "bonus": 5000});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_read"><a class="anchor" href="#_read"></a>2.2. Read</h3>
-<div class="listingblock">
-<div class="title">Alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.find({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ein Dokument mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.findOne({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Zählt alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.count({"abteilung":"Abteilung1"});</code></pre>
-</div>
+<div class="paragraph">
+<p><em>Geprüft wurde:</em> nichts</p>
 </div>
 <div class="paragraph">
-<p>db.nuggets.find();</p>
+<p>Microservices with Quarkus weiter gemacht bis 6.3. Configuring Quarkus.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_update"><a class="anchor" href="#_update"></a>2.3. Update</h3>
-<div class="listingblock">
-<div class="title">Tabelle</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">{ "_id" : ObjectId("60d0c6c39e25483ad800688d"), "name" : { "first" : "Nikola", "last" : "Jokic" }, "position" : "Center" }
-{ "_id" : ObjectId("60d0c9ef9e25483ad800688e"), "name" : { "first" : "Jamal", "last" : "Murray" }, "position" : "Point Guard" }
-{ "_id" : ObjectId("60d0cacb9e25483ad800688f"), "name" : { "first" : "Facundo", "last" : "Campazzo" }, "position" : "Shooting Guard" }
-{ "_id" : ObjectId("60d0caf89e25483ad8006890"), "name" : { "first" : "Aaron", "last" : "Gordon" }, "position" : "Small Forward" }
-{ "_id" : ObjectId("60d0cb089e25483ad8006891"), "name" : { "first" : "Bol", "last" : "Bol" }, "position" : "Power Forward" }</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">var modObj = db.nuggets.findOne({"name" : { "first" : "Facundo", "last" : "Campazzo" }});
-modObj.newPosition = "Point Guard";
-Point Guard
-
-db.nuggets.update({"name":{"first":"Facundo", "last":"Campazzo"}},modObj);
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Upsert</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.update({"name":{"first":"Jamal", "last":"Murray"}}, {"name":{"first":"Jamal", "last":"Murray"}, "position":"Center"}, true);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_delete"><a class="anchor" href="#_delete"></a>2.4. Delete</h3>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.remove({});</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_aggregationen"><a class="anchor" href="#_aggregationen"></a>3. Aggregationen</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Suche: $match</p>
-</li>
-<li>
-<p>Projektion: $project</p>
-</li>
-<li>
-<p>Gruppierung: $group</p>
-</li>
-<li>
-<p>Sortierung, Skip, Limit, &#8230;&#8203;: $sort</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_projektion"><a class="anchor" href="#_projektion"></a>3.1. Projektion</h3>
-<div class="listingblock">
-<div class="title">Nur Namen werden angezeigt</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$project" : {"name":1}});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gruppierung"><a class="anchor" href="#_gruppierung"></a>3.2. Gruppierung</h3>
 <div class="paragraph">
-<p><strong>Verfügbare Operatoren</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>$sum</p>
-</li>
-<li>
-<p>$avg</p>
-</li>
-<li>
-<p>$max</p>
-</li>
-<li>
-<p>$min</p>
-</li>
-<li>
-<p>$first</p>
-</li>
-<li>
-<p>$last</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Gruppieren von Mitarbeitern nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung"}});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ausgabe des Durchschnittsverdiensts nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung", "Durchschnittsgehalt" : {"$avg" : "$gehalt"}}});</code></pre>
-</div>
-</div>
+<p><em>Hü bis Mittwoch Abend:</em> lecture notes von stuetz:
+<a href="https://2122-5ahif-nvs.github.io/2122-5ahif-nvs-lecture-notes">lecture-notes</a></p>
 </div>
 </div>
 </div>
@@ -660,216 +483,5 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</code></pre>
 Last updated 2021-11-11 09:20:56 UTC
 </div>
 </div>
-<style>
-pre.rouge table td { padding: 5px; }
-pre.rouge table pre { margin: 0; }
-pre.rouge .cm {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cp {
-  color: #999999;
-  font-weight: bold;
-}
-pre.rouge .c1 {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cs {
-  color: #999999;
-  font-weight: bold;
-  font-style: italic;
-}
-pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .err {
-  color: #a61717;
-  background-color: #e3d2d2;
-}
-pre.rouge .gd {
-  color: #000000;
-  background-color: #ffdddd;
-}
-pre.rouge .ge {
-  color: #000000;
-  font-style: italic;
-}
-pre.rouge .gr {
-  color: #aa0000;
-}
-pre.rouge .gh {
-  color: #999999;
-}
-pre.rouge .gi {
-  color: #000000;
-  background-color: #ddffdd;
-}
-pre.rouge .go {
-  color: #888888;
-}
-pre.rouge .gp {
-  color: #555555;
-}
-pre.rouge .gs {
-  font-weight: bold;
-}
-pre.rouge .gu {
-  color: #aaaaaa;
-}
-pre.rouge .gt {
-  color: #aa0000;
-}
-pre.rouge .kc {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kd {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kn {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kp {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kr {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kt {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .k, pre.rouge .kv {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .mf {
-  color: #009999;
-}
-pre.rouge .mh {
-  color: #009999;
-}
-pre.rouge .il {
-  color: #009999;
-}
-pre.rouge .mi {
-  color: #009999;
-}
-pre.rouge .mo {
-  color: #009999;
-}
-pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
-  color: #009999;
-}
-pre.rouge .sb {
-  color: #d14;
-}
-pre.rouge .sc {
-  color: #d14;
-}
-pre.rouge .sd {
-  color: #d14;
-}
-pre.rouge .s2 {
-  color: #d14;
-}
-pre.rouge .se {
-  color: #d14;
-}
-pre.rouge .sh {
-  color: #d14;
-}
-pre.rouge .si {
-  color: #d14;
-}
-pre.rouge .sx {
-  color: #d14;
-}
-pre.rouge .sr {
-  color: #009926;
-}
-pre.rouge .s1 {
-  color: #d14;
-}
-pre.rouge .ss {
-  color: #990073;
-}
-pre.rouge .s, pre.rouge .sa, pre.rouge .dl {
-  color: #d14;
-}
-pre.rouge .na {
-  color: #008080;
-}
-pre.rouge .bp {
-  color: #999999;
-}
-pre.rouge .nb {
-  color: #0086B3;
-}
-pre.rouge .nc {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .no {
-  color: #008080;
-}
-pre.rouge .nd {
-  color: #3c5d5d;
-  font-weight: bold;
-}
-pre.rouge .ni {
-  color: #800080;
-}
-pre.rouge .ne {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nf, pre.rouge .fm {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nl {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nn {
-  color: #555555;
-}
-pre.rouge .nt {
-  color: #000080;
-}
-pre.rouge .vc {
-  color: #008080;
-}
-pre.rouge .vg {
-  color: #008080;
-}
-pre.rouge .vi {
-  color: #008080;
-}
-pre.rouge .nv, pre.rouge .vm {
-  color: #008080;
-}
-pre.rouge .ow {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .o {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .w {
-  color: #bbbbbb;
-}
-pre.rouge {
-  background-color: #f8f8f8;
-}
-</style>
 </body>
 </html>
