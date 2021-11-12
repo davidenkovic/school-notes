@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>MongoDB Zusammenfassung</title>
+<title>Mathe SA am 15.11.2021</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,440 +436,195 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="path/to/fontawesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>MongoDB Zusammenfassung</h1>
+<h1>Mathe SA am 15.11.2021</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_basic_commands">1. Basic Commands</a>
+<li><a href="#_stoff">1. Stoff</a></li>
+<li><a href="#_grundbegriffe">2. Grundbegriffe</a>
 <ul class="sectlevel2">
-<li><a href="#_db_anlegen">1.1. DB anlegen</a></li>
-<li><a href="#_db_hilfe">1.2. DB Hilfe</a></li>
-<li><a href="#_collection_erstellen">1.3. Collection erstellen</a></li>
-<li><a href="#_collection_hilfe">1.4. Collection Hilfe</a></li>
+<li><a href="#_wahrscheinlichkeitsfunktion_f">2.1. Wahrscheinlichkeitsfunktion f</a></li>
+<li><a href="#_verteilungsfunktion_f">2.2. Verteilungsfunktion F</a></li>
+<li><a href="#_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen">2.3. Erwartungswert, Varianz und Standardabweichung bei diskreten Verteilungen</a></li>
 </ul>
 </li>
-<li><a href="#_crud">2. CRUD</a>
+<li><a href="#_binomialverteilung">3. Binomialverteilung</a>
 <ul class="sectlevel2">
-<li><a href="#_create">2.1. Create</a></li>
-<li><a href="#_read">2.2. Read</a></li>
-<li><a href="#_update">2.3. Update</a></li>
-<li><a href="#_delete">2.4. Delete</a></li>
+<li><a href="#_bernoulli_experiment">3.1. Bernoulli-Experiment</a></li>
 </ul>
 </li>
-<li><a href="#_aggregationen">3. Aggregationen</a>
-<ul class="sectlevel2">
-<li><a href="#_projektion">3.1. Projektion</a></li>
-<li><a href="#_gruppierung">3.2. Gruppierung</a></li>
-</ul>
-</li>
+<li><a href="#_hypergeometrische_verteilung">4. Hypergeometrische Verteilung</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_basic_commands"><a class="anchor" href="#_basic_commands"></a>1. Basic Commands</h2>
+<h2 id="_stoff"><a class="anchor" href="#_stoff"></a>1. Stoff</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Binomialverteilung (ab BS 204)</p>
+</li>
+<li>
+<p>Hypergeometrische Verteilung (ab BS 213)</p>
+</li>
+<li>
+<p>Poissonverteilung (BS 216)</p>
+</li>
+<li>
+<p>Normalverteilung (ab BS 218)</p>
+</li>
+<li>
+<p>Standardnormalverteilung (ab BS 222)</p>
+</li>
+<li>
+<p>Statistik</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grundbegriffe"><a class="anchor" href="#_grundbegriffe"></a>2. Grundbegriffe</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_db_anlegen"><a class="anchor" href="#_db_anlegen"></a>1.1. DB anlegen</h3>
-<div class="listingblock">
+<h3 id="_wahrscheinlichkeitsfunktion_f"><a class="anchor" href="#_wahrscheinlichkeitsfunktion_f"></a>2.1. Wahrscheinlichkeitsfunktion f</h3>
+<div class="paragraph">
+<p>Die Wahrscheinlichkeitsfunktion f ordnet jedem Wert einer diskreten Zufallsvariablen X die Wahrscheinlichkeit zu, dass X <strong>genau</strong> diesen Wert annimmt:</p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">use mongodb // Erstellt oder wechselt auf die DB mitarbeiter
-db // Print -&gt; jetzige DB -&gt; mitarbeiter</code></pre>
+<img src="images/images/image-2021-11-12-19-32-07-546.png" alt="image 2021 11 12 19 32 07 546">
+</div>
+</div>
+<div class="paragraph">
+<p>Die Summe aller Funktionswerte von f ist 1.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verteilungsfunktion_f"><a class="anchor" href="#_verteilungsfunktion_f"></a>2.2. Verteilungsfunktion F</h3>
+<div class="paragraph">
+<p>Die Verteilungsfunktion F ordnet jedem Wert einer Diskreten Zufallsvariablen X die Wahrscheinlichkeit zu, dass X <strong>höchstens</strong> diesen Wert annimmt:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/images/image-2021-11-12-19-37-29-227.png" alt="image 2021 11 12 19 37 29 227">
+</div>
+</div>
+<div class="paragraph">
+<p>Sie ist also die Summe der Einzelwahrscheinlichkeit bis zu diesem Wert.</p>
+</div>
+<div class="sect3">
+<h4 id="_mini_zusammenfassung"><a class="anchor" href="#_mini_zusammenfassung"></a>2.2.1. Mini Zusammenfassung</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/images/image-2021-11-12-19-41-25-155.png" alt="image 2021 11 12 19 41 25 155">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_beispiel_wahrscheinlichkeitsfunktion_verteilungsfunktion"><a class="anchor" href="#_beispiel_wahrscheinlichkeitsfunktion_verteilungsfunktion"></a>2.2.2. Beispiel Wahrscheinlichkeitsfunktion &amp; Verteilungsfunktion</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/images/image-2021-11-12-21-28-10-156.png" alt="image 2021 11 12 21 28 10 156">
+</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_db_hilfe"><a class="anchor" href="#_db_hilfe"></a>1.2. DB Hilfe</h3>
-<div class="listingblock">
+<h3 id="_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen"><a class="anchor" href="#_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen"></a>2.3. Erwartungswert, Varianz und Standardabweichung bei diskreten Verteilungen</h3>
+<div class="paragraph">
+<p>Der Erwartungswert E(X) einer Zufallsvariablen X ist jener Wert, den die Variable im Mittel annimmt.</p>
+</div>
+<div class="paragraph">
+<p>Um zu berechnen, wie stark die Werte um diesen Mittelwert streue, brechnet man die Varianz V(X).</p>
+</div>
+<div class="sect3">
+<h4 id="_mini_zusammenfassung_erwartungswert_varianz"><a class="anchor" href="#_mini_zusammenfassung_erwartungswert_varianz"></a>2.3.1. Mini Zusammenfassung Erwartungswert &amp; Varianz</h4>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.help(); // Funktionen des „db“-Objekts anzeigen lassen</code></pre>
+<img src="images/images/image-2021-11-12-21-30-48-087.png" alt="image 2021 11 12 21 30 48 087">
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_collection_erstellen"><a class="anchor" href="#_collection_erstellen"></a>1.3. Collection erstellen</h3>
-<div class="listingblock">
+<div class="sect3">
+<h4 id="_beispiel_erwartungswert_varianz"><a class="anchor" href="#_beispiel_erwartungswert_varianz"></a>2.3.2. Beispiel Erwartungswert &amp; Varianz</h4>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.createCollection("mitarbeiter");</code></pre>
+<img src="images/images/image-2021-11-12-21-34-34-798.png" alt="image 2021 11 12 21 34 34 798">
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_collection_hilfe"><a class="anchor" href="#_collection_hilfe"></a>1.4. Collection Hilfe</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.help();</code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_crud"><a class="anchor" href="#_crud"></a>2. CRUD</h2>
+<h2 id="_binomialverteilung"><a class="anchor" href="#_binomialverteilung"></a>3. Binomialverteilung</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_create"><a class="anchor" href="#_create"></a>2.1. Create</h3>
-<div class="listingblock">
+<h3 id="_bernoulli_experiment"><a class="anchor" href="#_bernoulli_experiment"></a>3.1. Bernoulli-Experiment</h3>
+<div class="paragraph">
+<p>Ein Zufallsexperiment wird als Bernoulli-Experiment bezeichnet, wenn es die folgenden Bedingungen erfüllt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>genau zwei Ergebnisse möglich sind</p>
+</li>
+<li>
+<p>nach jeder durchführung, die Wahrscheinlichkeit für <em>Erfolg</em> <strong>gleich</strong> bleibt</p>
+</li>
+<li>
+<p>beliebig viele voneinander unabhängige Wiederholungen des Zufallsexperiments möglich sind</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Bernoulli-Experiment</strong> sind eigentlich "<strong>Ziehen mit zurücklegen</strong>" Beispiele.</p>
+</div>
+<div class="sect3">
+<h4 id="_beispiel_bernoulli_experimen_oder_auch_ziehen_mit_zurücklegen_gennant"><a class="anchor" href="#_beispiel_bernoulli_experimen_oder_auch_ziehen_mit_zurücklegen_gennant"></a>3.1.1. Beispiel Bernoulli-Experimen oder auch "<strong>Ziehen mit zurücklegen</strong>" gennant</h4>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.insert({name : {"first": "Gerhard", "last" : "Wurdinger"}, "abteilung" : "Abteilung1", "gehalt" : 22000, "bonus": 5000});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_read"><a class="anchor" href="#_read"></a>2.2. Read</h3>
-<div class="listingblock">
-<div class="title">Alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.find({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ein Dokument mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.findOne({"abteilung":"Abteilung1"});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Zählt alle Dokumente mit der Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.count({"abteilung":"Abteilung1"});</code></pre>
+<img src="images/images/image-2021-11-12-21-46-29-710.png" alt="image 2021 11 12 21 46 29 710">
 </div>
 </div>
 <div class="paragraph">
-<p>db.nuggets.find();</p>
+<p>Wird ein Bernoulli-Experiment n-mal durchgeführt, so kann die Wahrscheinlichket für die Anzahl der Erfolge mit der sogennten <strong>Binomialverteilung</strong> berrechnet werden.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_update"><a class="anchor" href="#_update"></a>2.3. Update</h3>
-<div class="listingblock">
-<div class="title">Tabelle</div>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">{ "_id" : ObjectId("60d0c6c39e25483ad800688d"), "name" : { "first" : "Nikola", "last" : "Jokic" }, "position" : "Center" }
-{ "_id" : ObjectId("60d0c9ef9e25483ad800688e"), "name" : { "first" : "Jamal", "last" : "Murray" }, "position" : "Point Guard" }
-{ "_id" : ObjectId("60d0cacb9e25483ad800688f"), "name" : { "first" : "Facundo", "last" : "Campazzo" }, "position" : "Shooting Guard" }
-{ "_id" : ObjectId("60d0caf89e25483ad8006890"), "name" : { "first" : "Aaron", "last" : "Gordon" }, "position" : "Small Forward" }
-{ "_id" : ObjectId("60d0cb089e25483ad8006891"), "name" : { "first" : "Bol", "last" : "Bol" }, "position" : "Power Forward" }</code></pre>
+<img src="images/images/image-2021-11-12-21-49-49-772.png" alt="image 2021 11 12 21 49 49 772">
 </div>
 </div>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
+</div>
+<div class="sect3">
+<h4 id="_mini_zusammenfassung_2"><a class="anchor" href="#_mini_zusammenfassung_2"></a>3.1.2. Mini Zusammenfassung</h4>
+<div class="imageblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">var modObj = db.nuggets.findOne({"name" : { "first" : "Facundo", "last" : "Campazzo" }});
-modObj.newPosition = "Point Guard";
-Point Guard
+<img src="images/images/image-2021-11-12-21-50-48-680.png" alt="image 2021 11 12 21 50 48 680">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hypergeometrische_verteilung"><a class="anchor" href="#_hypergeometrische_verteilung"></a>4. Hypergeometrische Verteilung</h2>
+<div class="sectionbody">
 
-db.nuggets.update({"name":{"first":"Facundo", "last":"Campazzo"}},modObj);
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Upsert</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.update({"name":{"first":"Jamal", "last":"Murray"}}, {"name":{"first":"Jamal", "last":"Murray"}, "position":"Center"}, true);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_delete"><a class="anchor" href="#_delete"></a>2.4. Delete</h3>
-<div class="listingblock">
-<div class="title">Update über document replacement</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.nuggets.remove({});</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_aggregationen"><a class="anchor" href="#_aggregationen"></a>3. Aggregationen</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Suche: $match</p>
-</li>
-<li>
-<p>Projektion: $project</p>
-</li>
-<li>
-<p>Gruppierung: $group</p>
-</li>
-<li>
-<p>Sortierung, Skip, Limit, &#8230;&#8203;: $sort</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_projektion"><a class="anchor" href="#_projektion"></a>3.1. Projektion</h3>
-<div class="listingblock">
-<div class="title">Nur Namen werden angezeigt</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$project" : {"name":1}});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gruppierung"><a class="anchor" href="#_gruppierung"></a>3.2. Gruppierung</h3>
-<div class="paragraph">
-<p><strong>Verfügbare Operatoren</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>$sum</p>
-</li>
-<li>
-<p>$avg</p>
-</li>
-<li>
-<p>$max</p>
-</li>
-<li>
-<p>$min</p>
-</li>
-<li>
-<p>$first</p>
-</li>
-<li>
-<p>$last</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Gruppieren von Mitarbeitern nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung"}});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Ausgabe des Durchschnittsverdiensts nach Abteilung</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell script">db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung", "Durchschnittsgehalt" : {"$avg" : "$gehalt"}}});</code></pre>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-12 20:04:39 UTC
+Last updated 2021-11-12 20:56:48 UTC
 </div>
 </div>
-<style>
-pre.rouge table td { padding: 5px; }
-pre.rouge table pre { margin: 0; }
-pre.rouge .cm {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cp {
-  color: #999999;
-  font-weight: bold;
-}
-pre.rouge .c1 {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .cs {
-  color: #999999;
-  font-weight: bold;
-  font-style: italic;
-}
-pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
-  color: #999988;
-  font-style: italic;
-}
-pre.rouge .err {
-  color: #a61717;
-  background-color: #e3d2d2;
-}
-pre.rouge .gd {
-  color: #000000;
-  background-color: #ffdddd;
-}
-pre.rouge .ge {
-  color: #000000;
-  font-style: italic;
-}
-pre.rouge .gr {
-  color: #aa0000;
-}
-pre.rouge .gh {
-  color: #999999;
-}
-pre.rouge .gi {
-  color: #000000;
-  background-color: #ddffdd;
-}
-pre.rouge .go {
-  color: #888888;
-}
-pre.rouge .gp {
-  color: #555555;
-}
-pre.rouge .gs {
-  font-weight: bold;
-}
-pre.rouge .gu {
-  color: #aaaaaa;
-}
-pre.rouge .gt {
-  color: #aa0000;
-}
-pre.rouge .kc {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kd {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kn {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kp {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kr {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .kt {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .k, pre.rouge .kv {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .mf {
-  color: #009999;
-}
-pre.rouge .mh {
-  color: #009999;
-}
-pre.rouge .il {
-  color: #009999;
-}
-pre.rouge .mi {
-  color: #009999;
-}
-pre.rouge .mo {
-  color: #009999;
-}
-pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
-  color: #009999;
-}
-pre.rouge .sb {
-  color: #d14;
-}
-pre.rouge .sc {
-  color: #d14;
-}
-pre.rouge .sd {
-  color: #d14;
-}
-pre.rouge .s2 {
-  color: #d14;
-}
-pre.rouge .se {
-  color: #d14;
-}
-pre.rouge .sh {
-  color: #d14;
-}
-pre.rouge .si {
-  color: #d14;
-}
-pre.rouge .sx {
-  color: #d14;
-}
-pre.rouge .sr {
-  color: #009926;
-}
-pre.rouge .s1 {
-  color: #d14;
-}
-pre.rouge .ss {
-  color: #990073;
-}
-pre.rouge .s, pre.rouge .sa, pre.rouge .dl {
-  color: #d14;
-}
-pre.rouge .na {
-  color: #008080;
-}
-pre.rouge .bp {
-  color: #999999;
-}
-pre.rouge .nb {
-  color: #0086B3;
-}
-pre.rouge .nc {
-  color: #445588;
-  font-weight: bold;
-}
-pre.rouge .no {
-  color: #008080;
-}
-pre.rouge .nd {
-  color: #3c5d5d;
-  font-weight: bold;
-}
-pre.rouge .ni {
-  color: #800080;
-}
-pre.rouge .ne {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nf, pre.rouge .fm {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nl {
-  color: #990000;
-  font-weight: bold;
-}
-pre.rouge .nn {
-  color: #555555;
-}
-pre.rouge .nt {
-  color: #000080;
-}
-pre.rouge .vc {
-  color: #008080;
-}
-pre.rouge .vg {
-  color: #008080;
-}
-pre.rouge .vi {
-  color: #008080;
-}
-pre.rouge .nv, pre.rouge .vm {
-  color: #008080;
-}
-pre.rouge .ow {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .o {
-  color: #000000;
-  font-weight: bold;
-}
-pre.rouge .w {
-  color: #bbbbbb;
-}
-pre.rouge {
-  background-color: #f8f8f8;
-}
-</style>
 </body>
 </html>
