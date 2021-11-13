@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Mathe SA am 15.11.2021</title>
+<title>Hypergeometrische Verteilung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,119 +440,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Mathe SA am 15.11.2021</h1>
+<h1>Hypergeometrische Verteilung</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_stoff">1. Stoff</a></li>
-<li><a href="#_grundbegriffe">2. Grundbegriffe</a>
-<ul class="sectlevel2">
-<li><a href="#_wahrscheinlichkeitsfunktion_f">2.1. Wahrscheinlichkeitsfunktion f</a></li>
-<li><a href="#_verteilungsfunktion_f">2.2. Verteilungsfunktion F</a></li>
-<li><a href="#_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen">2.3. Erwartungswert, Varianz und Standardabweichung bei diskreten Verteilungen</a></li>
-</ul>
-</li>
+<li><a href="#_beispiel_hypergeometrische_verteilung">1. Beispiel Hypergeometrische Verteilung</a></li>
+<li><a href="#_mini_zusammenfassung">2. Mini Zusammenfassung</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_stoff"><a class="anchor" href="#_stoff"></a>1. Stoff</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/binomialverteilung.html">Binomialverteilung (ab BS 204)</a></p>
-</li>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/hypergeometrische-verteilung.html">Hypergeometrische Verteilung (ab BS 213)</a></p>
-</li>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/poissonverteilung.html">Poissonverteilung (BS 216)</a></p>
-</li>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/normalverteilung.html">Normalverteilung (ab BS 218)</a></p>
-</li>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html">Standardnormalverteilung (ab BS 222)</a></p>
-</li>
-<li>
-<p><a href="https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html">Statistik</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Kurzgefasst verwendet man die Hypergeometrische Verteilung bei Experimenten wie "Ziehen ohne Zurücklegen". Also quasi gegenteil von Binomialverteilung.</p>
+</div>
+<div class="paragraph">
+<p>Man geht davon aus, dass in einer Menge von N Elementen, M Elemente ein bestimmtes Merkmal aufweisen. Aus dieser Menge wird eine Stichprobe vom Umfang n gezogen.</p>
+</div>
+<div class="paragraph">
+<p>Die Wahrscheinlichkeit, dass genau x Elemente in dieser Stichprobe des Merkmal aufweisen, wird mit der hypergeometrischen Verteilung ermittelt.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grundbegriffe"><a class="anchor" href="#_grundbegriffe"></a>2. Grundbegriffe</h2>
+<h2 id="_beispiel_hypergeometrische_verteilung"><a class="anchor" href="#_beispiel_hypergeometrische_verteilung"></a>1. Beispiel Hypergeometrische Verteilung</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_wahrscheinlichkeitsfunktion_f"><a class="anchor" href="#_wahrscheinlichkeitsfunktion_f"></a>2.1. Wahrscheinlichkeitsfunktion f</h3>
-<div class="paragraph">
-<p>Die Wahrscheinlichkeitsfunktion f ordnet jedem Wert einer diskreten Zufallsvariablen X die Wahrscheinlichkeit zu, dass X <strong>genau</strong> diesen Wert annimmt:</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="images/image-2021-11-12-19-32-07-546.png" alt="image 2021 11 12 19 32 07 546">
+<img src="images/image-2021-11-13-13-58-26-739.png" alt="image 2021 11 13 13 58 26 739">
 </div>
 </div>
-<div class="paragraph">
-<p>Die Summe aller Funktionswerte von f ist 1.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_verteilungsfunktion_f"><a class="anchor" href="#_verteilungsfunktion_f"></a>2.2. Verteilungsfunktion F</h3>
-<div class="paragraph">
-<p>Die Verteilungsfunktion F ordnet jedem Wert einer Diskreten Zufallsvariablen X die Wahrscheinlichkeit zu, dass X <strong>höchstens</strong> diesen Wert annimmt:</p>
-</div>
+<div class="sect1">
+<h2 id="_mini_zusammenfassung"><a class="anchor" href="#_mini_zusammenfassung"></a>2. Mini Zusammenfassung</h2>
+<div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/image-2021-11-12-19-37-29-227.png" alt="image 2021 11 12 19 37 29 227">
-</div>
-</div>
-<div class="paragraph">
-<p>Sie ist also die Summe der Einzelwahrscheinlichkeit bis zu diesem Wert.</p>
-</div>
-<div class="sect3">
-<h4 id="_mini_zusammenfassung"><a class="anchor" href="#_mini_zusammenfassung"></a>2.2.1. Mini Zusammenfassung</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-19-41-25-155.png" alt="image 2021 11 12 19 41 25 155">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_beispiel_wahrscheinlichkeitsfunktion_verteilungsfunktion"><a class="anchor" href="#_beispiel_wahrscheinlichkeitsfunktion_verteilungsfunktion"></a>2.2.2. Beispiel Wahrscheinlichkeitsfunktion &amp; Verteilungsfunktion</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-28-10-156.png" alt="image 2021 11 12 21 28 10 156">
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen"><a class="anchor" href="#_erwartungswert_varianz_und_standardabweichung_bei_diskreten_verteilungen"></a>2.3. Erwartungswert, Varianz und Standardabweichung bei diskreten Verteilungen</h3>
-<div class="paragraph">
-<p>Der Erwartungswert E(X) einer Zufallsvariablen X ist jener Wert, den die Variable im Mittel annimmt.</p>
-</div>
-<div class="paragraph">
-<p>Um zu berechnen, wie stark die Werte um diesen Mittelwert streue, brechnet man die Varianz V(X).</p>
-</div>
-<div class="sect3">
-<h4 id="_mini_zusammenfassung_erwartungswert_varianz"><a class="anchor" href="#_mini_zusammenfassung_erwartungswert_varianz"></a>2.3.1. Mini Zusammenfassung Erwartungswert &amp; Varianz</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-30-48-087.png" alt="image 2021 11 12 21 30 48 087">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_beispiel_erwartungswert_varianz"><a class="anchor" href="#_beispiel_erwartungswert_varianz"></a>2.3.2. Beispiel Erwartungswert &amp; Varianz</h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-34-34-798.png" alt="image 2021 11 12 21 34 34 798">
-</div>
-</div>
+<img src="images/image-2021-11-13-14-02-38-221.png" alt="image 2021 11 13 14 02 38 221">
 </div>
 </div>
 </div>
@@ -560,7 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-13 15:16:51 UTC
+Last updated 2021-11-13 15:06:17 UTC
 </div>
 </div>
 </body>
