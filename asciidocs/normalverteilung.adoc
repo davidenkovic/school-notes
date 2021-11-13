@@ -1,0 +1,20 @@
+= Normalverteilung
+
+
+_"Dazu gibts keine praktischen Beispiele glaub ich. Also zum Rechnen.
+Normalverteilung is einfach die glockenfubktion.
+Bei Normalverteilung rechnet man eig immer mit Tabelle"_ *~ Benjo*
+
+Was meint Benjo damit?
+
+Bisher haben wir immer mit *diskreten Zufallsvariablen* gearbeitet, die nur *bestimmte* Werte annehmen.
+
+Bei der Normalverteilung werden *stetige Zufallsvariablen* behandelt, die in einem gewissen *Berreich* jeden beliebigen Wert annehmen können.
+
+Weil eine *stetige Zufallsvariable* unendlich viele Werte annehmen kann, ist es unmöglich, für jeden einzelnen Wert die Wahrscheinlichkeit zu berrechnen.
+Deswegen gibt es keine Wahrscheinlichkeitsfunktion wie bei *diskreten Zufallsvariablen*
+
+== Daniel Jung Abi (gutes Beispiel)
+
+link:https://www.youtube.com/watch?v=_f1vgWUiavY&list=PLLTAHuUj-zHj7qBEx4VYSTjzTEtntuycU&index=1[Video by Daniel Jung]
+

@@ -2,12 +2,12 @@
 
 == Stoff
 
-* Binomialverteilung (ab BS 204)
-* Hypergeometrische Verteilung (ab BS 213)
-* Poissonverteilung (BS 216)
-* Normalverteilung (ab BS 218)
-* Standardnormalverteilung (ab BS 222)
-* Statistik
+* link:https://davidenkovic.github.io/school-notes/binomialverteilung.html[Binomialverteilung (ab BS 204)]
+* link:https://davidenkovic.github.io/school-notes/hypergeometrische-verteilung.html[Hypergeometrische Verteilung (ab BS 213)]
+* link:https://davidenkovic.github.io/school-notes/poissonverteilung.html[Poissonverteilung (BS 216)]
+* link:https://davidenkovic.github.io/school-notes/normalverteilung.html[Normalverteilung (ab BS 218)]
+* link:https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html[Standardnormalverteilung (ab BS 222)]
+* link:https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html[Statistik]
 
 == Grundbegriffe
 
@@ -46,27 +46,4 @@ image::images/image-2021-11-12-21-30-48-087.png[]
 ==== Beispiel Erwartungswert & Varianz
 image::images/image-2021-11-12-21-34-34-798.png[]
 
-== Binomialverteilung
 
-=== Bernoulli-Experiment
-
-Ein Zufallsexperiment wird als Bernoulli-Experiment bezeichnet, wenn es die folgenden Bedingungen erfüllt:
-
-* genau zwei Ergebnisse möglich sind
-* nach jeder durchführung, die Wahrscheinlichkeit für _Erfolg_ *gleich* bleibt
-* beliebig viele voneinander unabhängige Wiederholungen des Zufallsexperiments möglich sind
-
-*Bernoulli-Experiment* sind eigentlich "*Ziehen mit zurücklegen*" Beispiele.
-
-==== Beispiel Bernoulli-Experimen oder auch "*Ziehen mit zurücklegen*" gennant
-
-image::images/image-2021-11-12-21-46-29-710.png[]
-
-Wird ein Bernoulli-Experiment n-mal durchgeführt, so kann die Wahrscheinlichket für die Anzahl der Erfolge mit der sogennten *Binomialverteilung* berrechnet werden.
-
-image::images/image-2021-11-12-21-49-49-772.png[]
-
-==== Mini Zusammenfassung
-image::images/image-2021-11-12-21-50-48-680.png[]
-
-== Hypergeometrische Verteilung

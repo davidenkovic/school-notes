@@ -1,0 +1,15 @@
+= Hypergeometrische Verteilung
+
+Kurzgefasst verwendet man die Hypergeometrische Verteilung bei Experimenten wie "Ziehen ohne Zurücklegen". Also quasi gegenteil von Binomialverteilung.
+
+Man geht davon aus, dass in einer Menge von N Elementen, M Elemente ein bestimmtes Merkmal aufweisen. Aus dieser Menge wird eine Stichprobe vom Umfang n gezogen.
+
+Die Wahrscheinlichkeit, dass genau x Elemente in dieser Stichprobe des Merkmal aufweisen, wird mit der hypergeometrischen Verteilung ermittelt.
+
+== Beispiel Hypergeometrische Verteilung
+
+image::images/image-2021-11-13-13-58-26-739.png[]
+
+== Mini Zusammenfassung
+
+image::images/image-2021-11-13-14-02-38-221.png[]
