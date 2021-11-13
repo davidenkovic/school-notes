@@ -6,7 +6,7 @@
 * link:https://davidenkovic.github.io/school-notes/hypergeometrische-verteilung.html[Hypergeometrische Verteilung (ab BS 213)]
 * link:https://davidenkovic.github.io/school-notes/poissonverteilung.html[Poissonverteilung (BS 216)]
 * link:https://davidenkovic.github.io/school-notes/normalverteilung.html[Normalverteilung (ab BS 218)]
-* link:https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html[Standardnormalverteilung (ab BS 222)]
+* link:https://davidenkovic.github.io/school-notes/standardnormalv.html[Standardnormalverteilung (ab BS 222)]
 * link:https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html[Statistik]
 
 == Grundbegriffe
