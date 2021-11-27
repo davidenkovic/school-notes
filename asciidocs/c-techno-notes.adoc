@@ -1,0 +1,245 @@
+= C |Techno-Notes
+
+== Was ist wichtig in C
+
+=== Strings
+
+Du musst so einiges in C wissen wie zum Beispiel das es keine Strings gibt sondern Char Arrays.
+
+Also wenn du einen String angeben willst, verwende stattdessen ein char[].
+
+``char name[64]`` -> String mit der länge 64.
+
+=== Real Types
+
+Des öfteren kommen Real Types vor. Das sind einfache Variablen wie double, floater oder long double.
+
+link:https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html[Real Types]
+
+=== Input & Output
+
+==== Tabbelle
+
+[cols="1,1"]
+|===
+|Typ / Zeichensequenz | Buchstaben
+
+|int
+|%i oder %d
+
+|long
+|%ld
+
+|float/double
+|%f
+
+|char
+|%c
+
+|char* (string)
+|%s
+|===
+
+link:https://de.wikipedia.org/wiki/Printf[printf auf wikipedia]
+
+==== Simple string ouput without variable
+
+Um einen einfachen String auszugeben, musst du nur die folgende Zeile verwenden:
+
+`` printf("Hello, world");``
+
+
+==== String imput in variable
+
+Um einen String einzulesen und diesen dann zu speichern verwendest du *%s*:
+
+``scanf("%s" , name);``
+
+Der Wert den du dann in der Console eingibst wird dann in die Variable *name* gespeichert.
+
+==== String output with variable
+
+Um einen String auszugeben, mit dem Wert einer Variable, verwendest du wie beim einlessen *%s+:
+
+`` printf("Hallo %s!",name)``
+
+==== int input in variable
+
+Um einen int zu Speicher verwendest du *%d*:
+
+``scanf("%d" , &age); ``
+
+==== int output with variable
+
+Um einen int auszugeben, verwendest du *%d*:
+
+`` printf("Sie sind %d Jahre alt! ",age); ``
+
+
+
+Wichtig ist das du vor der Variable ein *&* verwendest. (Wegen Pointer und Address)
+
+== Flowgorithm Einführung
+
+=== Hello World
+
+image::images/image-2021-11-27-13-57-26-179.png[]
+
+* Main -> Anfang
+* Output "Hello, world!" -> Ausgabe von "Hello, world!"
+* End - Ende
+
+.Hello World code
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    printf("Hello, world"); // Ausgabe von "Hello, world!"
+
+    return 0; // Ende
+}
+----
+
+=== Hello Dave
+
+image::images/image-2021-11-27-14-01-12-563.png[]
+
+* Main -> Anfang
+* string name -> Variable name
+* Output -> Fragt nach dem Namen
+* Input -> Name eingeben wie z.B. Dave
+* Output -> "Hallo Dave!"
+* End - Ende
+
+.Hello Dave
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    char name[32]; // Variable name
+    printf("Geben Sie ihren Vornamen ein:"); // Fragt nach dem Namen
+    scanf("%s" , name); // Name eingeben wie z.B. Dave
+    printf("Hallo %s!",name); // "Hallo Dave!"
+
+
+    return 0; // Ende
+}
+----
+
+
+=== Name und Alter
+
+image::images/image-2021-11-27-15-03-46-678.png[]
+
+* Main -> Anfang
+* string name -> Variable name
+* int name -> Variable age
+* Output -> Fragt nach dem Namen
+* Input -> Name eingeben wie z.B. Dave
+* Output -> Fragt nach dem Alter
+* Input -> Name eingeben wie z.B. 18
+* Output -> "Sie sind Dave und 18 Jahre alt!"
+* End - Ende
+
+.Hello Dave and 18
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    char name[32]; // Variable name
+    int age; // Variable age
+
+    printf("Geben Sie ihren Vornamen ein: "); // Fragt nach dem Namen
+    scanf("%s" , name); // Name eingeben wie z.B. Dave
+
+    printf("%s, wie alt sind Sie? ",name); // Fragt nach dem Alter
+    scanf("%d" , &age); // Name eingeben wie z.B. 18
+
+    printf("%s, Sie sind %d Jahre alt! ",name ,age); // "Sie sind Dave und 18 Jahre alt!"
+
+
+    return 0; // Ende
+}
+----
+
+=== Summe
+
+image::images/image-2021-11-27-15-23-45-311.png[]
+
+* Main -> Anfang
+* Integer a, b, sum -> 3 Variablen a, b und sum (alles int)
+* Output -> Fragt nach 1. Zahl
+* Input -> Zahl a eingeben wie z.B. 31
+* Output -> Fragt nach 2. Zahl
+* Input -> Zahl b eingeben wie z.B. 7
+* sum = a + b -> Variable b initialisieren mit den werten a + b
+* Output -> Die Summe ist sum
+* End - Ende
+
+.Summe
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+int a; // Variable a
+int b; // Variable b
+int sum; // Variable sum
+
+    printf("1. Zahl: "); // Fragt nach 1. Zahl
+    scanf("%d" , &a); // Zahl a eingeben wie z.B. 31
+
+    printf("2. Zahl "); // Fragt nach 2. Zahl
+    scanf("%d" , &b); // Zahl b eingeben wie z.B. 7
+
+    sum = a + b; // Variable sum initialisieren mit den werten a + b also speichern in sum
+
+    printf("Die Summe ist %d.",sum); // Die Summe ist sum
+
+
+    return 0; // Ende
+}
+----
+
+=== Kreis
+
+image::images/image-2021-11-27-15-31-08-266.png[]
+
+* Main -> Anfang
+* Real radius, area -> 2 Variablen radius und area (beide double | link:https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html[Real Types])
+* Output -> Fragt Radius
+* Input -> Radius eingeben wie z.B. 3
+* area = radius * radius * 3.14-> Fläche ausrechnen mit radius * radius * 3.14f und in area speichern (f damit es ein double ist, muss aber nicht sein)
+* Output -> Die Fläche ist area
+* End - Ende
+
+.Kreis
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+double radius; // Variable Radius
+double area; // Variable Fläche
+
+    printf("Kresiberrechnung. Geben Sie den Radius ein: "); // Fragt Radius
+    scanf("%lf" , &radius); // Radius eingeben wie z.B. 3
+
+
+
+    area = radius * radius * 3.14f; // Fläche ausrechnen mit radius * radius * 3.14f und in area speichern
+
+    printf("Fläche: %lf", area); // Die Fläche ist area
+
+
+    return 0; // Ende
+}
+----
