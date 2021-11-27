@@ -482,6 +482,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_oder_verknüpfung">6.2. Oder-Verknüpfung ||</a></li>
 </ul>
 </li>
+<li><a href="#_schleifen">7. Schleifen</a>
+<ul class="sectlevel2">
+<li><a href="#_while_schleifen">7.1. While Schleifen</a></li>
+<li><a href="#_for_schleife">7.2. For Schleife</a></li>
+<li><a href="#_verschachtelung">7.3. Verschachtelung</a></li>
+<li><a href="#_do_while">7.4. Do while</a></li>
+<li><a href="#_break">7.5. Break</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1199,10 +1208,207 @@ einer Division gleich einem bestimmten Wert ist. Für die Gleichheit verwenden w
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_schleifen"><a class="anchor" href="#_schleifen"></a>7. Schleifen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_while_schleifen"><a class="anchor" href="#_while_schleifen"></a>7.1. While Schleifen</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Zahl %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+	<span class="n">i</span><span class="o">++</span><span class="p">;</span> <span class="c1">// Wichtig um keine Endlosschleife zu bekommen</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Wir haben also eine Variable i, welche wir mit 1 initialisieren.
+Dies ist unsere Zählvariable, womit wir die Schleifendurchgänge zählen.
+Danach beginnt eine while Schleife, in den Klammern ist die Durchlauf-Bedingung gesetzt.
+Dies ist auch unser Kontrollpunkt.</p>
+</div>
+<div class="paragraph">
+<p>Übersetzen wir den Schleifen-Befehl ins Deutsche, hört sich das etwa so an: „solange i kleiner gleich 100″.
+Der Schleifen-Block wird also solange wiederholt ausgeführt, wie der Wert der Variablen i kleiner oder gleich 100 ist.</p>
+</div>
+<div class="paragraph">
+<p>Hierbei darf man nicht vergessen im Schleifen-Körper die Zählvariable mit i++ jeden Durchlauf um eins zu erhöhen.
+Andernfalls hätten wir eine Endlos-Schleife, d.h. unser Programm reagiert nicht mehr, weil es sich im Kreise dreht.
+Die Durchlauf-Bedingung wird in anderer Fachliteratur üblicherweise Abbruch-Bedingung genannt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_schleife"><a class="anchor" href="#_for_schleife"></a>7.2. For Schleife</h3>
+<div class="paragraph">
+<p>Die for Schleife verwenden wir, wenn die Anzahl der Durchläufe bekannt ist.
+D.h. es ist eine Zähler-gesteuerte Schleife. Wir benötigen also immer eine Variable, welche wir zum Zählen der Durchläufe verwenden.</p>
+</div>
+<div class="paragraph">
+<p>Üblicherweise benennt man diese Zähl-Variablen beginnend mit dem Alphabetbuchstaben <strong>i</strong>, also <strong>i</strong>, <strong>j</strong>, <strong>k</strong>, etc.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+
+<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"Zahl %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In dem folgenden Beispiel wollen wir erneut die Zahlen von 1 bis 5 auf dem Bildschirm ausgeben. Die Schleife leiten wir mit dem Schlüsselwort for ein. In den Klammern gibt es drei Bereiche, welche durch einen Strichpunkt ; getrennt sind:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bereich 1: Startwert der Zählvariablen setzen, z.B. i=0</p>
+</li>
+<li>
+<p>Bereich 2: Durchlauf-Bedingung, z.B. i&lt;5</p>
+</li>
+<li>
+<p>Bereich 3: Operation auf Zählvariable ausführen, z.B. i++</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wichtig ist das das Zählen bei <strong>0</strong> beginnt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verschachtelung"><a class="anchor" href="#_verschachtelung"></a>7.3. Verschachtelung</h3>
+<div class="paragraph">
+<p>Schleifen können auch beliebig verschachtelt werden.
+Hier gibt z.B. die äußere Schleife an, dass 10 Zeilen ausgegeben werden.
+In jeder Zeile geben wir mittels der inneren Schleife Sternchen aus, welche am Ende eine Dreiecksform ergeben sollen.
+Die Durchlauf-Bedingung der inneren Schleife ist mit j&lt;i an die äußere Schleife gebunden.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+
+<span class="c1">// Schleife fuer die Zeilen</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Zeile %2d: "</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+
+	<span class="c1">// Schleife fuer die Spalten</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ausgabe</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="text">Zeile  1: *
+Zeile  2: **
+Zeile  3: ***
+Zeile  4: ****
+Zeile  5: *****
+Zeile  6: ******
+Zeile  7: *******
+Zeile  8: ********
+Zeile  9: *********
+Zeile 10: **********</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_do_while"><a class="anchor" href="#_do_while"></a>7.4. Do while</h3>
+<div class="paragraph">
+<p>Eine Do While schleife verwendet man immer am besten, wenn man will das der User eine Schleife beendet z.B. durch eine bestimmte Zahl oder durch einer bestimmten Tastatur eingabe wie die Enter taste.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="kt">int</span> <span class="n">alter</span><span class="p">;</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Bitte geben sie ihr Alter ein: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">alter</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">alter</span> <span class="o">&lt;</span>  <span class="mi">5</span> <span class="o">||</span> <span class="n">alter</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ausgabe</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="text">Bitte geben sie ihr Alter ein: 2
+Bitte geben sie ihr Alter ein: 101
+Bitte geben sie ihr Alter ein: 200
+Bitte geben sie ihr Alter ein: 33</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hier fragt das Programm so lange nach, bis der User ein gültiges Alter eingibt.
+Also ein alter zwischen 5 und 100.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_break"><a class="anchor" href="#_break"></a>7.5. Break</h3>
+<div class="paragraph">
+<p>Break</p>
+</div>
+<div class="paragraph">
+<p>Mit dem Schlüsselwort break können wir zu jeder Zeit eine Schleife verlassen, ohne auf den Kontrollpunkt warten zu müssen.
+In dem Beispiel soll der Benutzer Zahlen zwischen 1 und 50 eingeben, um eine Gesamtsumme von 100 zu erreichen.
+Hält er sich nicht an die Vorgaben und gibt eine kleinere Zahl als 1 oder eine größere als 50 ein, wird sofort die Schleife verlassen und die Zahl nicht mehr zur Summe addiert.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="kt">int</span> <span class="n">summand</span><span class="p">,</span> <span class="n">summe</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">do</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Summe = %d"</span><span class="p">,</span> <span class="n">summe</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Eingabe von Summand zwischen 1 und 50: "</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">summand</span><span class="p">);</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="n">summand</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">summand</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">summe</span> <span class="o">+=</span> <span class="n">summand</span><span class="p">;</span>
+
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">summe</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">);</span>
+
+
+<span class="k">if</span><span class="p">(</span><span class="n">summe</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Sie haben die Zahl 100 wegen ungueltigen Eingaben nicht erreicht.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Sie haben den Wert 100 erreicht.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ausgabe:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="text">Summe = 0
+Eingabe von Summand zwischen 1 und 50: 33
+
+Summe = 33
+Eingabe von Summand zwischen 1 und 50: 44
+
+Summe = 77
+Eingabe von Summand zwischen 1 und 50: 55
+
+Sie haben die Zahl 100 wegen ungueltigen Eingaben nicht erreicht.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-27 18:09:40 UTC
+Last updated 2021-11-27 19:30:46 UTC
 </div>
 </div>
 <style>
