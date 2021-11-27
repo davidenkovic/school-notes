@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Binomialverteilung</title>
+<title>C |Techno-Notes</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,82 +440,636 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Binomialverteilung</h1>
+<h1>C |Techno-Notes</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_bernoulli_experiment">1. Bernoulli-Experiment</a>
+<li><a href="#_was_ist_wichtig_in_c">1. Was ist wichtig in C</a>
 <ul class="sectlevel2">
-<li><a href="#_beispiel_bernoulli_experimen_oder_auch_ziehen_mit_zurücklegen_gennant">1.1. Beispiel Bernoulli-Experimen oder auch "<strong>Ziehen mit zurücklegen</strong>" gennant</a></li>
-<li><a href="#_mini_zusammenfassung">1.2. Mini Zusammenfassung</a></li>
+<li><a href="#_strings">1.1. Strings</a></li>
+<li><a href="#_real_types">1.2. Real Types</a></li>
+<li><a href="#_input_output">1.3. Input &amp; Output</a></li>
 </ul>
 </li>
-<li><a href="#_mathe_sa_index">2. Mathe SA Index</a></li>
+<li><a href="#_flowgorithm_einführung">2. Flowgorithm Einführung</a>
+<ul class="sectlevel2">
+<li><a href="#_hello_world">2.1. Hello World</a></li>
+<li><a href="#_hello_dave">2.2. Hello Dave</a></li>
+<li><a href="#_name_und_alter">2.3. Name und Alter</a></li>
+<li><a href="#_summe">2.4. Summe</a></li>
+<li><a href="#_kreis">2.5. Kreis</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_bernoulli_experiment"><a class="anchor" href="#_bernoulli_experiment"></a>1. Bernoulli-Experiment</h2>
+<h2 id="_was_ist_wichtig_in_c"><a class="anchor" href="#_was_ist_wichtig_in_c"></a>1. Was ist wichtig in C</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Ein Zufallsexperiment wird als Bernoulli-Experiment bezeichnet, wenn es die folgenden Bedingungen erfüllt:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>genau zwei Ergebnisse möglich sind</p>
-</li>
-<li>
-<p>nach jeder durchführung, die Wahrscheinlichkeit für <em>Erfolg</em> <strong>gleich</strong> bleibt</p>
-</li>
-<li>
-<p>beliebig viele voneinander unabhängige Wiederholungen des Zufallsexperiments möglich sind</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Bernoulli-Experiment</strong> sind eigentlich "<strong>Ziehen mit zurücklegen</strong>" Beispiele.</p>
-</div>
 <div class="sect2">
-<h3 id="_beispiel_bernoulli_experimen_oder_auch_ziehen_mit_zurücklegen_gennant"><a class="anchor" href="#_beispiel_bernoulli_experimen_oder_auch_ziehen_mit_zurücklegen_gennant"></a>1.1. Beispiel Bernoulli-Experimen oder auch "<strong>Ziehen mit zurücklegen</strong>" gennant</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-46-29-710.png" alt="image 2021 11 12 21 46 29 710">
-</div>
+<h3 id="_strings"><a class="anchor" href="#_strings"></a>1.1. Strings</h3>
+<div class="paragraph">
+<p>Du musst so einiges in C wissen wie zum Beispiel das es keine Strings gibt sondern Char Arrays.</p>
 </div>
 <div class="paragraph">
-<p>Wird ein Bernoulli-Experiment n-mal durchgeführt, so kann die Wahrscheinlichket für die Anzahl der Erfolge mit der sogennten <strong>Binomialverteilung</strong> berrechnet werden.</p>
+<p>Also wenn du einen String angeben willst, verwende stattdessen ein char[].</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-49-49-772.png" alt="image 2021 11 12 21 49 49 772">
-</div>
+<div class="paragraph">
+<p><code>char name[64]</code> &#8594; String mit der länge 64.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mini_zusammenfassung"><a class="anchor" href="#_mini_zusammenfassung"></a>1.2. Mini Zusammenfassung</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-12-21-50-48-680.png" alt="image 2021 11 12 21 50 48 680">
+<h3 id="_real_types"><a class="anchor" href="#_real_types"></a>1.2. Real Types</h3>
+<div class="paragraph">
+<p>Des öfteren kommen Real Types vor. Das sind einfache Variablen wie double, floater oder long double.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html">Real Types</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input_output"><a class="anchor" href="#_input_output"></a>1.3. Input &amp; Output</h3>
+<div class="sect3">
+<h4 id="_tabbelle"><a class="anchor" href="#_tabbelle"></a>1.3.1. Tabbelle</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Typ / Zeichensequenz</th>
+<th class="tableblock halign-left valign-top">Buchstaben</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%i oder %d</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%ld</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">float/double</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%f</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">char</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%c</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">char* (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%s</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://de.wikipedia.org/wiki/Printf">printf auf wikipedia</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_simple_string_ouput_without_variable"><a class="anchor" href="#_simple_string_ouput_without_variable"></a>1.3.2. Simple string ouput without variable</h4>
+<div class="paragraph">
+<p>Um einen einfachen String auszugeben, musst du nur die folgende Zeile verwenden:</p>
+</div>
+<div class="paragraph">
+<p><code> printf("Hello, world");</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_string_imput_in_variable"><a class="anchor" href="#_string_imput_in_variable"></a>1.3.3. String imput in variable</h4>
+<div class="paragraph">
+<p>Um einen String einzulesen und diesen dann zu speichern verwendest du <strong>%s</strong>:</p>
+</div>
+<div class="paragraph">
+<p><code>scanf("%s" , name);</code></p>
+</div>
+<div class="paragraph">
+<p>Der Wert den du dann in der Console eingibst wird dann in die Variable <strong>name</strong> gespeichert.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_string_output_with_variable"><a class="anchor" href="#_string_output_with_variable"></a>1.3.4. String output with variable</h4>
+<div class="paragraph">
+<p>Um einen String auszugeben, mit dem Wert einer Variable, verwendest du wie beim einlessen *%s+:</p>
+</div>
+<div class="paragraph">
+<p><code> printf("Hallo %s!",name)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_int_input_in_variable"><a class="anchor" href="#_int_input_in_variable"></a>1.3.5. int input in variable</h4>
+<div class="paragraph">
+<p>Um einen int zu Speicher verwendest du <strong>%d</strong>:</p>
+</div>
+<div class="paragraph">
+<p><code>scanf("%d" , &amp;age); </code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_int_output_with_variable"><a class="anchor" href="#_int_output_with_variable"></a>1.3.6. int output with variable</h4>
+<div class="paragraph">
+<p>Um einen int auszugeben, verwendest du <strong>%d</strong>:</p>
+</div>
+<div class="paragraph">
+<p><code> printf("Sie sind %d Jahre alt! ",age); </code></p>
+</div>
+<div class="paragraph">
+<p>Wichtig ist das du vor der Variable ein <strong>&amp;</strong> verwendest. (Wegen Pointer und Address)</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mathe_sa_index"><a class="anchor" href="#_mathe_sa_index"></a>2. Mathe SA Index</h2>
+<h2 id="_flowgorithm_einführung"><a class="anchor" href="#_flowgorithm_einführung"></a>2. Flowgorithm Einführung</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html">Mathe SA Index</a></p>
+<div class="sect2">
+<h3 id="_hello_world"><a class="anchor" href="#_hello_world"></a>2.1. Hello World</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-13-57-26-179.png" alt="image 2021 11 27 13 57 26 179">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main &#8594; Anfang</p>
+</li>
+<li>
+<p>Output "Hello, world!" &#8594; Ausgabe von "Hello, world!"</p>
+</li>
+<li>
+<p>End - Ende</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Hello World code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">// Anfang</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello, world"</span><span class="p">);</span> <span class="c1">// Ausgabe von "Hello, world!"</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Ende</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hello_dave"><a class="anchor" href="#_hello_dave"></a>2.2. Hello Dave</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-14-01-12-563.png" alt="image 2021 11 27 14 01 12 563">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main &#8594; Anfang</p>
+</li>
+<li>
+<p>string name &#8594; Variable name</p>
+</li>
+<li>
+<p>Output &#8594; Fragt nach dem Namen</p>
+</li>
+<li>
+<p>Input &#8594; Name eingeben wie z.B. Dave</p>
+</li>
+<li>
+<p>Output &#8594; "Hallo Dave!"</p>
+</li>
+<li>
+<p>End - Ende</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Hello Dave</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">// Anfang</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span> <span class="c1">// Variable name</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Geben Sie ihren Vornamen ein:"</span><span class="p">);</span> <span class="c1">// Fragt nach dem Namen</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span> <span class="p">,</span> <span class="n">name</span><span class="p">);</span> <span class="c1">// Name eingeben wie z.B. Dave</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hallo %s!"</span><span class="p">,</span><span class="n">name</span><span class="p">);</span> <span class="c1">// "Hallo Dave!"</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Ende</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_name_und_alter"><a class="anchor" href="#_name_und_alter"></a>2.3. Name und Alter</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-15-03-46-678.png" alt="image 2021 11 27 15 03 46 678">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main &#8594; Anfang</p>
+</li>
+<li>
+<p>string name &#8594; Variable name</p>
+</li>
+<li>
+<p>int name &#8594; Variable age</p>
+</li>
+<li>
+<p>Output &#8594; Fragt nach dem Namen</p>
+</li>
+<li>
+<p>Input &#8594; Name eingeben wie z.B. Dave</p>
+</li>
+<li>
+<p>Output &#8594; Fragt nach dem Alter</p>
+</li>
+<li>
+<p>Input &#8594; Name eingeben wie z.B. 18</p>
+</li>
+<li>
+<p>Output &#8594; "Sie sind Dave und 18 Jahre alt!"</p>
+</li>
+<li>
+<p>End - Ende</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Hello Dave and 18</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">// Anfang</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span> <span class="c1">// Variable name</span>
+    <span class="kt">int</span> <span class="n">age</span><span class="p">;</span> <span class="c1">// Variable age</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Geben Sie ihren Vornamen ein: "</span><span class="p">);</span> <span class="c1">// Fragt nach dem Namen</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span> <span class="p">,</span> <span class="n">name</span><span class="p">);</span> <span class="c1">// Name eingeben wie z.B. Dave</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%s, wie alt sind Sie? "</span><span class="p">,</span><span class="n">name</span><span class="p">);</span> <span class="c1">// Fragt nach dem Alter</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">age</span><span class="p">);</span> <span class="c1">// Name eingeben wie z.B. 18</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%s, Sie sind %d Jahre alt! "</span><span class="p">,</span><span class="n">name</span> <span class="p">,</span><span class="n">age</span><span class="p">);</span> <span class="c1">// "Sie sind Dave und 18 Jahre alt!"</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Ende</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summe"><a class="anchor" href="#_summe"></a>2.4. Summe</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-15-23-45-311.png" alt="image 2021 11 27 15 23 45 311">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main &#8594; Anfang</p>
+</li>
+<li>
+<p>Integer a, b, sum &#8594; 3 Variablen a, b und sum (alles int)</p>
+</li>
+<li>
+<p>Output &#8594; Fragt nach 1. Zahl</p>
+</li>
+<li>
+<p>Input &#8594; Zahl a eingeben wie z.B. 31</p>
+</li>
+<li>
+<p>Output &#8594; Fragt nach 2. Zahl</p>
+</li>
+<li>
+<p>Input &#8594; Zahl b eingeben wie z.B. 7</p>
+</li>
+<li>
+<p>sum = a + b &#8594; Variable b initialisieren mit den werten a + b</p>
+</li>
+<li>
+<p>Output &#8594; Die Summe ist sum</p>
+</li>
+<li>
+<p>End - Ende</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Summe</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">// Anfang</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// Variable a</span>
+<span class="kt">int</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Variable b</span>
+<span class="kt">int</span> <span class="n">sum</span><span class="p">;</span> <span class="c1">// Variable sum</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"1. Zahl: "</span><span class="p">);</span> <span class="c1">// Fragt nach 1. Zahl</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span> <span class="c1">// Zahl a eingeben wie z.B. 31</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"2. Zahl "</span><span class="p">);</span> <span class="c1">// Fragt nach 2. Zahl</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span> <span class="c1">// Zahl b eingeben wie z.B. 7</span>
+
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// Variable sum initialisieren mit den werten a + b also speichern in sum</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Die Summe ist %d."</span><span class="p">,</span><span class="n">sum</span><span class="p">);</span> <span class="c1">// Die Summe ist sum</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Ende</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kreis"><a class="anchor" href="#_kreis"></a>2.5. Kreis</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-15-31-08-266.png" alt="image 2021 11 27 15 31 08 266">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Main &#8594; Anfang</p>
+</li>
+<li>
+<p>Real radius, area &#8594; 2 Variablen radius und area (beide double | <a href="https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html">Real Types</a>)</p>
+</li>
+<li>
+<p>Output &#8594; Fragt Radius</p>
+</li>
+<li>
+<p>Input &#8594; Radius eingeben wie z.B. 3</p>
+</li>
+<li>
+<p>area = radius * radius * 3.14&#8594; Fläche ausrechnen mit radius * radius * 3.14f und in area speichern (f damit es ein double ist, muss aber nicht sein)</p>
+</li>
+<li>
+<p>Output &#8594; Die Fläche ist area</p>
+</li>
+<li>
+<p>End - Ende</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Kreis</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">// Anfang</span>
+<span class="p">{</span>
+<span class="kt">double</span> <span class="n">radius</span><span class="p">;</span> <span class="c1">// Variable Radius</span>
+<span class="kt">double</span> <span class="n">area</span><span class="p">;</span> <span class="c1">// Variable Fläche</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Kresiberrechnung. Geben Sie den Radius ein: "</span><span class="p">);</span> <span class="c1">// Fragt Radius</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">radius</span><span class="p">);</span> <span class="c1">// Radius eingeben wie z.B. 3</span>
+
+
+
+    <span class="n">area</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14</span><span class="n">f</span><span class="p">;</span> <span class="c1">// Fläche ausrechnen mit radius * radius * 3.14f und in area speichern</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Fläche: %lf"</span><span class="p">,</span> <span class="n">area</span><span class="p">);</span> <span class="c1">// Die Fläche ist area</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Ende</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-27 12:15:33 UTC
+Last updated 2021-11-27 15:06:52 UTC
 </div>
 </div>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .sa, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
 </body>
 </html>
