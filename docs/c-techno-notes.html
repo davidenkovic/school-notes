@@ -460,6 +460,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_kreis">2.5. Kreis</a></li>
 </ul>
 </li>
+<li><a href="#_verzweigung">3. Verzweigung</a>
+<ul class="sectlevel2">
+<li><a href="#_main">3.1. Main</a></li>
+<li><a href="#_input_output_2">3.2. Input &amp; Output</a></li>
+<li><a href="#_if">3.3. If</a></li>
+<li><a href="#_else_if">3.4. else if</a></li>
+<li><a href="#_end">3.5. End</a></li>
+</ul>
+</li>
+<li><a href="#_verzweigung_code">4. Verzweigung Code</a></li>
+<li><a href="#_wichtiges_über_die_verzweigung">5. Wichtiges über die Verzweigung</a>
+<ul class="sectlevel2">
+<li><a href="#_vergleichsoperatoren">5.1. Vergleichsoperatoren</a></li>
+<li><a href="#_der_modulo_operator">5.2. Der Modulo-Operator</a></li>
+</ul>
+</li>
+<li><a href="#_bedingungen_verknüpfen">6. Bedingungen verknüpfen</a>
+<ul class="sectlevel2">
+<li><a href="#_und_verknüpfung">6.1. Und-Verknüpfung &amp;&amp;</a></li>
+<li><a href="#_oder_verknüpfung">6.2. Oder-Verknüpfung ||</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -854,10 +876,333 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_verzweigung"><a class="anchor" href="#_verzweigung"></a>3. Verzweigung</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-08-48-484.png" alt="image 2021 11 27 18 08 48 484">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_main"><a class="anchor" href="#_main"></a>3.1. Main</h3>
+<div class="paragraph">
+<p>Wie bei den oberen Beispielen fangen wir bei dem <strong>Main</strong> Block an und gehen runter bist zu dem <strong>End</strong> Block.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input_output_2"><a class="anchor" href="#_input_output_2"></a>3.2. Input &amp; Output</h3>
+<div class="paragraph">
+<p>Nach dem <strong>Main</strong> Block kommt das Festlegen der Variable <em>number</em>.
+Das Programm fragt den User nach einer Zahl und diese wird dann auch in der Variable <em>number</em> gespeichert.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_if"><a class="anchor" href="#_if"></a>3.3. If</h3>
+<div class="paragraph">
+<p>Nach dem ganzen <strong>Output</strong> und <strong>Input</strong> folgt die erste <strong>Verzweigung</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Die <strong>Verzweigung</strong> prüft ob die oben eingegebene <strong>Zahl größer ist als 0</strong>.</p>
+</div>
+<div class="paragraph">
+<p><em>Folgendes Szenario:</em></p>
+</div>
+<div class="paragraph">
+<p>Der User gibt die Zahl <strong>10</strong> ein. Heißt automatisch das die Bedingung, also <strong>Zahl größer als 0</strong>, <em>richig</em> ist.</p>
+</div>
+<div class="paragraph">
+<p><code>10 &gt; 0 &#8594; true</code></p>
+</div>
+<div class="paragraph">
+<p>Wenn der User aber <strong>0</strong> eingibt, ist die Bedigung falsch.</p>
+</div>
+<div class="paragraph">
+<p><code>10 &gt; 0 &#8594; false</code></p>
+</div>
+<div class="paragraph">
+<p>Würde der User eine negative Zahl eingeben dann wäre die Bedingung ebenso Falsch.</p>
+</div>
+<div class="paragraph">
+<p><code>-10 &gt; 0 &#8594; false</code></p>
+</div>
+<div class="sect3">
+<h4 id="_if_true"><a class="anchor" href="#_if_true"></a>3.3.1. if true</h4>
+<div class="paragraph">
+<p>Wenn also die Bedingung True ist, hüpft unser Programm in die Anweisung ein.</p>
+</div>
+<div class="paragraph">
+<p>In anderen Worten in den Körper der <strong>iF-Verzweigung</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-19-37-548.png" alt="image 2021 11 27 18 19 37 548">
+</div>
+</div>
+<div class="paragraph">
+<p>Das Programm gibt aus: <em>"Less than 0"</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_if_false"><a class="anchor" href="#_if_false"></a>3.3.2. if false</h4>
+<div class="paragraph">
+<p>Wenn die bedingung falsch ist, geht unser Programm weiter und ignoriert sommit, was in dem Körper der if-Verzweigung steht.</p>
+</div>
+<div class="paragraph">
+<p>Da es bei diesem Beispiel keinne <strong>else</strong> gibt kommt gleich nach den wider eine <strong>if</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Diese Wird aber <strong>elseif</strong> genannt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-23-45-635.png" alt="image 2021 11 27 18 23 45 635">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_else_if"><a class="anchor" href="#_else_if"></a>3.4. else if</h3>
+<div class="paragraph">
+<p>Eine <strong>Elseif</strong> ist das gleiche wie eine normale if nur das sie erst dann verwendet wird, wenn nach einer if-Verzweigung eine weitere Überprüfung stattfinden soll.</p>
+</div>
+<div class="paragraph">
+<p>In unserem Beispiel soll unser Programm bei der ersten <strong>if-VErzweigung</strong> überprüfen ob die Zahl größer als null ist.
+Wenn das nicht der Fall ist, sollte unser Programm gleich wieder Überprüfen ob es sich um die Zahl <strong>0</strong> handelt oder um eine <strong>negative Zahl</strong>.</p>
+</div>
+<div class="sect3">
+<h4 id="_else_if_false"><a class="anchor" href="#_else_if_false"></a>3.4.1. else if false</h4>
+<div class="paragraph">
+<p>Wenn der User oben <strong>100</strong> eingegeben hat, trifft folgendes Szenario auf.</p>
+</div>
+<div class="paragraph">
+<p><code>100 == 0 &#8594; false</code></p>
+</div>
+<div class="paragraph">
+<p>somit hüpft unser Programm aus der Verzweigung raus.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-29-52-048.png" alt="image 2021 11 27 18 29 52 048">
+</div>
+</div>
+<div class="sect4">
+<h5 id="_else_if_true"><a class="anchor" href="#_else_if_true"></a>else if true</h5>
+<div class="paragraph">
+<p>Wenn der User aber <strong>0</strong> eingegeben hat dann ist die Bedingung <strong>true</strong>.</p>
+</div>
+<div class="paragraph">
+<p><code>0 == 0 &#8594; true</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-31-29-527.png" alt="image 2021 11 27 18 31 29 527">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_end"><a class="anchor" href="#_end"></a>3.5. End</h3>
+<div class="paragraph">
+<p>Egal welchen weg unser Programm gewählt hat wir kommen immer zum Ende.
+Was aber währen dem Weg ausgegeben wurde hängt von der <strong>user eingabe</strong> ab da in den beiden verzweigungen unterschiedlichen Ausgaben passiert sind.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-11-27-18-34-58-767.png" alt="image 2021 11 27 18 34 58 767">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verzweigung_code"><a class="anchor" href="#_verzweigung_code"></a>4. Verzweigung Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So würde unser Beispiel als Code aussehen:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="c1">//anfang</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Geben Sie eine Zahl ein: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">);</span> <span class="c1">// Zahl einlessen</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// Ist die Zahl Kleiner als 0?</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Less than 0"</span><span class="p">);</span> <span class="c1">// Ja! Die Zahl is Kleiner als 0.</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// Die Zahl war kleiner als null doch ist sie jetzt gleich 0?</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Equals 0"</span><span class="p">);</span> <span class="c1">// Ja! Die Zahl ist gleich 0.</span>
+
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span> <span class="c1">// Die Zahl war nicht kleiner als 0 und auch nicht gleich 0.</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Greater than 0"</span><span class="p">);</span> <span class="c1">// Die Zahl kann jz nur größer als 10 sein</span>
+    <span class="p">}</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wichtiges_über_die_verzweigung"><a class="anchor" href="#_wichtiges_über_die_verzweigung"></a>5. Wichtiges über die Verzweigung</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_vergleichsoperatoren"><a class="anchor" href="#_vergleichsoperatoren"></a>5.1. Vergleichsoperatoren</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Operator</th>
+<th class="tableblock halign-left valign-top">Operator</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>==</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gleich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a == b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!=</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ungleich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a != b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kleiner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &lt; b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">größer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &gt; b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8656;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kleiner geich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &#8656; b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;=</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">größer gleich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &gt;= b</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_der_modulo_operator"><a class="anchor" href="#_der_modulo_operator"></a>5.2. Der Modulo-Operator</h3>
+<div class="paragraph">
+<p>Wir haben bis jetzt die Operatoren +, -, * und / kennengelernt. Jetzt kommt noch einer dazu:</p>
+</div>
+<div class="paragraph">
+<p><strong>Der Modulo-Operator %.</strong></p>
+</div>
+<div class="paragraph">
+<p>Der Modulo-Operator berechnet den Rest einer ganzzahligen Division.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>5 % 2 = 1 &#8594; 5 dividiert durch 2 ist 2, Rest 1.</p>
+</li>
+<li>
+<p>20 % 3 = 2 &#8594; 20 dividiert durch 3 ist 18, Rest 2</p>
+</li>
+<li>
+<p>37 % 10 = 7 &#8594; 37 dividiert durch 10 ist 3, Rest 7</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wenn ich den Modulo-Operator in einer Bedingung verwende, wird das häufig gemacht, ob der Rest
+einer Division gleich einem bestimmten Wert ist. Für die Gleichheit verwenden wir das doppelte Gleichheitszeichen ==.</p>
+</div>
+<div class="paragraph">
+<p>Um zu prüfen, ob der Rest der Division durch 2 gleich 0 ist, schreibt man also:</p>
+</div>
+<div class="paragraph">
+<p><code>a % 2 == 0</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Diese Bedingung ist wahr, wenn a eine gerade Zahl ist!</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bedingungen_verknüpfen"><a class="anchor" href="#_bedingungen_verknüpfen"></a>6. Bedingungen verknüpfen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wenn du bei einer Bedingung 2 Abfragen haben willst, läuft das so ab:</p>
+</div>
+<div class="paragraph">
+<p>Es gibt zwei arten von Verknüpfungen.</p>
+</div>
+<div class="sect2">
+<h3 id="_und_verknüpfung"><a class="anchor" href="#_und_verknüpfung"></a>6.1. Und-Verknüpfung &amp;&amp;</h3>
+<div class="paragraph">
+<p>Bei der <strong>Und-Verknüpfung</strong> werden 2 (oder mehr) Bedingungen zusammen gesetzt und <strong>beide müssen true sein</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Z.B.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Die Zahl ist zwischen 0 und 10"</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mann kann auch mehrere Bedingungen anhängen. Wichtig ist das alles True sein muss um in den Body zu kommen.</p>
+</div>
+<div class="paragraph">
+<p>Z.B.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="n">number</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Die Zahl ist zwischen 0 und 10 darf aber nicht 5 sein"</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oder_verknüpfung"><a class="anchor" href="#_oder_verknüpfung"></a>6.2. Oder-Verknüpfung ||</h3>
+<div class="paragraph">
+<p>Anders bei der Und-Verknüpfung müssen hier nicht alle Bedingungen <strong>True</strong> sein.</p>
+</div>
+<div class="paragraph">
+<p>Z.B.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="c"><span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">10</span> <span class="o">||</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Die Zahl ist entweder 0, 5 oder 10"</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-11-27 15:06:52 UTC
+Last updated 2021-11-27 18:09:40 UTC
 </div>
 </div>
 <style>

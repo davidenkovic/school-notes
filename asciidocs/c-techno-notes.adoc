@@ -243,3 +243,217 @@ double area; // Variable Fläche
     return 0; // Ende
 }
 ----
+
+== Verzweigung
+
+image::images/image-2021-11-27-18-08-48-484.png[]
+
+=== Main
+
+Wie bei den oberen Beispielen fangen wir bei dem *Main* Block an und gehen runter bist zu dem *End* Block.
+
+=== Input & Output
+Nach dem *Main* Block kommt das Festlegen der Variable _number_.
+Das Programm fragt den User nach einer Zahl und diese wird dann auch in der Variable _number_ gespeichert.
+
+=== If
+
+Nach dem ganzen *Output* und *Input* folgt die erste *Verzweigung*.
+
+Die *Verzweigung* prüft ob die oben eingegebene *Zahl größer ist als 0*.
+
+_Folgendes Szenario:_
+
+Der User gibt die Zahl *10* ein. Heißt automatisch das die Bedingung, also *Zahl größer als 0*, _richig_ ist.
+
+``10 > 0 -> true``
+
+Wenn der User aber *0* eingibt, ist die Bedigung falsch.
+
+``10 > 0 -> false``
+
+Würde der User eine negative Zahl eingeben dann wäre die Bedingung ebenso Falsch.
+
+``-10 > 0 -> false``
+
+==== if true
+
+Wenn also die Bedingung True ist, hüpft unser Programm in die Anweisung ein.
+
+In anderen Worten in den Körper der *iF-Verzweigung*.
+
+image::images/image-2021-11-27-18-19-37-548.png[]
+
+Das Programm gibt aus: _"Less than 0"_
+
+==== if false
+
+Wenn die bedingung falsch ist, geht unser Programm weiter und ignoriert sommit, was in dem Körper der if-Verzweigung steht.
+
+Da es bei diesem Beispiel keinne *else* gibt kommt gleich nach den wider eine *if*.
+
+Diese Wird aber *elseif* genannt.
+
+image::images/image-2021-11-27-18-23-45-635.png[]
+
+=== else if
+
+Eine *Elseif* ist das gleiche wie eine normale if nur das sie erst dann verwendet wird, wenn nach einer if-Verzweigung eine weitere Überprüfung stattfinden soll.
+
+In unserem Beispiel soll unser Programm bei der ersten *if-VErzweigung* überprüfen ob die Zahl größer als null ist.
+Wenn das nicht der Fall ist, sollte unser Programm gleich wieder Überprüfen ob es sich um die Zahl *0* handelt oder um eine *negative Zahl*.
+
+==== else if false
+
+Wenn der User oben *100* eingegeben hat, trifft folgendes Szenario auf.
+
+``100 == 0 -> false``
+
+somit hüpft unser Programm aus der Verzweigung raus.
+
+image::images/image-2021-11-27-18-29-52-048.png[]
+
+===== else if true
+
+Wenn der User aber *0* eingegeben hat dann ist die Bedingung *true*.
+
+``0 == 0 -> true``
+
+image::images/image-2021-11-27-18-31-29-527.png[]
+
+=== End
+
+Egal welchen weg unser Programm gewählt hat wir kommen immer zum Ende.
+Was aber währen dem Weg ausgegeben wurde hängt von der *user eingabe* ab da in den beiden verzweigungen unterschiedlichen Ausgaben passiert sind.
+
+image::images/image-2021-11-27-18-34-58-767.png[]
+
+== Verzweigung Code
+
+So würde unser Beispiel als Code aussehen:
+
+[source, c]
+----
+#include <stdio.h>
+
+int main() //anfang
+{
+    int number;
+
+    printf("Geben Sie eine Zahl ein: ");
+    scanf("%d" , &number); // Zahl einlessen
+
+    if(number < 0){ // Ist die Zahl Kleiner als 0?
+        printf("Less than 0"); // Ja! Die Zahl is Kleiner als 0.
+    }
+    else if(number == 0){ // Die Zahl war kleiner als null doch ist sie jetzt gleich 0?
+        printf("Equals 0"); // Ja! Die Zahl ist gleich 0.
+
+    }
+    else{ // Die Zahl war nicht kleiner als 0 und auch nicht gleich 0.
+        printf("Greater than 0"); // Die Zahl kann jz nur größer als 10 sein
+    }
+
+
+    return 0;
+}
+----
+
+== Wichtiges über die Verzweigung
+
+=== Vergleichsoperatoren
+
+[cols="1,1,1"]
+|===
+| Operator | Operator | Beispiel
+
+| *==*
+| gleich
+| a == b
+
+| !=
+| ungleich
+| a != b
+
+| <
+| kleiner
+| a < b
+
+| >
+| größer
+| a > b
+
+| <=
+| kleiner geich
+| a <= b
+
+| >=
+| größer gleich
+| a >= b
+
+|===
+
+=== Der Modulo-Operator
+
+Wir haben bis jetzt die Operatoren +, -, * und / kennengelernt. Jetzt kommt noch einer dazu:
+
+*Der Modulo-Operator %.*
+
+Der Modulo-Operator berechnet den Rest einer ganzzahligen Division.
+
+* 5 % 2 = 1 -> 5 dividiert durch 2 ist 2, Rest 1.
+* 20 % 3 = 2 -> 20 dividiert durch 3 ist 18, Rest 2
+* 37 % 10 = 7 -> 37 dividiert durch 10 ist 3, Rest 7
+
+Wenn ich den Modulo-Operator in einer Bedingung verwende, wird das häufig gemacht, ob der Rest
+einer Division gleich einem bestimmten Wert ist. Für die Gleichheit verwenden wir das doppelte Gleichheitszeichen ==.
+
+Um zu prüfen, ob der Rest der Division durch 2 gleich 0 ist, schreibt man also:
+
+``a % 2 == 0``
+
+*Diese Bedingung ist wahr, wenn a eine gerade Zahl ist!*
+
+== Bedingungen verknüpfen
+
+
+Wenn du bei einer Bedingung 2 Abfragen haben willst, läuft das so ab:
+
+Es gibt zwei arten von Verknüpfungen.
+
+=== Und-Verknüpfung &&
+
+Bei der *Und-Verknüpfung* werden 2 (oder mehr) Bedingungen zusammen gesetzt und *beide müssen true sein*.
+
+Z.B.:
+
+[source,c]
+----
+if(number > 0 && number < 10){
+    printf("Die Zahl ist zwischen 0 und 10");
+}
+----
+
+Mann kann auch mehrere Bedingungen anhängen. Wichtig ist das alles True sein muss um in den Body zu kommen.
+
+Z.B.:
+
+[source,c]
+----
+if(number > 0 && number < 10 && number != 5){
+    printf("Die Zahl ist zwischen 0 und 10 darf aber nicht 5 sein");
+}
+----
+
+=== Oder-Verknüpfung ||
+
+Anders bei der Und-Verknüpfung müssen hier nicht alle Bedingungen *True* sein.
+
+Z.B.:
+
+[source,c]
+----
+if(number == 0 || number == 10 || number == 5){
+    printf("Die Zahl ist entweder 0, 5 oder 10");
+}
+----
