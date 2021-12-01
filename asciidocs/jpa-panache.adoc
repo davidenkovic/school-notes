@@ -1,0 +1,386 @@
+= JPA/Panache
+
+*JPA* Zusammenfassung wurde schon geschrieben:
+
+link:https://davidenkovic.github.io/school-notes/jpa-test.html[JPA Zusammenfassung ohne Panache]
+
+== Beispiel
+
+[source,java]
+----
+@Entity
+public class Person extends PanacheEntity {
+    public String name;
+    public LocalDate birth;
+    public Status status;
+
+    public static Person findByName(String name){
+        return find("name", name).firstResult(); // Select by name
+    }
+
+    public static List<Person> findAlive(){
+        return list("status", Status.Alive); // Filter by status
+    }
+
+    public static void deleteStefs(){
+        delete("name", "Stef"); // delete all Stefs
+    }
+}
+----
+
+== Einstellungen
+
+=== Pom.xml
+
+[source,xml]
+----
+<dependencies>
+    <!-- Hibernate ORM specific dependencies -->
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-hibernate-orm-panache</artifactId>
+    </dependency>
+
+    <!-- JDBC driver dependencies -->
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-jdbc-postgresql</artifactId>
+    </dependency>
+</dependencies>
+----
+
+=== Hibernet
+
+[source,properties]
+----
+
+# configure your datasource
+quarkus.datasource.db-kind = postgresql
+quarkus.datasource.username = sarah
+quarkus.datasource.password = connor
+quarkus.datasource.jdbc.url = jdbc:postgresql://localhost:5432/mydatabase
+
+# drop and create the database at startup (use `update` to only update the schema)
+quarkus.hibernate-orm.database.generation = drop-and-create
+
+----
+
+=== Entity
+
+Um eine Panache Entity zu definieren, wird diese mit `Entity` annotiert und mit `PanacheEntity` erweitert.
+
+[source,java]
+----
+@Entity
+public class Person extends PanacheEntity {
+    public String name;
+    public LocalDate birth;
+    public Status status;
+}
+----
+
+JPA columns werden einfach als normale Klassenfelder definiert.
+
+Wenn man ein feld nicht persistieren will, verwendet man `@Transient`
+
+Transient -> Vorübergehend
+
+[source,java]
+----
+@Entity
+public class Person extends PanacheEntity {
+    public String name;
+    public LocalDate birth;
+    public Status status;
+
+    // return name as uppercase in the model
+    public String getName(){
+        return name.toUpperCase();
+    }
+
+    // store all names in lowercase in the DB
+    public void setName(String name){
+        this.name = name.toLowerCase();
+    }
+}
+----
+
+== Repository
+
+Bei jeder Repository ist es wichtig `@ApplicationScoped` zu verwenden.
+
+Um die ganzen Panache Methoden zu benützen, verwenden wir `PanacheRepository<Entity>`.
+
+.Person Entity
+[source,java]
+----
+@Entity
+public class Person {
+    @Id @GeneratedValue private Long id;
+    private String name;
+    private LocalDate birth;
+    private Status status;
+
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id){
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public LocalDate getBirth() {
+        return birth;
+    }
+    public void setBirth(LocalDate birth) {
+        this.birth = birth;
+    }
+    public Status getStatus() {
+        return status;
+    }
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+}
+----
+
+.PersonRepository
+[source,java]
+----
+@ApplicationScoped
+public class PersonRepository implements PanacheRepository<Person> {
+
+   // put your custom logic here as instance methods
+
+   public Person findByName(String name){
+       return find("name", name).firstResult();
+   }
+
+   public List<Person> findAlive(){
+       return list("status", Status.Alive);
+   }
+
+   public void deleteStefs(){
+       delete("name", "Stef");
+  }
+}
+----
+
+.Verwenden von Repositories
+[source,java]
+----
+@Inject
+PersonRepository personRepository;
+
+@GET
+public long count(){
+    return personRepository.count();
+}
+----
+
+== Meist verwendete usecases
+
+[source,java]
+----
+// creating a person
+Person person = new Person();
+person.setName("Stef");
+person.setBirth(LocalDate.of(1910, Month.FEBRUARY, 1));
+person.setStatus(Status.Alive);
+
+// persist
+personRepository.persist(person);
+
+// check if it's persistent
+if(personRepository.isPersistent(person)){
+    // delete it
+    personRepository.delete(person);
+}
+
+// getting a list of all Person entities
+List<Person> allPersons = personRepository.listAll();
+
+// finding a specific person by ID
+person = personRepository.findById(personId);
+
+// finding a specific person by ID via an Optional
+Optional<Person> optional = personRepository.findByIdOptional(personId);
+person = optional.orElseThrow(() -> new NotFoundException());
+
+// finding all living persons
+List<Person> livingPersons = personRepository.list("status", Status.Alive);
+
+// counting all persons
+long countAll = personRepository.count();
+
+// counting all living persons
+long countAlive = personRepository.count("status", Status.Alive);
+
+// delete all living persons
+personRepository.delete("status", Status.Alive);
+
+// delete all persons
+personRepository.deleteAll();
+
+// delete by id
+boolean deleted = personRepository.deleteById(personId);
+
+// set the name of all living persons to 'Mortal'
+personRepository.update("name = 'Mortal' where status = ?1", Status.Alive);
+----
+
+== Stream optionen
+
+[source, java]
+----
+Stream<Person> persons = personRepository.streamAll();
+List<String> namesButEmmanuels = persons
+    .map(p -> p.name.toLowerCase() )
+    .filter( n -> ! "emmanuel".equals(n) )
+    .collect(Collectors.toList());
+----
+
+== Sorting
+
+=== Query
+
+[source, java]
+----
+List<Person> persons = Person.list("order by name,birth");
+----
+=== Parameter
+
+[source, java]
+----
+List<Person> persons = Person.list(Sort.by("name").and("birth"));
+
+// and with more restrictions
+List<Person> persons = Person.list("status", Sort.by("name").and("birth"), Status.Alive);
+----
+
+== Queries
+
+[source, java]
+----
+Order.find("select distinct o from Order o left join fetch o.lineItems");
+Order.update("update from Person set name = 'Mortal' where status = ?", Status.Alive);
+----
+
+== Named queries
+
+[source, java]
+----
+@Entity
+@NamedQueries({
+    @NamedQuery(name = "Person.getByName", query = "from Person where name = ?1"),
+    @NamedQuery(name = "Person.countByStatus", query = "select count(*) from Person p where p.status = :status"),
+    @NamedQuery(name = "Person.updateStatusById", query = "update Person p set p.status = :status where p.id = :id"),
+    @NamedQuery(name = "Person.deleteById", query = "delete from Person p where p.id = ?1")
+})
+
+public class Person extends PanacheEntity {
+    public String name;
+    public LocalDate birth;
+    public Status status;
+
+    public static Person findByName(String name){
+        return find("#Person.getByName", name).firstResult();
+    }
+
+    public static long countByStatus(Status status) {
+        return count("#Person.countByStatus", Parameters.with("status", status).map());
+    }
+
+    public static long updateStatusById(Status status, long id) {
+        return update("#Person.updateStatusById", Parameters.with("status", status).and("id", id));
+    }
+
+    public static long deleteById(long id) {
+        return delete("#Person.deleteById", id);
+    }
+}
+----
+
+== Query parameters
+
+[source, java]
+----
+// generate a Map
+Person.find("name = :name and status = :status",
+         Parameters.with("name", "stef").and("status", Status.Alive).map());
+
+// use it as-is
+Person.find("name = :name and status = :status",
+         Parameters.with("name", "stef").and("status", Status.Alive));
+----
+
+== PanacheQuery (Personal Favorite)
+
+[source, java]
+----
+public class PersonName {
+    public final String name;
+
+    public PersonName(String name){
+        this.name = name;
+    }
+}
+
+// only 'name' will be loaded from the database
+PanacheQuery<PersonName> query = Person.find("status", Status.Alive).project(PersonName.class);
+----
+
+== Transactions
+
+Wichtig ist es jede Methode mit `@Transactional` zu annotieren, wenn Transaktionen auf der Datenbank passieren wie zum Beispiel `persist`.
+
+.persistAndFlush Beispiel
+[source, java]
+----
+@Transactional
+public void create(Parameter parameter){
+    try {
+        //Here I use the persistAndFlush() shorthand method on a Panache repository to persist to database then flush the changes.
+        return parameterRepository.persistAndFlush(parameter);
+    }
+    catch(PersistenceException pe){
+        LOG.error("Unable to create the parameter", pe);
+        //in case of error, I save it to disk
+        diskPersister.save(parameter);
+    }
+}
+----
+
+== Custom IDs
+
+[source, java]
+----
+@Entity
+public class Person extends PanacheEntityBase {
+
+    @Id
+    @SequenceGenerator(
+            name = "personSequence",
+            sequenceName = "person_id_seq",
+            allocationSize = 1,
+            initialValue = 4)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "personSequence")
+    public Integer id;
+
+    //...
+}
+----
+
+Wenn wir dann unsere eigene ID benützen, verwenden wir `PanacheRepositoryBase` statt `PanacheRepository`.
+
+[source, java]
+----
+@ApplicationScoped
+public class PersonRepository implements PanacheRepositoryBase<Person,Integer> {
+    //...
+}
+----
