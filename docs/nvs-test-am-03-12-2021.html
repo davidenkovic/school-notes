@@ -445,6 +445,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_stoff">1. Stoff</a></li>
+<li><a href="#_jpapanache">2. JPA/Panache</a>
+<ul class="sectlevel2">
+<li><a href="#_beispiel">2.1. Beispiel</a></li>
+<li><a href="#_einstellungen">2.2. Einstellungen</a></li>
+<li><a href="#_entity">2.3. Entity</a></li>
+<li><a href="#_repository">2.4. Repository</a></li>
+<li><a href="#_meist_verwendete_usecases">2.5. Meist verwendete usecases</a></li>
+<li><a href="#_stream_optionen">2.6. Stream optionen</a></li>
+<li><a href="#_sorting">2.7. Sorting</a></li>
+<li><a href="#_queries">2.8. Queries</a></li>
+<li><a href="#_named_queries">2.9. Named queries</a></li>
+<li><a href="#_query_parameters">2.10. Query parameters</a></li>
+<li><a href="#_panachequery_personal_favorite">2.11. PanacheQuery (Personal Favorite)</a></li>
+<li><a href="#_transactions">2.12. Transactions</a></li>
+<li><a href="#_custom_ids">2.13. Custom IDs</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -494,21 +511,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<details>
-<summary class="title">JPA/Panache</summary>
-<div class="content">
-<div class="paragraph">
-<p>== JPA/Panache</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_jpapanache"><a class="anchor" href="#_jpapanache"></a>2. JPA/Panache</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>JPA</strong> Zusammenfassung wurde schon geschrieben:</p>
 </div>
 <div class="paragraph">
 <p><a href="https://davidenkovic.github.io/school-notes/jpa-test.html">JPA Zusammenfassung ohne Panache</a></p>
 </div>
-<div class="paragraph">
-<p>=== Beispiel</p>
-</div>
+<div class="sect2">
+<h3 id="_beispiel"><a class="anchor" href="#_beispiel"></a>2.1. Beispiel</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
@@ -531,12 +546,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Einstellungen</p>
 </div>
-<div class="paragraph">
-<p>==== Pom.xml</p>
-</div>
+<div class="sect2">
+<h3 id="_einstellungen"><a class="anchor" href="#_einstellungen"></a>2.2. Einstellungen</h3>
+<div class="sect3">
+<h4 id="_pom_xml"><a class="anchor" href="#_pom_xml"></a>2.2.1. Pom.xml</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;dependencies&gt;</span>
@@ -554,9 +568,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="nt">&lt;/dependencies&gt;</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>==== Hibernet</p>
 </div>
+<div class="sect3">
+<h4 id="_hibernet"><a class="anchor" href="#_hibernet"></a>2.2.2. Hibernet</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="properties"><span class="c"># configure your datasource
@@ -569,9 +583,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </span><span class="py">quarkus.hibernate-orm.database.generation</span> <span class="p">=</span> <span class="s">drop-and-create</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Entity</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_entity"><a class="anchor" href="#_entity"></a>2.3. Entity</h3>
 <div class="paragraph">
 <p>Um eine Panache Entity zu definieren, wird diese mit <code>Entity</code> annotiert und mit <code>PanacheEntity</code> erweitert.</p>
 </div>
@@ -614,9 +629,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Repository</p>
 </div>
+<div class="sect2">
+<h3 id="_repository"><a class="anchor" href="#_repository"></a>2.4. Repository</h3>
 <div class="paragraph">
 <p>Bei jeder Repository ist es wichtig <code>@ApplicationScoped</code> zu verwenden.</p>
 </div>
@@ -694,9 +709,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Meist verwendete usecases</p>
 </div>
+<div class="sect2">
+<h3 id="_meist_verwendete_usecases"><a class="anchor" href="#_meist_verwendete_usecases"></a>2.5. Meist verwendete usecases</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="c1">// creating a person</span>
@@ -746,9 +761,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="n">personRepository</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="s">"name = 'Mortal' where status = ?1"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Stream optionen</p>
 </div>
+<div class="sect2">
+<h3 id="_stream_optionen"><a class="anchor" href="#_stream_optionen"></a>2.6. Stream optionen</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nc">Stream</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">streamAll</span><span class="o">();</span>
@@ -758,20 +773,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
     <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Sorting</p>
 </div>
-<div class="paragraph">
-<p>==== Query</p>
-</div>
+<div class="sect2">
+<h3 id="_sorting"><a class="anchor" href="#_sorting"></a>2.7. Sorting</h3>
+<div class="sect3">
+<h4 id="_query"><a class="anchor" href="#_query"></a>2.7.1. Query</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="s">"order by name,birth"</span><span class="o">);</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>==== Parameter</p>
 </div>
+<div class="sect3">
+<h4 id="_parameter"><a class="anchor" href="#_parameter"></a>2.7.2. Parameter</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="nc">Sort</span><span class="o">.</span><span class="na">by</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"birth"</span><span class="o">));</span>
@@ -780,18 +794,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Sort</span><span class="o">.</span><span class="na">by</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"birth"</span><span class="o">),</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Queries</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_queries"><a class="anchor" href="#_queries"></a>2.8. Queries</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nc">Order</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"select distinct o from Order o left join fetch o.lineItems"</span><span class="o">);</span>
 <span class="nc">Order</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="s">"update from Person set name = 'Mortal' where status = ?"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Named queries</p>
 </div>
+<div class="sect2">
+<h3 id="_named_queries"><a class="anchor" href="#_named_queries"></a>2.9. Named queries</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
@@ -825,9 +840,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Query parameters</p>
 </div>
+<div class="sect2">
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>2.10. Query parameters</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="c1">// generate a Map</span>
@@ -839,9 +854,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
          <span class="nc">Parameters</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"stef"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">));</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== PanacheQuery (Personal Favorite)</p>
 </div>
+<div class="sect2">
+<h3 id="_panachequery_personal_favorite"><a class="anchor" href="#_panachequery_personal_favorite"></a>2.11. PanacheQuery (Personal Favorite)</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonName</span> <span class="o">{</span>
@@ -856,9 +871,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="nc">PanacheQuery</span><span class="o">&lt;</span><span class="nc">PersonName</span><span class="o">&gt;</span> <span class="n">query</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">).</span><span class="na">project</span><span class="o">(</span><span class="nc">PersonName</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Transactions</p>
 </div>
+<div class="sect2">
+<h3 id="_transactions"><a class="anchor" href="#_transactions"></a>2.12. Transactions</h3>
 <div class="paragraph">
 <p>Wichtig ist es jede Methode mit <code>@Transactional</code> zu annotieren, wenn Transaktionen auf der Datenbank passieren wie zum Beispiel <code>persist</code>.</p>
 </div>
@@ -879,9 +894,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== Custom IDs</p>
 </div>
+<div class="sect2">
+<h3 id="_custom_ids"><a class="anchor" href="#_custom_ids"></a>2.13. Custom IDs</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
@@ -912,13 +927,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</details>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-01 19:52:46 UTC
+Last updated 2021-12-01 19:58:21 UTC
 </div>
 </div>
 <style>
