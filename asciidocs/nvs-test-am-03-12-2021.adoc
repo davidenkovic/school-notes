@@ -14,9 +14,6 @@
 ** Konfiguration von Karate ist vorbereitet
 ** de Webseiten (Doku) von assertJ und karate dürfen benutzt werden
 
-.JPA/Panache
-[%collapsible]
-====
 
 == JPA/Panache
 
@@ -404,5 +401,3 @@ public class PersonRepository implements PanacheRepositoryBase<Person,Integer> {
     //...
 }
 ----
-
-====
