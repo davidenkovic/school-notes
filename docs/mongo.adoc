@@ -1,0 +1,147 @@
+= MongoDB Zusammenfassung
+:icons: font
+:sectnums:
+:toc: left
+:iconfont-cdn: path/to/fontawesome.css
+
+== Basic Commands
+
+=== DB anlegen
+
+[source,shell script]
+----
+use mongodb // Erstellt oder wechselt auf die DB mitarbeiter
+db // Print -> jetzige DB -> mitarbeiter
+----
+
+=== DB Hilfe
+
+[source,shell script]
+----
+db.help(); // Funktionen des „db“-Objekts anzeigen lassen
+----
+
+=== Collection erstellen
+
+[source,shell script]
+----
+db.createCollection("mitarbeiter");
+----
+
+=== Collection Hilfe
+
+[source,shell script]
+----
+db.mitarbeiter.help();
+----
+
+== CRUD
+
+=== Create
+
+[source,shell script]
+----
+db.mitarbeiter.insert({name : {"first": "Gerhard", "last" : "Wurdinger"}, "abteilung" : "Abteilung1", "gehalt" : 22000, "bonus": 5000});
+----
+
+=== Read
+
+.Alle Dokumente mit der Abteilung
+[source,shell script]
+----
+db.mitarbeiter.find({"abteilung":"Abteilung1"});
+----
+
+.Ein Dokument mit der Abteilung
+[source,shell script]
+----
+db.mitarbeiter.findOne({"abteilung":"Abteilung1"});
+----
+
+.Zählt alle Dokumente mit der Abteilung
+[source,shell script]
+----
+db.mitarbeiter.count({"abteilung":"Abteilung1"});
+----
+
+// Dokument:
+db.nuggets.find();
+
+
+
+=== Update
+
+.Tabelle
+[source,shell script]
+----
+{ "_id" : ObjectId("60d0c6c39e25483ad800688d"), "name" : { "first" : "Nikola", "last" : "Jokic" }, "position" : "Center" }
+{ "_id" : ObjectId("60d0c9ef9e25483ad800688e"), "name" : { "first" : "Jamal", "last" : "Murray" }, "position" : "Point Guard" }
+{ "_id" : ObjectId("60d0cacb9e25483ad800688f"), "name" : { "first" : "Facundo", "last" : "Campazzo" }, "position" : "Shooting Guard" }
+{ "_id" : ObjectId("60d0caf89e25483ad8006890"), "name" : { "first" : "Aaron", "last" : "Gordon" }, "position" : "Small Forward" }
+{ "_id" : ObjectId("60d0cb089e25483ad8006891"), "name" : { "first" : "Bol", "last" : "Bol" }, "position" : "Power Forward" }
+
+----
+
+
+.Update über document replacement
+[source,shell script]
+----
+
+var modObj = db.nuggets.findOne({"name" : { "first" : "Facundo", "last" : "Campazzo" }});
+modObj.newPosition = "Point Guard";
+Point Guard
+
+db.nuggets.update({"name":{"first":"Facundo", "last":"Campazzo"}},modObj);
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+----
+
+.Upsert
+[source,shell script]
+----
+db.nuggets.update({"name":{"first":"Jamal", "last":"Murray"}}, {"name":{"first":"Jamal", "last":"Murray"}, "position":"Center"}, true);
+----
+=== Delete
+
+.Update über document replacement
+[source,shell script]
+----
+db.nuggets.remove({});
+----
+
+== Aggregationen
+
+* Suche: $match
+* Projektion: $project
+* Gruppierung: $group
+* Sortierung, Skip, Limit, ...: $sort
+
+=== Projektion
+
+.Nur Namen werden angezeigt
+[source,shell script]
+----
+db.mitarbeiter.aggregate({"$project" : {"name":1}});
+----
+
+=== Gruppierung
+
+*Verfügbare Operatoren*
+
+* $sum
+* $avg
+* $max
+* $min
+* $first
+* $last
+
+.Gruppieren von Mitarbeitern nach Abteilung
+[source,shell script]
+----
+db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung"}});
+----
+
+.Ausgabe des Durchschnittsverdiensts nach Abteilung
+[source,shell script]
+----
+db.mitarbeiter.aggregate({"$group" : {"_id" : "$abteilung", "Durchschnittsgehalt" : {"$avg" : "$gehalt"}}});
+----

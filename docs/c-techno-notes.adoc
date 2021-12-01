@@ -1,0 +1,627 @@
+= C |Techno-Notes
+
+== Was ist wichtig in C
+
+=== Strings
+
+Du musst so einiges in C wissen wie zum Beispiel das es keine Strings gibt sondern Char Arrays.
+
+Also wenn du einen String angeben willst, verwende stattdessen ein char[].
+
+``char name[64]`` -> String mit der länge 64.
+
+=== Real Types
+
+Des öfteren kommen Real Types vor. Das sind einfache Variablen wie double, floater oder long double.
+
+link:https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html[Real Types]
+
+=== Input & Output
+
+==== Tabbelle
+
+[cols="1,1"]
+|===
+|Typ / Zeichensequenz | Buchstaben
+
+|int
+|%i oder %d
+
+|long
+|%ld
+
+|float/double
+|%f
+
+|char
+|%c
+
+|char* (string)
+|%s
+|===
+
+link:https://de.wikipedia.org/wiki/Printf[printf auf wikipedia]
+
+==== Simple string ouput without variable
+
+Um einen einfachen String auszugeben, musst du nur die folgende Zeile verwenden:
+
+`` printf("Hello, world");``
+
+
+==== String imput in variable
+
+Um einen String einzulesen und diesen dann zu speichern verwendest du *%s*:
+
+``scanf("%s" , name);``
+
+Der Wert den du dann in der Console eingibst wird dann in die Variable *name* gespeichert.
+
+==== String output with variable
+
+Um einen String auszugeben, mit dem Wert einer Variable, verwendest du wie beim einlessen *%s+:
+
+`` printf("Hallo %s!",name)``
+
+==== int input in variable
+
+Um einen int zu Speicher verwendest du *%d*:
+
+``scanf("%d" , &age); ``
+
+==== int output with variable
+
+Um einen int auszugeben, verwendest du *%d*:
+
+`` printf("Sie sind %d Jahre alt! ",age); ``
+
+
+
+Wichtig ist das du vor der Variable ein *&* verwendest. (Wegen Pointer und Address)
+
+== Flowgorithm Einführung
+
+=== Hello World
+
+image::images/image-2021-11-27-13-57-26-179.png[]
+
+* Main -> Anfang
+* Output "Hello, world!" -> Ausgabe von "Hello, world!"
+* End - Ende
+
+.Hello World code
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    printf("Hello, world"); // Ausgabe von "Hello, world!"
+
+    return 0; // Ende
+}
+----
+
+=== Hello Dave
+
+image::images/image-2021-11-27-14-01-12-563.png[]
+
+* Main -> Anfang
+* string name -> Variable name
+* Output -> Fragt nach dem Namen
+* Input -> Name eingeben wie z.B. Dave
+* Output -> "Hallo Dave!"
+* End - Ende
+
+.Hello Dave
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    char name[32]; // Variable name
+    printf("Geben Sie ihren Vornamen ein:"); // Fragt nach dem Namen
+    scanf("%s" , name); // Name eingeben wie z.B. Dave
+    printf("Hallo %s!",name); // "Hallo Dave!"
+
+
+    return 0; // Ende
+}
+----
+
+
+=== Name und Alter
+
+image::images/image-2021-11-27-15-03-46-678.png[]
+
+* Main -> Anfang
+* string name -> Variable name
+* int name -> Variable age
+* Output -> Fragt nach dem Namen
+* Input -> Name eingeben wie z.B. Dave
+* Output -> Fragt nach dem Alter
+* Input -> Name eingeben wie z.B. 18
+* Output -> "Sie sind Dave und 18 Jahre alt!"
+* End - Ende
+
+.Hello Dave and 18
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+    char name[32]; // Variable name
+    int age; // Variable age
+
+    printf("Geben Sie ihren Vornamen ein: "); // Fragt nach dem Namen
+    scanf("%s" , name); // Name eingeben wie z.B. Dave
+
+    printf("%s, wie alt sind Sie? ",name); // Fragt nach dem Alter
+    scanf("%d" , &age); // Name eingeben wie z.B. 18
+
+    printf("%s, Sie sind %d Jahre alt! ",name ,age); // "Sie sind Dave und 18 Jahre alt!"
+
+
+    return 0; // Ende
+}
+----
+
+=== Summe
+
+image::images/image-2021-11-27-15-23-45-311.png[]
+
+* Main -> Anfang
+* Integer a, b, sum -> 3 Variablen a, b und sum (alles int)
+* Output -> Fragt nach 1. Zahl
+* Input -> Zahl a eingeben wie z.B. 31
+* Output -> Fragt nach 2. Zahl
+* Input -> Zahl b eingeben wie z.B. 7
+* sum = a + b -> Variable b initialisieren mit den werten a + b
+* Output -> Die Summe ist sum
+* End - Ende
+
+.Summe
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+int a; // Variable a
+int b; // Variable b
+int sum; // Variable sum
+
+    printf("1. Zahl: "); // Fragt nach 1. Zahl
+    scanf("%d" , &a); // Zahl a eingeben wie z.B. 31
+
+    printf("2. Zahl "); // Fragt nach 2. Zahl
+    scanf("%d" , &b); // Zahl b eingeben wie z.B. 7
+
+    sum = a + b; // Variable sum initialisieren mit den werten a + b also speichern in sum
+
+    printf("Die Summe ist %d.",sum); // Die Summe ist sum
+
+
+    return 0; // Ende
+}
+----
+
+=== Kreis
+
+image::images/image-2021-11-27-15-31-08-266.png[]
+
+* Main -> Anfang
+* Real radius, area -> 2 Variablen radius und area (beide double | link:https://publications.gbdirect.co.uk/c_book/chapter2/real_types.html[Real Types])
+* Output -> Fragt Radius
+* Input -> Radius eingeben wie z.B. 3
+* area = radius * radius * 3.14-> Fläche ausrechnen mit radius * radius * 3.14f und in area speichern (f damit es ein double ist, muss aber nicht sein)
+* Output -> Die Fläche ist area
+* End - Ende
+
+.Kreis
+[source,c]
+----
+#include <stdio.h>
+
+int main() // Anfang
+{
+double radius; // Variable Radius
+double area; // Variable Fläche
+
+    printf("Kresiberrechnung. Geben Sie den Radius ein: "); // Fragt Radius
+    scanf("%lf" , &radius); // Radius eingeben wie z.B. 3
+
+
+
+    area = radius * radius * 3.14f; // Fläche ausrechnen mit radius * radius * 3.14f und in area speichern
+
+    printf("Fläche: %lf", area); // Die Fläche ist area
+
+
+    return 0; // Ende
+}
+----
+
+== Verzweigung
+
+image::images/image-2021-11-27-18-08-48-484.png[]
+
+=== Main
+
+Wie bei den oberen Beispielen fangen wir bei dem *Main* Block an und gehen runter bist zu dem *End* Block.
+
+=== Input & Output
+Nach dem *Main* Block kommt das Festlegen der Variable _number_.
+Das Programm fragt den User nach einer Zahl und diese wird dann auch in der Variable _number_ gespeichert.
+
+=== If
+
+Nach dem ganzen *Output* und *Input* folgt die erste *Verzweigung*.
+
+Die *Verzweigung* prüft ob die oben eingegebene *Zahl größer ist als 0*.
+
+_Folgendes Szenario:_
+
+Der User gibt die Zahl *10* ein. Heißt automatisch das die Bedingung, also *Zahl größer als 0*, _richig_ ist.
+
+``10 > 0 -> true``
+
+Wenn der User aber *0* eingibt, ist die Bedigung falsch.
+
+``10 > 0 -> false``
+
+Würde der User eine negative Zahl eingeben dann wäre die Bedingung ebenso Falsch.
+
+``-10 > 0 -> false``
+
+==== if true
+
+Wenn also die Bedingung True ist, hüpft unser Programm in die Anweisung ein.
+
+In anderen Worten in den Körper der *iF-Verzweigung*.
+
+image::images/image-2021-11-27-18-19-37-548.png[]
+
+Das Programm gibt aus: _"Less than 0"_
+
+==== if false
+
+Wenn die bedingung falsch ist, geht unser Programm weiter und ignoriert sommit, was in dem Körper der if-Verzweigung steht.
+
+Da es bei diesem Beispiel keinne *else* gibt kommt gleich nach den wider eine *if*.
+
+Diese Wird aber *elseif* genannt.
+
+image::images/image-2021-11-27-18-23-45-635.png[]
+
+=== else if
+
+Eine *Elseif* ist das gleiche wie eine normale if nur das sie erst dann verwendet wird, wenn nach einer if-Verzweigung eine weitere Überprüfung stattfinden soll.
+
+In unserem Beispiel soll unser Programm bei der ersten *if-VErzweigung* überprüfen ob die Zahl größer als null ist.
+Wenn das nicht der Fall ist, sollte unser Programm gleich wieder Überprüfen ob es sich um die Zahl *0* handelt oder um eine *negative Zahl*.
+
+==== else if false
+
+Wenn der User oben *100* eingegeben hat, trifft folgendes Szenario auf.
+
+``100 == 0 -> false``
+
+somit hüpft unser Programm aus der Verzweigung raus.
+
+image::images/image-2021-11-27-18-29-52-048.png[]
+
+===== else if true
+
+Wenn der User aber *0* eingegeben hat dann ist die Bedingung *true*.
+
+``0 == 0 -> true``
+
+image::images/image-2021-11-27-18-31-29-527.png[]
+
+=== End
+
+Egal welchen weg unser Programm gewählt hat wir kommen immer zum Ende.
+Was aber währen dem Weg ausgegeben wurde hängt von der *user eingabe* ab da in den beiden verzweigungen unterschiedlichen Ausgaben passiert sind.
+
+image::images/image-2021-11-27-18-34-58-767.png[]
+
+== Verzweigung Code
+
+So würde unser Beispiel als Code aussehen:
+
+[source, c]
+----
+#include <stdio.h>
+
+int main() //anfang
+{
+    int number;
+
+    printf("Geben Sie eine Zahl ein: ");
+    scanf("%d" , &number); // Zahl einlessen
+
+    if(number < 0){ // Ist die Zahl Kleiner als 0?
+        printf("Less than 0"); // Ja! Die Zahl is Kleiner als 0.
+    }
+    else if(number == 0){ // Die Zahl war kleiner als null doch ist sie jetzt gleich 0?
+        printf("Equals 0"); // Ja! Die Zahl ist gleich 0.
+
+    }
+    else{ // Die Zahl war nicht kleiner als 0 und auch nicht gleich 0.
+        printf("Greater than 0"); // Die Zahl kann jz nur größer als 10 sein
+    }
+
+
+    return 0;
+}
+----
+
+== Wichtiges über die Verzweigung
+
+=== Vergleichsoperatoren
+
+[cols="1,1,1"]
+|===
+| Operator | Operator | Beispiel
+
+| *==*
+| gleich
+| a == b
+
+| !=
+| ungleich
+| a != b
+
+| <
+| kleiner
+| a < b
+
+| >
+| größer
+| a > b
+
+| <=
+| kleiner geich
+| a <= b
+
+| >=
+| größer gleich
+| a >= b
+
+|===
+
+=== Der Modulo-Operator
+
+Wir haben bis jetzt die Operatoren +, -, * und / kennengelernt. Jetzt kommt noch einer dazu:
+
+*Der Modulo-Operator %.*
+
+Der Modulo-Operator berechnet den Rest einer ganzzahligen Division.
+
+* 5 % 2 = 1 -> 5 dividiert durch 2 ist 2, Rest 1.
+* 20 % 3 = 2 -> 20 dividiert durch 3 ist 18, Rest 2
+* 37 % 10 = 7 -> 37 dividiert durch 10 ist 3, Rest 7
+
+Wenn ich den Modulo-Operator in einer Bedingung verwende, wird das häufig gemacht, ob der Rest
+einer Division gleich einem bestimmten Wert ist. Für die Gleichheit verwenden wir das doppelte Gleichheitszeichen ==.
+
+Um zu prüfen, ob der Rest der Division durch 2 gleich 0 ist, schreibt man also:
+
+``a % 2 == 0``
+
+*Diese Bedingung ist wahr, wenn a eine gerade Zahl ist!*
+
+== Bedingungen verknüpfen
+
+
+Wenn du bei einer Bedingung 2 Abfragen haben willst, läuft das so ab:
+
+Es gibt zwei arten von Verknüpfungen.
+
+=== Und-Verknüpfung &&
+
+Bei der *Und-Verknüpfung* werden 2 (oder mehr) Bedingungen zusammen gesetzt und *beide müssen true sein*.
+
+Z.B.:
+
+[source,c]
+----
+if(number > 0 && number < 10){
+    printf("Die Zahl ist zwischen 0 und 10");
+}
+----
+
+Mann kann auch mehrere Bedingungen anhängen. Wichtig ist das alles True sein muss um in den Body zu kommen.
+
+Z.B.:
+
+[source,c]
+----
+if(number > 0 && number < 10 && number != 5){
+    printf("Die Zahl ist zwischen 0 und 10 darf aber nicht 5 sein");
+}
+----
+
+=== Oder-Verknüpfung ||
+
+Anders bei der Und-Verknüpfung müssen hier nicht alle Bedingungen *True* sein.
+
+Z.B.:
+
+[source,c]
+----
+if(number == 0 || number == 10 || number == 5){
+    printf("Die Zahl ist entweder 0, 5 oder 10");
+}
+----
+
+
+== Schleifen
+
+=== While Schleifen
+
+[source,c]
+----
+int i=1;
+while(i <= 100) {
+	printf("Zahl %d\n", i);
+	i++; // Wichtig um keine Endlosschleife zu bekommen
+}
+----
+
+Wir haben also eine Variable i, welche wir mit 1 initialisieren.
+Dies ist unsere Zählvariable, womit wir die Schleifendurchgänge zählen.
+Danach beginnt eine while Schleife, in den Klammern ist die Durchlauf-Bedingung gesetzt.
+Dies ist auch unser Kontrollpunkt.
+
+Übersetzen wir den Schleifen-Befehl ins Deutsche, hört sich das etwa so an: „solange i kleiner gleich 100″.
+Der Schleifen-Block wird also solange wiederholt ausgeführt, wie der Wert der Variablen i kleiner oder gleich 100 ist.
+
+Hierbei darf man nicht vergessen im Schleifen-Körper die Zählvariable mit i++ jeden Durchlauf um eins zu erhöhen.
+Andernfalls hätten wir eine Endlos-Schleife, d.h. unser Programm reagiert nicht mehr, weil es sich im Kreise dreht.
+Die Durchlauf-Bedingung wird in anderer Fachliteratur üblicherweise Abbruch-Bedingung genannt.
+
+=== For Schleife
+
+Die for Schleife verwenden wir, wenn die Anzahl der Durchläufe bekannt ist.
+D.h. es ist eine Zähler-gesteuerte Schleife. Wir benötigen also immer eine Variable, welche wir zum Zählen der Durchläufe verwenden.
+
+Üblicherweise benennt man diese Zähl-Variablen beginnend mit dem Alphabetbuchstaben *i*, also *i*, *j*, *k*, etc.
+
+[source,c]
+----
+int i;
+
+for(i=0; i<5; i++) {
+	printf("Zahl %d\n", i+1);
+}
+----
+
+In dem folgenden Beispiel wollen wir erneut die Zahlen von 1 bis 5 auf dem Bildschirm ausgeben. Die Schleife leiten wir mit dem Schlüsselwort for ein. In den Klammern gibt es drei Bereiche, welche durch einen Strichpunkt ; getrennt sind:
+
+* Bereich 1: Startwert der Zählvariablen setzen, z.B. i=0
+* Bereich 2: Durchlauf-Bedingung, z.B. i<5
+* Bereich 3: Operation auf Zählvariable ausführen, z.B. i++
+
+Wichtig ist das das Zählen bei *0* beginnt.
+
+=== Verschachtelung
+
+Schleifen können auch beliebig verschachtelt werden.
+Hier gibt z.B. die äußere Schleife an, dass 10 Zeilen ausgegeben werden.
+In jeder Zeile geben wir mittels der inneren Schleife Sternchen aus, welche am Ende eine Dreiecksform ergeben sollen.
+Die Durchlauf-Bedingung der inneren Schleife ist mit j<i an die äußere Schleife gebunden.
+
+[source,c]
+----
+int i, j;
+
+// Schleife fuer die Zeilen
+for(i=0; i<10; i++) {
+	printf("\nZeile %2d: ", i+1);
+
+	// Schleife fuer die Spalten
+	for(j=0; j<=i; j++) {
+		printf("*");
+	}
+}
+
+printf("\n");
+----
+
+*Ausgabe*:
+
+[source,text]
+----
+Zeile  1: *
+Zeile  2: **
+Zeile  3: ***
+Zeile  4: ****
+Zeile  5: *****
+Zeile  6: ******
+Zeile  7: *******
+Zeile  8: ********
+Zeile  9: *********
+Zeile 10: **********
+----
+
+=== Do while
+
+Eine Do While schleife verwendet man immer am besten, wenn man will das der User eine Schleife beendet z.B. durch eine bestimmte Zahl oder durch einer bestimmten Tastatur eingabe wie die Enter taste.
+
+[source,c]
+----
+int alter;
+
+do {
+    printf("\nBitte geben sie ihr Alter ein: ");
+    scanf("%d", &alter);
+} while(alter <  5 || alter > 100);
+
+----
+
+*Ausgabe*:
+
+[source,text]
+----
+Bitte geben sie ihr Alter ein: 2
+Bitte geben sie ihr Alter ein: 101
+Bitte geben sie ihr Alter ein: 200
+Bitte geben sie ihr Alter ein: 33
+----
+
+Hier fragt das Programm so lange nach, bis der User ein gültiges Alter eingibt.
+Also ein alter zwischen 5 und 100.
+
+=== Break
+
+
+Break
+
+Mit dem Schlüsselwort break können wir zu jeder Zeit eine Schleife verlassen, ohne auf den Kontrollpunkt warten zu müssen.
+In dem Beispiel soll der Benutzer Zahlen zwischen 1 und 50 eingeben, um eine Gesamtsumme von 100 zu erreichen.
+Hält er sich nicht an die Vorgaben und gibt eine kleinere Zahl als 1 oder eine größere als 50 ein, wird sofort die Schleife verlassen und die Zahl nicht mehr zur Summe addiert.
+
+[source,c]
+----
+int summand, summe=0;
+
+do {
+	printf("\nSumme = %d", summe);
+	printf("\nEingabe von Summand zwischen 1 und 50: ");
+	scanf("%d", &summand);
+
+	if(summand < 1 || summand > 50) {
+		break;
+	}
+
+	summe += summand;
+
+}while(summe < 100);
+
+
+if(summe < 100) {
+	printf("\nSie haben die Zahl 100 wegen ungueltigen Eingaben nicht erreicht.\n");
+}else {
+	printf("\nSie haben den Wert 100 erreicht.\n");
+}
+----
+
+*Ausgabe:*
+
+[source,text]
+----
+Summe = 0
+Eingabe von Summand zwischen 1 und 50: 33
+
+Summe = 33
+Eingabe von Summand zwischen 1 und 50: 44
+
+Summe = 77
+Eingabe von Summand zwischen 1 und 50: 55
+
+Sie haben die Zahl 100 wegen ungueltigen Eingaben nicht erreicht.
+----
