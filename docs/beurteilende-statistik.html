@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Poissonverteilung</title>
+<title>Beurteilende Statistik (Mathe Mitschrift 01.12.2021)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,83 +440,224 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Poissonverteilung</h1>
+<h1>Beurteilende Statistik (Mathe Mitschrift 01.12.2021)</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_was_ist_die_poissonverteilung">1. Was ist die Poissonverteilung</a></li>
-<li><a href="#_herleitung">2. Herleitung</a>
+<li><a href="#_schätzen">1. Schätzen:</a></li>
+<li><a href="#_testen">2. Testen</a></li>
+<li><a href="#_schätzen_von_parametern">3. Schätzen von Parametern</a>
 <ul class="sectlevel2">
-<li><a href="#_mini_zusammenfassung">2.1. Mini Zusammenfassung</a></li>
-<li><a href="#_daniel_jung_abi_gutes_beispiel">2.2. Daniel Jung Abi (gutes Beispiel)</a></li>
+<li><a href="#_punktschätzung">3.1. Punktschätzung</a></li>
+<li><a href="#_intervallschätzung">3.2. Intervallschätzung</a></li>
 </ul>
 </li>
-<li><a href="#_mathe_sa_index">3. Mathe SA Index</a></li>
+<li><a href="#_parameterschätzung_bei_binomialverteilten_zufallsvariablen">4. Parameterschätzung bei binomialverteilten Zufallsvariablen</a>
+<ul class="sectlevel2">
+<li><a href="#_mathcad_befehle">4.1. Mathcad befehle</a></li>
+</ul>
+</li>
+<li><a href="#_parameterschätzung_bei_normalverteilten_zufallsvariablen">5. Parameterschätzung bei normalverteilten Zufallsvariablen</a>
+<ul class="sectlevel2">
+<li><a href="#_mathcad_formel">5.1. Mathcad Formel</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_was_ist_die_poissonverteilung"><a class="anchor" href="#_was_ist_die_poissonverteilung"></a>1. Was ist die Poissonverteilung</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>"Sobald in der Angabe eine Zahl steht (Konstante), kannst nur Poissonverteilung anwenden. "</em> <strong>~ Benjo</strong></p>
-</div>
-<div class="paragraph">
-<p>Was meint Benjo damit?</p>
-</div>
-<div class="paragraph">
-<p>Die Poissonverteilung wird als Modell für die Anzahl x von <strong>Ereignissen</strong>, die <strong>pro Einheit</strong> zufällig, unabhängig und mit dem <strong>kosntanten Mittelwert μ</strong> auftreten, verwendet.</p>
-</div>
-<div class="paragraph">
-<p>Der <strong>Mittelwert μ</strong>, ist der einzige Parameter der Poissonverteilung. Sowohl dr Erwartungswert E(X) als auch die Varianz V(X) haben denselber Wert wie μ.</p>
+<p>Keine vollständigen Qualitätskontrollen; Strichprobe entnommen und getestet und somit schließt man auf die Gesamtproduktion.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_herleitung"><a class="anchor" href="#_herleitung"></a>2. Herleitung</h2>
+<h2 id="_schätzen"><a class="anchor" href="#_schätzen"></a>1. Schätzen:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fehlerteil p ist nicht bekannt</p>
+</li>
+<li>
+<p>Intervall wird angegeben</p>
+</li>
+<li>
+<p>Wahrscheinlichkeit sollte natürlich hoch sein, etwa 95%</p>
+<div class="ulist">
+<ul>
+<li>
+<p>α &#8230;&#8203; Irrtumswahrscheinlichkeit</p>
+</li>
+<li>
+<p>1 - α &#8230;&#8203; Vertrauensniveau oder ach konfidenzintervalla</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testen"><a class="anchor" href="#_testen"></a>2. Testen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Es gibt eine Vermutung übder den Fehleranteil p</p>
+</li>
+<li>
+<p>Stichprobeergebnis dient als Instrument um entscheiden zu können, ob die Vermutung zutrifft oder nicht</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schätzen_von_parametern"><a class="anchor" href="#_schätzen_von_parametern"></a>3. Schätzen von Parametern</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Die Herleitung erflogt als Grenzfall der Binomialverteilung mit:</p>
+<p>Es gibt 2 möglichkeiten:</p>
 </div>
-<div class="paragraph">
-<p>n &#8594; unendlich<br>
-p &#8594; 0<br>
-n * p = μ</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Punktschätzung</p>
+</li>
+<li>
+<p>Intervallschätzung</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="_mini_zusammenfassung"><a class="anchor" href="#_mini_zusammenfassung"></a>2.1. Mini Zusammenfassung</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-13-14-22-18-498.png" alt="image 2021 11 13 14 22 18 498">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/image-2021-11-13-14-22-50-783.png" alt="image 2021 11 13 14 22 50 783">
-</div>
+<h3 id="_punktschätzung"><a class="anchor" href="#_punktschätzung"></a>3.1. Punktschätzung</h3>
+<div class="paragraph">
+<p>Die Punktschätzung ist eine bestimmung eines einzelnen Wertes zur Schätzung eines unbekannten Parameters.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_daniel_jung_abi_gutes_beispiel"><a class="anchor" href="#_daniel_jung_abi_gutes_beispiel"></a>2.2. Daniel Jung Abi (gutes Beispiel)</h3>
+<h3 id="_intervallschätzung"><a class="anchor" href="#_intervallschätzung"></a>3.2. Intervallschätzung</h3>
 <div class="paragraph">
-<p><a href="https://www.youtube.com/watch?v=UESWARetzXU">Video by Daniel Jung</a></p>
+<p>Dabei wird ein Inervall berechnet, in dem der wahre unbekannte Wert (mit einer vorgegebenen Wahrscheinlichkeit) liegt.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mathe_sa_index"><a class="anchor" href="#_mathe_sa_index"></a>3. Mathe SA Index</h2>
+<h2 id="_parameterschätzung_bei_binomialverteilten_zufallsvariablen"><a class="anchor" href="#_parameterschätzung_bei_binomialverteilten_zufallsvariablen"></a>4. Parameterschätzung bei binomialverteilten Zufallsvariablen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html">Mathe SA Index</a></p>
+<p><strong>Buch Seite 249</strong></p>
+</div>
+<div class="paragraph">
+<p>x &#8230;&#8203; fehlerhaften Stücke<br>
+n &#8230;&#8203; Stichprobe</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-25-29-791.png" alt="image 2021 12 01 10 25 29 791">
+</div>
+<div class="title">Figure 1. Schätzwert p</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-27-12-546.png" alt="image 2021 12 01 10 27 12 546">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mathcad_befehle"><a class="anchor" href="#_mathcad_befehle"></a>4.1. Mathcad befehle</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-28-48-537.png" alt="image 2021 12 01 10 28 48 537">
+</div>
+</div>
+<div class="paragraph">
+<p>Manchmal möchte man einen bestimmten Bereich nicht unter- brw. überschreiten.</p>
+</div>
+<div class="paragraph">
+<p>Unter bzw. obere Schranke für den jeweiligen Parameter. Somit kann ich einen Konfidenzintervall hernehmen</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-33-20-612.png" alt="image 2021 12 01 10 33 20 612">
+</div>
+<div class="title">Figure 2. Konfidenzintervall für Unter bzw. obere Schranke</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameterschätzung_bei_normalverteilten_zufallsvariablen"><a class="anchor" href="#_parameterschätzung_bei_normalverteilten_zufallsvariablen"></a>5. Parameterschätzung bei normalverteilten Zufallsvariablen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Erwartungswert oder mittelwert ist unbekannt.
+Glücklicherweise ist die Standardabweichung bekannt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-37-02-049.png" alt="image 2021 12 01 10 37 02 049">
+</div>
+<div class="title">Figure 3. Buchs Seite 244</div>
+</div>
+<div class="paragraph">
+<p><strong>Gleiche erklärung wie oben:</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-40-23-524.png" alt="image 2021 12 01 10 40 23 524">
+</div>
+<div class="title">Figure 4. Umgeänderte Version</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-47-36-273.png" alt="image 2021 12 01 10 47 36 273">
+</div>
+<div class="title">Figure 5. Zweiseitig Vertrauensbereich</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-48-36-250.png" alt="image 2021 12 01 10 48 36 250">
+</div>
+<div class="title">Figure 6. Einseitiger Vertrauensbereich</div>
+</div>
+<div class="paragraph">
+<p>Manchmal möchte man einen bestimmten Bereich nicht unter- brw. überschreiten.</p>
+</div>
+<div class="paragraph">
+<p>Unter bzw. obere Schranke für den jeweiligen Parameter. Somit kann ich einen Konfidenzintervall hernehmen</p>
+</div>
+<div class="paragraph">
+<p><em>Der einzige Unterschied ist:</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-43-12-554.png" alt="image 2021 12 01 10 43 12 554">
+</div>
+<div class="title">Figure 7. untere</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-43-25-964.png" alt="image 2021 12 01 10 43 25 964">
+</div>
+<div class="title">Figure 8. obere</div>
+</div>
+<div class="sect2">
+<h3 id="_mathcad_formel"><a class="anchor" href="#_mathcad_formel"></a>5.1. Mathcad Formel</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/image-2021-12-01-10-45-46-951.png" alt="image 2021 12 01 10 45 46 951">
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-01 09:39:59 UTC
+Last updated 2021-12-01 09:50:17 UTC
 </div>
 </div>
 </body>
