@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>JPA Zusammenfassung</title>
+<title>NVS Test am 03.12.2021</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,910 +436,483 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="path/to/fontawesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>JPA Zusammenfassung</h1>
+<h1>NVS Test am 03.12.2021</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_entity">1. Entity</a>
-<ul class="sectlevel2">
-<li><a href="#_begriffe">1.1. Begriffe</a></li>
-<li><a href="#_code_bsp">1.2. Code Bsp</a></li>
-</ul>
-</li>
-<li><a href="#_entity_manager">2. Entity Manager</a>
-<ul class="sectlevel2">
-<li><a href="#_begriffe_2">2.1. Begriffe</a></li>
-<li><a href="#_persistierbare_datentypen">2.2. Persistierbare Datentypen</a></li>
-</ul>
-</li>
-<li><a href="#_mapping">3. Mapping</a>
-<ul class="sectlevel2">
-<li><a href="#_arten_von_mapping">3.1. Arten von Mapping</a></li>
-</ul>
-</li>
-<li><a href="#_beziehungen">4. Beziehungen</a>
-<ul class="sectlevel2">
-<li><a href="#_beziehungen_zwischen_tabellen">4.1. Beziehungen zwischen Tabellen</a></li>
-<li><a href="#_möglichkeiten_zur_navigation_im_klassenmodel">4.2. Möglichkeiten zur Navigation im Klassenmodel</a></li>
-<li><a href="#_11_beziehung_unidirektional">4.3. 1:1 Beziehung unidirektional</a></li>
-<li><a href="#_cascade">4.4. Cascade</a></li>
-<li><a href="#_11_beziehung_bidirektional">4.5. 1:1 Beziehung bidirektional</a></li>
-<li><a href="#_1n_beziehung_unidirektional">4.6. 1:n Beziehung unidirektional</a></li>
-<li><a href="#_1n_beziehung_tipps">4.7. 1:n Beziehung - Tipps</a></li>
-<li><a href="#_mn_beziehung_unidirektional">4.8. m:n Beziehung unidirektional</a></li>
-<li><a href="#_mn_beziehung_bidirektional">4.9. m:n Beziehung bidirektional</a></li>
-</ul>
-</li>
-<li><a href="#_vererbung">5. Vererbung</a>
-<ul class="sectlevel2">
-<li><a href="#_inheritancetype_single_table">5.1. InheritanceType.SINGLE_TABLE</a></li>
-<li><a href="#_inheritancetype_table_per_class">5.2. InheritanceType.TABLE_PER_CLASS</a></li>
-<li><a href="#_inheritancetype_joined">5.3. InheritanceType.JOINED</a></li>
-<li><a href="#_wann_welche_strategie">5.4. Wann welche Strategie?</a></li>
-</ul>
-</li>
-<li><a href="#_embeddable_embedd">6. @Embeddable / @Embedd</a>
-<ul class="sectlevel2">
-<li><a href="#_definition">6.1. Definition:</a></li>
-<li><a href="#_verwendung">6.2. Verwendung:</a></li>
-<li><a href="#_zu_beachten">6.3. Zu beachten:</a></li>
-<li><a href="#_ergebnis">6.4. Ergebnis:</a></li>
-</ul>
-</li>
+<li><a href="#_stoff">1. Stoff</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_entity"><a class="anchor" href="#_entity"></a>1. Entity</h2>
+<h2 id="_stoff"><a class="anchor" href="#_stoff"></a>1. Stoff</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_begriffe"><a class="anchor" href="#_begriffe"></a>1.1. Begriffe</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>JPA/Panache</p>
+</li>
+<li>
+<p>RESTful services (inkl. JSON-B, JSON-P, FormParam, QueryParam, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>Websocket</p>
+</li>
+<li>
+<p>Security (ohne Keycloak)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Basic and Form Authentication Mechanisms</p>
+</li>
+<li>
+<p>RBAC</p>
+</li>
+<li>
+<p>JDBC, application.properties, Annotationen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Testen mit assertJ-core, assertJ-db, karate</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Konfiguration von Karate ist vorbereitet</p>
+</li>
+<li>
+<p>de Webseiten (Doku) von assertJ und karate dürfen benutzt werden</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<details>
+<summary class="title">JPA/Panache</summary>
+<div class="content">
 <div class="paragraph">
-<p>Primärschlüssel (@Id) können durch die Datenbank generiert werden
-(@GeneratedValue).</p>
+<p>== JPA/Panache</p>
 </div>
 <div class="paragraph">
-<p>Strategien sind: Identity, Table, Sequence und Auto.</p>
+<p><strong>JPA</strong> Zusammenfassung wurde schon geschrieben:</p>
 </div>
 <div class="paragraph">
-<p><strong>Auto</strong>: Default, wenn nichts angegeben wird. Bei Hibernate Auto = Sequence.</p>
+<p><a href="https://davidenkovic.github.io/school-notes/jpa-test.html">JPA Zusammenfassung ohne Panache</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Sequence</strong>: Neue Ids werden über eine Sequence generiert, vielfältige.
-Konfigurationsmöglichkeiten:</p>
+<p>=== Beispiel</p>
 </div>
-<div class="paragraph">
-<p><strong>Identity</strong>: Auto-Increment Spalte.</p>
-</div>
-<div class="paragraph">
-<p><strong>Table</strong>: Tabelle "emuliert" Sequence.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_code_bsp"><a class="anchor" href="#_code_bsp"></a>1.2. Code Bsp</h3>
 <div class="listingblock">
-<div class="title">Entity Code</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-     <span class="nd">@Id</span>
-     <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
-     <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
-     <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
-     <span class="kt">long</span> <span class="n">salary</span><span class="o">;</span>
-     <span class="kd">public</span> <span class="nf">Employee</span><span class="o">()</span> <span class="o">{}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">extends</span> <span class="nc">PanacheEntity</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Person</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="k">return</span> <span class="nf">find</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">name</span><span class="o">).</span><span class="na">firstResult</span><span class="o">();</span> <span class="c1">// Select by name</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="nf">findAlive</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="nf">list</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span> <span class="c1">// Filter by status</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">deleteStefs</span><span class="o">(){</span>
+        <span class="n">delete</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Stef"</span><span class="o">);</span> <span class="c1">// delete all Stefs</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_entity_manager"><a class="anchor" href="#_entity_manager"></a>2. Entity Manager</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_begriffe_2"><a class="anchor" href="#_begriffe_2"></a>2.1. Begriffe</h3>
 <div class="paragraph">
-<p>Der EntityManager verwaltet die Entitäten.</p>
+<p>=== Einstellungen</p>
 </div>
 <div class="paragraph">
-<p>Er synchronisiert die Objekt- und Datenbankidentität von verwalteten
-Entitäten automatisch.</p>
+<p>==== Pom.xml</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;dependencies&gt;</span>
+    <span class="c">&lt;!-- Hibernate ORM specific dependencies --&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>io.quarkus<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>quarkus-hibernate-orm-panache<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+
+    <span class="c">&lt;!-- JDBC driver dependencies --&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>io.quarkus<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>quarkus-jdbc-postgresql<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span></code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Erst zum Commit-Zeitpunkt werden Änderungen an verwalteten Objekten
-(Entities) in die relationale Datenbank übertragen.</p>
+<p>==== Hibernet</p>
 </div>
-<div class="sect3">
-<h4 id="_wichtige_methoden"><a class="anchor" href="#_wichtige_methoden"></a>2.1.1. Wichtige Methoden:</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>persist</p>
-</li>
-<li>
-<p>merge</p>
-</li>
-<li>
-<p>refresh</p>
-</li>
-<li>
-<p>remove</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="properties"><span class="c"># configure your datasource
+</span><span class="py">quarkus.datasource.db-kind</span> <span class="p">=</span> <span class="s">postgresql</span>
+<span class="py">quarkus.datasource.username</span> <span class="p">=</span> <span class="s">sarah</span>
+<span class="py">quarkus.datasource.password</span> <span class="p">=</span> <span class="s">connor</span>
+<span class="py">quarkus.datasource.jdbc.url</span> <span class="p">=</span> <span class="s">jdbc:postgresql://localhost:5432/mydatabase</span>
+
+<span class="c"># drop and create the database at startup (use `update` to only update the schema)
+</span><span class="py">quarkus.hibernate-orm.database.generation</span> <span class="p">=</span> <span class="s">drop-and-create</span></code></pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_persistierbare_datentypen"><a class="anchor" href="#_persistierbare_datentypen"></a>2.2. Persistierbare Datentypen</h3>
-<div class="paragraph">
-<p>Was kann man Persistieren?</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Primitive Datentypen (int, char, &#8230;&#8203;) und Wrapper-Objekte (Integer, ..)</p>
-</li>
-<li>
-<p>Strings</p>
-</li>
-<li>
-<p>BigInteger und BigDecimal</p>
-</li>
-<li>
-<p>Date und Calendar</p>
-</li>
-<li>
-<p>Collections und Arrays von persistierbaren Typen</p>
-</li>
-<li>
-<p>Enumerations</p>
-</li>
-<li>
-<p>Entity-Typen und Collections von Entitytypen</p>
-</li>
-<li>
-<p>Eingebettete Klassen</p>
-</li>
-<li>
-<p>Serialisierbare Datentypen (&#8594; Blob)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_mapping"><a class="anchor" href="#_mapping"></a>3. Mapping</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Es wird immer vom Default-Verhalten ausgegangen (Convention over
-Configuration).</p>
 </div>
 <div class="paragraph">
-<p>Das Default-Verhalten kann aber angepasst werden:</p>
+<p>=== Entity</p>
+</div>
+<div class="paragraph">
+<p>Um eine Panache Entity zu definieren, wird diese mit <code>Entity</code> annotiert und mit <code>PanacheEntity</code> erweitert.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"EMP"</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"EMP_ID"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">extends</span> <span class="nc">PanacheEntity</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>JPA columns werden einfach als normale Klassenfelder definiert.</p>
+</div>
+<div class="paragraph">
+<p>Wenn man ein feld nicht persistieren will, verwendet man <code>@Transient</code></p>
+</div>
+<div class="paragraph">
+<p>Transient &#8594; Vorübergehend</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">extends</span> <span class="nc">PanacheEntity</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
+
+    <span class="c1">// return name as uppercase in the model</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// store all names in lowercase in the DB</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Repository</p>
+</div>
+<div class="paragraph">
+<p>Bei jeder Repository ist es wichtig <code>@ApplicationScoped</code> zu verwenden.</p>
+</div>
+<div class="paragraph">
+<p>Um die ganzen Panache Methoden zu benützen, verwenden wir <code>PanacheRepository&lt;Entity&gt;</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Person Entity</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+    <span class="nd">@Id</span> <span class="nd">@GeneratedValue</span> <span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">Long</span> <span class="nf">getId</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">LocalDate</span> <span class="nf">getBirth</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBirth</span><span class="o">(</span><span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">birth</span> <span class="o">=</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">Status</span> <span class="nf">getStatus</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">status</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setStatus</span><span class="o">(</span><span class="nc">Status</span> <span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">status</span> <span class="o">=</span> <span class="n">status</span><span class="o">;</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_arten_von_mapping"><a class="anchor" href="#_arten_von_mapping"></a>3.1. Arten von Mapping</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Klassename = Tabellenname - @Table</p>
-</li>
-<li>
-<p>Property-Name = Spaltenname - @Column</p>
-</li>
-<li>
-<p>String auf VARCHAR - @Column(length=20)</p>
-</li>
-<li>
-<p>Ausnahmen sind anzugeben (nicht die Regel)</p>
-</li>
-<li>
-<p>@Column(columnDefinition="varchar2(20)")</p>
-</li>
-<li>
-<p>Andere Namen @Column(name = "myName")</p>
-</li>
-<li>
-<p>Nicht persistente Properties - @Transient</p>
-</li>
-<li>
-<p>NOT NULL - @Column(nullable = false)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_beziehungen"><a class="anchor" href="#_beziehungen"></a>4. Beziehungen</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_beziehungen_zwischen_tabellen"><a class="anchor" href="#_beziehungen_zwischen_tabellen"></a>4.1. Beziehungen zwischen Tabellen</h3>
-<div class="paragraph">
-<p>3 Arten:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>1:1</p>
-</li>
-<li>
-<p>1:n</p>
-</li>
-<li>
-<p>n:m</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_möglichkeiten_zur_navigation_im_klassenmodel"><a class="anchor" href="#_möglichkeiten_zur_navigation_im_klassenmodel"></a>4.2. Möglichkeiten zur Navigation im Klassenmodel</h3>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-1.png" alt="diagram classes 1" width="220" height="66">
-</div>
-<div class="title">Figure 1. Bidirektional</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-2.png" alt="diagram classes 2" width="220" height="66">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-3.png" alt="diagram classes 3" width="220" height="66">
-</div>
-<div class="title">Figure 2. Unidirektional</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_11_beziehung_unidirektional"><a class="anchor" href="#_11_beziehung_unidirektional"></a>4.3. 1:1 Beziehung unidirektional</h3>
 <div class="listingblock">
-<div class="title">Code</div>
+<div class="title">PersonRepository</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@ApplicationScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonRepository</span> <span class="kd">implements</span> <span class="nc">PanacheRepository</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="o">{</span>
 
-    <span class="kt">int</span> <span class="n">salary</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
+   <span class="c1">// put your custom logic here as instance methods</span>
 
-    <span class="nd">@OneToOne</span>
-    <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="nc">Person</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+       <span class="k">return</span> <span class="nf">find</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">name</span><span class="o">).</span><span class="na">firstResult</span><span class="o">();</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="nf">findAlive</span><span class="o">(){</span>
+       <span class="k">return</span> <span class="nf">list</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deleteStefs</span><span class="o">(){</span>
+       <span class="n">delete</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Stef"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Verwenden von Repositories</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Inject</span>
+<span class="nc">PersonRepository</span> <span class="n">personRepository</span><span class="o">;</span>
+
+<span class="nd">@GET</span>
+<span class="kd">public</span> <span class="kt">long</span> <span class="nf">count</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">count</span><span class="o">();</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Meist verwendete usecases</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="c1">// creating a person</span>
+<span class="nc">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="o">();</span>
+<span class="n">person</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"Stef"</span><span class="o">);</span>
+<span class="n">person</span><span class="o">.</span><span class="na">setBirth</span><span class="o">(</span><span class="nc">LocalDate</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1910</span><span class="o">,</span> <span class="nc">Month</span><span class="o">.</span><span class="na">FEBRUARY</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+<span class="n">person</span><span class="o">.</span><span class="na">setStatus</span><span class="o">(</span><span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span>
+
+<span class="c1">// persist</span>
+<span class="n">personRepository</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">person</span><span class="o">);</span>
+
+<span class="c1">// check if it's persistent</span>
+<span class="k">if</span><span class="o">(</span><span class="n">personRepository</span><span class="o">.</span><span class="na">isPersistent</span><span class="o">(</span><span class="n">person</span><span class="o">)){</span>
+    <span class="c1">// delete it</span>
+    <span class="n">personRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">person</span><span class="o">);</span>
 <span class="o">}</span>
 
-<span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">street</span><span class="o">;</span>
-    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"addrNum"</span><span class="o">)</span>
-    <span class="nc">String</span> <span class="n">number</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">zipCode</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">city</span><span class="o">;</span>
-<span class="o">}</span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-4.png" alt="diagram classes 4" width="329" height="117">
-</div>
-<div class="title">Figure 3. cld</div>
-</div>
-<div class="paragraph">
-<p>Es müssen alle miteinander in Beziehung stehenden Entitäten im Zustand "managed" sein:</p>
-</div>
-<div class="listingblock">
-<div class="title">Managed</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="s">"Hermann"</span><span class="o">,</span> <span class="s">"Mayr"</span><span class="o">);</span>
-<span class="nc">Address</span> <span class="n">a1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Address</span><span class="o">(</span><span class="s">"Himbeerstrasse"</span><span class="o">,</span> <span class="s">"22a"</span><span class="o">,</span> <span class="s">"4440"</span><span class="o">,</span> <span class="s">"Steyr"</span><span class="o">);</span>
-<span class="n">emp</span><span class="o">.</span><span class="na">setAddress</span><span class="o">(</span><span class="n">a1</span><span class="o">);</span>
-<span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">a1</span><span class="o">);</span>
-<span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Standardmäßig wird bei unidirektionalen Beziehungen eine Assoziativtabelle angelegt / verwendet (da Address keine Foreign-KeySpalte besitzt).</p>
-</div>
-<div class="paragraph">
-<p>Ist dies nicht erwünscht (meistens), kann JPA durch die Annotation @JoinColumn angewiesen werden, eine Foreign-Key-Spalte in der Tabelle der referenzierenden Entität anzulegen:</p>
-</div>
-<div class="listingblock">
-<div class="title">Annotation</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"addressid"</span><span class="o">)</span>
-<span class="nc">Address</span> <span class="n">address</span><span class="o">;</span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_cascade"><a class="anchor" href="#_cascade"></a>4.4. Cascade</h3>
-<div class="paragraph">
-<p>Transitive Persistenz (Persistence by Reachability)
-bedeutet, dass ein Entity nicht nur explizit persistent gemacht werden kann,
-sondern dass es implizit (automatisch) persistent wird, wenn es von einem
-bereits persistenten Entity referenziert wird.</p>
-</div>
-<div class="paragraph">
-<p>Mit dem Attribut cascade kann angegeben werden, dass eine Operation am
-einen Ende der Beziehung auch für die Entität(en) am anderen Ende
-wirksam wird.</p>
-</div>
-<div class="paragraph">
-<p><strong>Beispiel:</strong> Wird Employee persistiert, so geschieht dies auch mit der
-referenzierten Entität Address automatisch:</p>
-</div>
-<div class="listingblock">
-<div class="title">Annotation</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@OneToOne</span><span class="o">(</span><span class="n">cascade</span> <span class="o">=</span> <span class="nc">CascadeType</span><span class="o">.</span><span class="na">PERSIST</span><span class="o">)</span>
-<span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+<span class="c1">// getting a list of all Person entities</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">allPersons</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">listAll</span><span class="o">();</span>
 
-<span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="s">"Hermann"</span><span class="o">,</span> <span class="s">"Mayr"</span><span class="o">);</span>
-<span class="nc">Address</span> <span class="n">a1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Address</span><span class="o">(</span><span class="s">"Himbeerstrasse"</span><span class="o">,</span> <span class="s">"22a"</span><span class="o">,</span> <span class="s">"4440"</span><span class="o">,</span> <span class="s">"Steyr"</span><span class="o">);</span>
-<span class="n">emp</span><span class="o">.</span><span class="na">setAddress</span><span class="o">(</span><span class="n">a1</span><span class="o">);</span>
+<span class="c1">// finding a specific person by ID</span>
+<span class="n">person</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">personId</span><span class="o">);</span>
 
-<span class="c1">//em.persist(a1); a1 wird von emp referenziert und somit automatisch persistiert</span>
-<span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span></code></pre>
+<span class="c1">// finding a specific person by ID via an Optional</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">findByIdOptional</span><span class="o">(</span><span class="n">personId</span><span class="o">);</span>
+<span class="n">person</span> <span class="o">=</span> <span class="n">optional</span><span class="o">.</span><span class="na">orElseThrow</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">NotFoundException</span><span class="o">());</span>
+
+<span class="c1">// finding all living persons</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">livingPersons</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span>
+
+<span class="c1">// counting all persons</span>
+<span class="kt">long</span> <span class="n">countAll</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">count</span><span class="o">();</span>
+
+<span class="c1">// counting all living persons</span>
+<span class="kt">long</span> <span class="n">countAlive</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">count</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span>
+
+<span class="c1">// delete all living persons</span>
+<span class="n">personRepository</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span>
+
+<span class="c1">// delete all persons</span>
+<span class="n">personRepository</span><span class="o">.</span><span class="na">deleteAll</span><span class="o">();</span>
+
+<span class="c1">// delete by id</span>
+<span class="kt">boolean</span> <span class="n">deleted</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">deleteById</span><span class="o">(</span><span class="n">personId</span><span class="o">);</span>
+
+<span class="c1">// set the name of all living persons to 'Mortal'</span>
+<span class="n">personRepository</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="s">"name = 'Mortal' where status = ?1"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_11_beziehung_bidirektional"><a class="anchor" href="#_11_beziehung_bidirektional"></a>4.5. 1:1 Beziehung bidirektional</h3>
 <div class="paragraph">
-<p>Über das Attribut mappedBy das andere "Ende" einer bidirektionalen Beziehung festgelegt werden.</p>
-</div>
-<div class="paragraph">
-<p>mappedBy bezieht sich dabei auf die Membervariable.</p>
-</div>
-<div class="paragraph">
-<p>Eine Foreign-Key-Spalte wird automatisch angelegt, kann allerdings weiterhin mit @JoinColumn konfiguriert werden.</p>
+<p>=== Stream optionen</p>
 </div>
 <div class="listingblock">
-<div class="title">Code</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Stream</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="n">personRepository</span><span class="o">.</span><span class="na">streamAll</span><span class="o">();</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">namesButEmmanuels</span> <span class="o">=</span> <span class="n">persons</span>
+    <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">p</span><span class="o">.</span><span class="na">name</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">()</span> <span class="o">)</span>
+    <span class="o">.</span><span class="na">filter</span><span class="o">(</span> <span class="n">n</span> <span class="o">-&gt;</span> <span class="o">!</span> <span class="s">"emmanuel"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">)</span>
+    <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Sorting</p>
+</div>
+<div class="paragraph">
+<p>==== Query</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="s">"order by name,birth"</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>==== Parameter</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="nc">Sort</span><span class="o">.</span><span class="na">by</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"birth"</span><span class="o">));</span>
+
+<span class="c1">// and with more restrictions</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Sort</span><span class="o">.</span><span class="na">by</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"birth"</span><span class="o">),</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Queries</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Order</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"select distinct o from Order o left join fetch o.lineItems"</span><span class="o">);</span>
+<span class="nc">Order</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="s">"update from Person set name = 'Mortal' where status = ?"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Named queries</p>
+</div>
+<div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
+<span class="nd">@NamedQueries</span><span class="o">({</span>
+    <span class="nd">@NamedQuery</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Person.getByName"</span><span class="o">,</span> <span class="n">query</span> <span class="o">=</span> <span class="s">"from Person where name = ?1"</span><span class="o">),</span>
+    <span class="nd">@NamedQuery</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Person.countByStatus"</span><span class="o">,</span> <span class="n">query</span> <span class="o">=</span> <span class="s">"select count(*) from Person p where p.status = :status"</span><span class="o">),</span>
+    <span class="nd">@NamedQuery</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Person.updateStatusById"</span><span class="o">,</span> <span class="n">query</span> <span class="o">=</span> <span class="s">"update Person p set p.status = :status where p.id = :id"</span><span class="o">),</span>
+    <span class="nd">@NamedQuery</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Person.deleteById"</span><span class="o">,</span> <span class="n">query</span> <span class="o">=</span> <span class="s">"delete from Person p where p.id = ?1"</span><span class="o">)</span>
+<span class="o">})</span>
 
-    <span class="kt">int</span> <span class="n">salary</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">extends</span> <span class="nc">PanacheEntity</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">LocalDate</span> <span class="n">birth</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
 
-    <span class="nd">@OneToOne</span>
-    <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Person</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="k">return</span> <span class="nf">find</span><span class="o">(</span><span class="s">"#Person.getByName"</span><span class="o">,</span> <span class="n">name</span><span class="o">).</span><span class="na">firstResult</span><span class="o">();</span>
     <span class="o">}</span>
 
-
-<span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">street</span><span class="o">;</span>
-    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"addrNum"</span><span class="o">)</span>
-    <span class="nc">String</span> <span class="n">number</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">zipCode</span>
-    <span class="nc">String</span> <span class="n">city</span><span class="o">;</span>
-    <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"address"</span><span class="o">)</span>
-    <span class="nc">Employee</span> <span class="n">employee</span><span class="o">;</span>
-<span class="o">}</span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-5%20png.png" alt="diagram classes 5 png" width="329" height="117">
-</div>
-<div class="title">Figure 4. cld</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_1n_beziehung_unidirektional"><a class="anchor" href="#_1n_beziehung_unidirektional"></a>4.6. 1:n Beziehung unidirektional</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>@OneToMany</p>
-</li>
-<li>
-<p>Das n-Ende wird über eine Collection (Set, List) abgebildet</p>
-</li>
-<li>
-<p>Wie bei @OneToOne wird standardmäßig eine Assoziativtabelle angelegt, dies kann durch Angabe einer @JoinColumn verhindert werden.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Tipp: Collection im Kontruktor initialisieren
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
-
-    <span class="kt">int</span> <span class="n">salary</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
-
-    <span class="nd">@OneToOne</span>
-    <span class="nc">Address</span> <span class="n">address</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">countByStatus</span><span class="o">(</span><span class="nc">Status</span> <span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">count</span><span class="o">(</span><span class="s">"#Person.countByStatus"</span><span class="o">,</span> <span class="nc">Parameters</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">).</span><span class="na">map</span><span class="o">());</span>
     <span class="o">}</span>
 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">updateStatusById</span><span class="o">(</span><span class="nc">Status</span> <span class="n">status</span><span class="o">,</span> <span class="kt">long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">update</span><span class="o">(</span><span class="s">"#Person.updateStatusById"</span><span class="o">,</span> <span class="nc">Parameters</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="n">status</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="n">id</span><span class="o">));</span>
+    <span class="o">}</span>
 
-<span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Division</span> <span class="o">{</span>
- <span class="nd">@Id</span>
- <span class="nd">@GeneratedValue</span>
- <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
- <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
-
- <span class="nd">@OneToMany</span>
- <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">;</span>
- <span class="kd">public</span> <span class="nf">Division</span><span class="o">()</span> <span class="o">{</span>
- <span class="n">employees</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
- <span class="o">}</span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-6%20png.png" alt="diagram classes 6 png" width="122" height="241">
-</div>
-<div class="title">Figure 5. cld</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_1n_beziehung_tipps"><a class="anchor" href="#_1n_beziehung_tipps"></a>4.7. 1:n Beziehung - Tipps</h3>
-<div class="paragraph">
-<p>Da bidirektionale 1:n-Beziehungen sehr häufig vorkommen,
-lohnt es sich, eine einfache Merkregel einzuprägen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Bei bidirektionalen 1:n-Beziehungen (oder n:1) ist die „nSeite" die besitzende Seite</p>
-</li>
-<li>
-<p>Die Join-Spalte der besitzenden Seite wird optional mit @Joinnolunn annotiert</p>
-</li>
-<li>
-<p>Die „1-Seite" ist die inverse Seite, daher wird des mappedByAttribut verwendet</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mn_beziehung_unidirektional"><a class="anchor" href="#_mn_beziehung_unidirektional"></a>4.8. m:n Beziehung unidirektional</h3>
-<div class="listingblock">
-<div class="title">Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-     <span class="nd">@Id</span>
-     <span class="nd">@GeneratedValue</span>
-     <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
-
-     <span class="kt">int</span> <span class="n">salary</span><span class="o">;</span>
-     <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span>
-     <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
-
-     <span class="nd">@ManyToMany</span>
-     <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Task</span><span class="o">&gt;</span> <span class="n">tasks</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">deleteById</span><span class="o">(</span><span class="kt">long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">delete</span><span class="o">(</span><span class="s">"#Person.deleteById"</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-7%20png.png" alt="diagram classes 7 png" width="122" height="254">
-</div>
-<div class="title">Figure 6. cld</div>
+<div class="paragraph">
+<p>=== Query parameters</p>
 </div>
 <div class="listingblock">
-<div class="title">Code</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="s">"Hermann"</span><span class="o">,</span> <span class="s">"Mayr"</span><span class="o">);</span>
-<span class="nc">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Task</span><span class="o">();</span>
-<span class="n">emp</span><span class="o">.</span><span class="na">getTasks</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">t</span><span class="o">);</span></code></pre>
+<pre class="rouge highlight"><code data-lang="java"><span class="c1">// generate a Map</span>
+<span class="nc">Person</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"name = :name and status = :status"</span><span class="o">,</span>
+         <span class="nc">Parameters</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"stef"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">).</span><span class="na">map</span><span class="o">());</span>
+
+<span class="c1">// use it as-is</span>
+<span class="nc">Person</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"name = :name and status = :status"</span><span class="o">,</span>
+         <span class="nc">Parameters</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"stef"</span><span class="o">).</span><span class="na">and</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">));</span></code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>=== PanacheQuery (Personal Favorite)</p>
 </div>
-<div class="sect2">
-<h3 id="_mn_beziehung_bidirektional"><a class="anchor" href="#_mn_beziehung_bidirektional"></a>4.9. m:n Beziehung bidirektional</h3>
 <div class="listingblock">
-<div class="title">Code</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonName</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
 
-    <span class="kt">int</span> <span class="n">salary</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">firstName</span><span class="o">;</span>
-    <span class="nc">String</span> <span class="n">lastName</span><span class="o">;</span>
-
-    <span class="nd">@ManyToMany</span>
-    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Task</span><span class="o">&gt;</span> <span class="n">tasks</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">PersonName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="nd">@Entity</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Task</span> <span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
-
-    <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
-    <span class="kt">int</span> <span class="n">bonus</span><span class="o">;</span>
-
-    <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">mappedBy</span> <span class="o">=</span> <span class="s">"tasks"</span><span class="o">)</span>
-    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">;</span>
+<span class="c1">// only 'name' will be loaded from the database</span>
+<span class="nc">PanacheQuery</span><span class="o">&lt;</span><span class="nc">PersonName</span><span class="o">&gt;</span> <span class="n">query</span> <span class="o">=</span> <span class="nc">Person</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Alive</span><span class="o">).</span><span class="na">project</span><span class="o">(</span><span class="nc">PersonName</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Transactions</p>
+</div>
+<div class="paragraph">
+<p>Wichtig ist es jede Methode mit <code>@Transactional</code> zu annotieren, wenn Transaktionen auf der Datenbank passieren wie zum Beispiel <code>persist</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">persistAndFlush Beispiel</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Transactional</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">create</span><span class="o">(</span><span class="nc">Parameter</span> <span class="n">parameter</span><span class="o">){</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="c1">//Here I use the persistAndFlush() shorthand method on a Panache repository to persist to database then flush the changes.</span>
+        <span class="k">return</span> <span class="n">parameterRepository</span><span class="o">.</span><span class="na">persistAndFlush</span><span class="o">(</span><span class="n">parameter</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">catch</span><span class="o">(</span><span class="nc">PersistenceException</span> <span class="n">pe</span><span class="o">){</span>
+        <span class="no">LOG</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">"Unable to create the parameter"</span><span class="o">,</span> <span class="n">pe</span><span class="o">);</span>
+        <span class="c1">//in case of error, I save it to disk</span>
+        <span class="n">diskPersister</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">parameter</span><span class="o">);</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="diagram-classes-8%20png.png" alt="diagram classes 8 png" width="300" height="104">
-</div>
-<div class="title">Figure 7. cld</div>
+<div class="paragraph">
+<p>=== Custom IDs</p>
 </div>
 <div class="listingblock">
-<div class="title">Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="s">"Hermann"</span><span class="o">,</span> <span class="s">"Mayr"</span><span class="o">);</span>
-<span class="nc">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Task</span><span class="o">();</span>
-<span class="n">emp</span><span class="o">.</span><span class="na">getTasks</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">t</span><span class="o">);</span>
-<span class="n">t</span><span class="o">.</span><span class="na">getEmployees</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vererbung"><a class="anchor" href="#_vererbung"></a>5. Vererbung</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Bisher direktes Mapping zwischen Objektmodell und relationalem Modell möglich:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Klasse &#8594; Tabelle</p>
-</li>
-<li>
-<p>Membervariable &#8594; Spalte</p>
-</li>
-<li>
-<p>Objekt &#8594; Zeile</p>
-</li>
-<li>
-<p>Beziehungen über FK (+ ev. Assoziativtabelle)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>3 verschiedene Abbildungen werden angeboten, mit unterschiedlichen Stärken/Schwächen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>SINGLE_TABLE</p>
-</li>
-<li>
-<p>JOINED</p>
-</li>
-<li>
-<p>TABLE_PER_CLASS</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_inheritancetype_single_table"><a class="anchor" href="#_inheritancetype_single_table"></a>5.1. InheritanceType.SINGLE_TABLE</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Es wird eine Tabelle mit allen Attributen für sämtliche Klassen angelegt</p>
-</li>
-<li>
-<p>Typ wird in Spalte DTYPE gespeichert</p>
-</li>
-<li>
-<p>Spalten, für welche es beim aktuellen Typ keine Entsprechung gibt (z.B. Spalte internShipEnd bei Manager) werden auf NULL gesetzt</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/SINGLE_TABLE.PNG" alt="SINGLE TABLE">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Vorteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Queries typischerweise effizient &#8594; schnel</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Nachteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Bei großen Hierarchien oft viele "null-Spalten"</p>
-</li>
-<li>
-<p>Keine Not-Null-Constraints bei Variablen in abgeleiteten Klassen</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_inheritancetype_table_per_class"><a class="anchor" href="#_inheritancetype_table_per_class"></a>5.2. InheritanceType.TABLE_PER_CLASS</h3>
-<div class="paragraph">
-<p>Für jede Klasse in der Hierarchie wird eine Tabelle mit den in dieser Klasse vorhandenen Properties angelegt.</p>
-</div>
-<div class="paragraph">
-<p><strong>Vorteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nur tatsächlich vorhandene Properties werden auf Tabelle abgebildet (keine null-Spalten)</p>
-</li>
-<li>
-<p>Not-Null Constraints möglich
-*Queries auf nur einen Typ sehr schnell:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">SQL Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">Select</span> <span class="n">i</span> <span class="k">from</span> <span class="n">Intern</span> <span class="n">i</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">2000</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Nachteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Abfragen über mehrere Typen / Basisklasse langsam / schnell sehr komplex</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">SQL Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">Select</span> <span class="n">e</span> <span class="k">from</span> <span class="n">Employee</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">2000</span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/TABLE_PER_CLASS.PNG" alt="TABLE PER CLASS">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_inheritancetype_joined"><a class="anchor" href="#_inheritancetype_joined"></a>5.3. InheritanceType.JOINED</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Je Klasse eine Tabelle</p>
-</li>
-<li>
-<p>Tabellen von abgeleitete Klassen enthalten keine Spalten für geerbte Attribute</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Nur neue Membervariablen + ID</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Bei Abfragen &#8594; JOIN über Spalte ID</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Vorteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nur tatsächlich vorhandene Properties werden auf Tabelle abgebildet (keine null-Spalten)</p>
-</li>
-<li>
-<p>Not-Null Constraints möglich</p>
-</li>
-<li>
-<p>Queries auf nur einen Typ sehr schnell:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">SQL Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">Select</span> <span class="n">i</span> <span class="k">from</span> <span class="n">Intern</span> <span class="n">i</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">2000</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Nachteile:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Abfragen über mehrere Typen / Basisklasse langsam / schnell sehr komplex</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">SQL Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">Select</span> <span class="n">e</span> <span class="k">from</span> <span class="n">Employee</span> <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">2000</span></code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/JOINED.PNG" alt="JOINED">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wann_welche_strategie"><a class="anchor" href="#_wann_welche_strategie"></a>5.4. Wann welche Strategie?</h3>
-<div class="paragraph">
-<p><strong>SINGLE_TABLE</strong>, falls Query-Performance wichtig ist und (viele) polymorphe Abfragen vorkommen (Abfragen, welche mehr als einen Typ zurückliefern können). Allerdings verliert man dabei die Möglichkeit, not-null Constraints auf Membervariablen von abgeleiteten Klassen zu setzen.</p>
-</div>
-<div class="paragraph">
-<p><strong>JOINED</strong>, falls not-null Constraints zum Einsatz kommen sollen und es polymorphe Abfragen gibt. JOINED macht ebenfalls Sinn, wenn der Vererbungsbaum nicht balanziert ist (nahezu alle Felder in einer Subklasse, fast nur Instanzen eines Typs).</p>
-</div>
-<div class="paragraph">
-<p><strong>TABLE_PER_CLASS</strong>, falls es keine polymophen Abfragen gibt.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_embeddable_embedd"><a class="anchor" href="#_embeddable_embedd"></a>6. @Embeddable / @Embedd</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Problemstellung:</strong></p>
-</div>
-<div class="paragraph">
-<p>Feingranulares Objektmodell (viele Entitäten) führt zu vielen Tabellen &#8594; schlechte Performanz (Joins, Selects, Speicher-Overhead)</p>
-</div>
-<div class="paragraph">
-<p><strong>Abhilfe:</strong></p>
-</div>
-<div class="paragraph">
-<p>@Embeddable / @Embedd erlaubt das "Einbetten" von Objekten direkt in die Eltern-Entität</p>
-</div>
-<div class="paragraph">
-<p>Membervariablen des eingebetteten Objekts werden Spalten in der Tabelle der ElternEntität</p>
-</div>
-<div class="paragraph">
-<p>Kurzgefasst: Wie Inject bei Quarkus.</p>
-</div>
-<div class="sect2">
-<h3 id="_definition"><a class="anchor" href="#_definition"></a>6.1. Definition:</h3>
-<div class="listingblock">
-<div class="title">Definition</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="nd">@Embeddable</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmbeddableEntity</span> <span class="o">{</span>
- <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
- <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="o">}</span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_verwendung"><a class="anchor" href="#_verwendung"></a>6.2. Verwendung:</h3>
-<div class="listingblock">
-<div class="title">Verwendung</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="nd">@Entity</span>
-<span class="nd">@Inheritance</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">InheritanceType</span><span class="o">.</span><span class="na">SINGLE_TABLE</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="kd">extends</span> <span class="nc">PanacheEntityBase</span> <span class="o">{</span>
+
     <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span>
-    <span class="kt">long</span> <span class="n">id</span><span class="o">;</span>
-    <span class="nd">@Embedded</span>
-    <span class="nc">EmbeddableEntity</span> <span class="n">someEnt</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">someEnt</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmbeddableEntity</span><span class="o">();</span>
+    <span class="nd">@SequenceGenerator</span><span class="o">(</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s">"personSequence"</span><span class="o">,</span>
+            <span class="n">sequenceName</span> <span class="o">=</span> <span class="s">"person_id_seq"</span><span class="o">,</span>
+            <span class="n">allocationSize</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span>
+            <span class="n">initialValue</span> <span class="o">=</span> <span class="mi">4</span><span class="o">)</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">SEQUENCE</span><span class="o">,</span> <span class="n">generator</span> <span class="o">=</span> <span class="s">"personSequence"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">Integer</span> <span class="n">id</span><span class="o">;</span>
+
+    <span class="c1">//...</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Wenn wir dann unsere eigene ID benützen, verwenden wir <code>PanacheRepositoryBase</code> statt <code>PanacheRepository</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@ApplicationScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonRepository</span> <span class="kd">implements</span> <span class="nc">PanacheRepositoryBase</span><span class="o">&lt;</span><span class="nc">Person</span><span class="o">,</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="c1">//...</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_zu_beachten"><a class="anchor" href="#_zu_beachten"></a>6.3. Zu beachten:</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Nur für gerichtete @OneToOne Beziehungen möglich</p>
-</li>
-<li>
-<p>Eingebettetes Objekt existiert im Lebenszyklus der Eltern-Entität</p>
-</li>
-<li>
-<p>Laden des eingebetteten Objekts nur über ElternEntität möglich</p>
-</li>
-<li>
-<p>@Embedd vollständig transparent in JPQL:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">SQL Code</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="sql"><span class="k">Select</span> <span class="n">e</span> <span class="k">from</span> <span class="n">Employee</span> <span class="n">e</span> <span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">someEnt</span><span class="p">.</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span></code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Eingebettes Objekt muss initialisiert sein (null unzulässig), sonst:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight"><code>Exception in thread "main" javax.persistence.PersistenceException:
-org.hibernate.PropertyValueException: not-null property references a null or
-transient value : jpademo.entities.Employee.someEnt</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ergebnis"><a class="anchor" href="#_ergebnis"></a>6.4. Ergebnis:</h3>
-<div class="imageblock">
-<div class="content">
-<img src="images/ERGEBNIS.PNG" alt="ERGEBNIS">
-</div>
-</div>
-</div>
+</details>
 </div>
 </div>
 </div>
