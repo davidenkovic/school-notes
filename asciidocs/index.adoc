@@ -31,3 +31,7 @@ link:https://davidenkovic.github.io/school-notes/math-sa-15.11.21.html[Mathe SA 
 == Mathe Beurteilende Statistik
 
 link:https://davidenkovic.github.io/school-notes/beurteilende-statistik.html[Mathe Mitschrift 01.12.2021]
+
+== Nvs Test
+
+link:https://davidenkovic.github.io/school-notes/nvs-test-am-03-12-2021.html[Nvs Test am 03.12.2021]
