@@ -3,7 +3,7 @@
 == Stoff
 
 
-* link:https://davidenkovvic.github.io/school-notes/jpa-panache.html[JPA/Panache]
+* link:https://davidenkovic.github.io/school-notes/jpa-panache.html[JPA/Panache]
 * RESTful services (inkl. JSON-B, JSON-P, FormParam, QueryParam, ...)
 * Websocket
 * Security (ohne Keycloak)
