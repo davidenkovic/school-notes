@@ -1,5 +1,9 @@
 = Recht-Test
 
+== Links
+
+link:../files/Recht-Zusammenfassung.pdf[Meris Zusammenfassung 5AHITM]
+
 == Stoff
 
 * Arbeitsrecht Seite 146 bis 174
@@ -19,7 +23,7 @@
 
 == Arbeitsrecht
 
-===  1. Gliederung des Arbeitsrechts
+=== Gliederung des Arbeitsrechts
 
 Unter Arbeitsrecht versteht man die Gesamtheit der Bestimmungen, die die Beziehung der an einem abhängigen Dienstverhältnis beteiligten Personen regeln.
 
@@ -33,7 +37,7 @@ image::images/image-2021-12-08-17-00-33-927.png[]
 
 image::images/image-2021-12-08-17-04-52-539.png[]
 
-=== 2. Arbeitsvertragsrecht
+=== Arbeitsvertragsrecht
 
 Wofür dient der Arbeitsvertrag?
 
@@ -42,7 +46,7 @@ Klare Vereinbarungen verhindern Konflikte. Also Im Arbeitsvertrag steht genau, w
 .Festgelegte Punkte des Arbeitsvertrags
 image::images/image-2021-12-08-17-12-29-012.png[]
 
-==== 2.1. Arbeitsverhältnis
+==== Arbeitsverhältnis
 
 Die Merkmale davon sind:
 
@@ -53,7 +57,7 @@ Die Merkmale davon sind:
 * Es besteht persönliche *Treue- und Fürsorgepflicht*.
 * Der Arbeitnehmer hat sich in die betriebliche Organisation einzuordnen.
 
-==== 2.2. Arbeitsvertrag
+==== Arbeitsvertrag
 
 * *Form*
 ** grundsätzlich formfrei
@@ -76,17 +80,17 @@ Wenn kein schriftlicher Arbeitsvertrag ausgestellt wird, muss der AG dem AN eine
 
 Wenn die arbeit aber höchstens einen Monat dauert, wird kein *Dienstzettel* benötigt. (Praktikum)
 
-===== 2.2.1 Was muss im Dienstvertrag drin stehen?
+===== Was muss im Dienstvertrag drin stehen?
 
 image::images/image-2021-12-08-17-38-33-142.png[]
 
-===== 2.2.2 Probearbeitsverhältnis
+===== Probearbeitsverhältnis
 
 Das Arbeitsverhältnis wird nur *vorläufig* eingegangen und kann jederzeit ohne Angabe von Gründen gelöst werden.
 
 In der Regel besteht diese *Lösungsmöglichkeit einen Monat* lang.
 
-===== 2.2.3 Sonderformen von Arbeitsvertägen
+===== Sonderformen von Arbeitsvertägen
 
 *Freier Dienstvertrag*
 
@@ -104,21 +108,21 @@ Arbeitsort und Arbeitszeiten werden nicht angegeben, der AN arbeitet selbständi
 
 image::images/image-2021-12-08-18-02-08-787.png[]
 
-==== 2.3. Pflichten des Arbeitgebers
+==== Pflichten des Arbeitgebers
 
 image::images/image-2021-12-08-18-02-56-518.png[]
 
-===== 2.3.1 Entgeltleistung
+===== Entgeltleistung
 
 Der AG muss dem AN ein *Entgelt* zahlen. Die höhe des *Entgelts* richtet sich in erster Linie nach den Vereinbarungen im *Arbeitsvertrag*.
 
-===== 2.3.2 Entgeltfortzahlung im Krankheitsfall
+===== Entgeltfortzahlung im Krankheitsfall
 
 Der AN hat eine Mitteilungspflicht und Nachweispflicht gegenüber dem AG.
 
 image::images/image-2021-12-08-18-06-18-087.png[]
 
-===== 2.3.2 Entgeltfortzahlung im Urlaub
+===== Entgeltfortzahlung im Urlaub
 
 Der AN hat Anspruch auf den gesetzlich vorgeschriebenen Mindesturlaub. In dem Zeitraum muss der AG dem AN das Entgelt weiterbezahlen.
 
@@ -126,14 +130,14 @@ Der AN muss sich mit dem AG den Urlaubsantritt ausmachen und kann es nicht selbs
 
 *Wichtig*: eine Erkrankung unterbricht den Urlaub.
 
-===== 2.3.3 Fürsorgepflicht
+===== Fürsorgepflicht
 
 Der AG hat zu sorgen:
 
 * das Leben und die Gesundheit seiner Mitarbeiter möglichst zu schützen (Schutzkleidung,...)
 * Schutz der Persönlichkeit (Mobbing, Belästigung)
 
-==== 2.4. Pflichten des Arbeitnehmer und der Arbeitnehmerin
+==== Pflichten des Arbeitnehmer und der Arbeitnehmerin
 
 ===== Arbeitspflicht
 
@@ -149,7 +153,7 @@ image::images/image-2021-12-08-18-18-14-176.png[]
 
 image::images/image-2021-12-08-18-18-59-362.png[]
 
-==== 2.5. Beendigung des Arbeitsverhältnisses
+==== Beendigung des Arbeitsverhältnisses
 
 image::images/image-2021-12-08-18-35-36-334.png[]
 
@@ -175,6 +179,6 @@ image::images/image-2021-12-08-18-38-38-515.png[]
 
 image::images/image-2021-12-08-18-39-20-635.png[]
 
-==== 2.6 Ansprüche währen und nach Beendigung eines Arbeitsverhältnisses
+==== Ansprüche währen und nach Beendigung eines Arbeitsverhältnisses
 
 image::images/image-2021-12-08-18-40-49-648.png[]
