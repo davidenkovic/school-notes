@@ -1,0 +1,180 @@
+= Recht-Test
+
+== Stoff
+
+* Arbeitsrecht Seite 146 bis 174
+** 1. Gliederung des Arbeitsrechts (alles)
+** 2. Arbeitsvertragsrecht (alles)
+** 3. Arbeitnehmerschutz (grob)
+*** Arbeitszeit und Arbeitsruhegesetz
+** 4. Kollektives Arbeitsrecht
+*** Kollektivverträge
+*** Betriebsvereinbarung
+*** Streikrecht
+* Sozialpartnerschaft Seite 66 bis 73
+** 1. Was ist die Sozialpartnerschaft (alles)
+** 2. Interessenverbände der Sozialpartnerschaft (grob)
+* Arbeits- und sozialgerichtliches Verfahren (nur die Seite)
+
+
+== Arbeitsrecht
+
+===  1. Gliederung des Arbeitsrechts
+
+Unter Arbeitsrecht versteht man die Gesamtheit der Bestimmungen, die die Beziehung der an einem abhängigen Dienstverhältnis beteiligten Personen regeln.
+
+Die Aufgabe des Arbeitsrechts ist es, das ökonomische und soziale Ungleichgewicht zwischen der Arbeitnehmer und Arbeitgeber auszugleichen.
+
+Das Arbeitsrecht wird unterteilt in *Individualarbeitsrecht* und *Kollektives Arbeitsrecht*.
+
+image::images/image-2021-12-08-17-00-33-927.png[]
+
+==== Stufenbau der Rechtsvorschriften
+
+image::images/image-2021-12-08-17-04-52-539.png[]
+
+=== 2. Arbeitsvertragsrecht
+
+Wofür dient der Arbeitsvertrag?
+
+Klare Vereinbarungen verhindern Konflikte. Also Im Arbeitsvertrag steht genau, was der Arbeitnehmer zu tun hat.
+
+.Festgelegte Punkte des Arbeitsvertrags
+image::images/image-2021-12-08-17-12-29-012.png[]
+
+==== 2.1. Arbeitsverhältnis
+
+Die Merkmale davon sind:
+
+* Der Arbeitnehmer stellt seine Arbeitskraft gegen Bezahlung eines *Entgelts* dem Arbeitgeber zu Verfügung.
+* Der Arbeitnehmer ist *wirtschaftlich* und *persönlich* (Weisungsgebundenheit) vom Arbeitgeber *abhängig*.
+* Es besteht *persönliche Arbeitspflicht*, d.h. der Arbeitnehmer kann sich nicht vertreten lassen.
+* Der Arbeitgeber stellt dem arbeitnehmer *Arbeitsmittel+ zur verfügung. (PC, Telefon, ...).
+* Es besteht persönliche *Treue- und Fürsorgepflicht*.
+* Der Arbeitnehmer hat sich in die betriebliche Organisation einzuordnen.
+
+==== 2.2. Arbeitsvertrag
+
+* *Form*
+** grundsätzlich formfrei
+** kann schriftlich, mündlich oder durch schlüssige Handlung abgeschlossen werden
+** Lehrverträge müssen* schriftlich sein
+
+* *Übereinstimmung*
+** AG und AN müssen sich über alle wesentliche Punkte der Arbeitsverhältnis einig sein
+
+* *Geschäftfähigkeit*
+** der Abschluss eines Arbeitsvertrages is erst mit der Geschäftsfähigkeit, die im Allgemeinen mir der Volljährigkeit eintritt. (Also erst 18 dann Abschluss)
+** *Ausnahme*: außer 14-Jährige, welche die Schule abgeschlossen haben.
+
+* *Möglichkeit und Erlaubtheit der Vertragsinhaltes*
+** Die Rechtsfolgen bei *Unmöglichkeit und Unerlaubtheit* richten sich nach allgemeinen schuldrechtlichen Grundsätzen.
+*** _Bsp: Bezahlung eines LKW-Fahrers nach Km und nicht nach geleisteter Arbeit._
+
+*Wichtig*: +
+Wenn kein schriftlicher Arbeitsvertrag ausgestellt wird, muss der AG dem AN einen *Dienstzettel* ausstellen.
+
+Wenn die arbeit aber höchstens einen Monat dauert, wird kein *Dienstzettel* benötigt. (Praktikum)
+
+===== 2.2.1 Was muss im Dienstvertrag drin stehen?
+
+image::images/image-2021-12-08-17-38-33-142.png[]
+
+===== 2.2.2 Probearbeitsverhältnis
+
+Das Arbeitsverhältnis wird nur *vorläufig* eingegangen und kann jederzeit ohne Angabe von Gründen gelöst werden.
+
+In der Regel besteht diese *Lösungsmöglichkeit einen Monat* lang.
+
+===== 2.2.3 Sonderformen von Arbeitsvertägen
+
+*Freier Dienstvertrag*
+
+image::images/image-2021-12-08-17-58-22-209.png[]
+
+image::images/image-2021-12-08-17-58-40-434.png[]
+
+*Werkvertrag*
+
+Beim Werkvertrag verpflichtet sich der Auftragnehmer zur Erbringung eines Erfolges oder zur Herstellung eines Werkes.
+
+Das Entgelt wird nur dann bezahlt, wenn die *Leistung laut Vertrag* erbracht wird.
+
+Arbeitsort und Arbeitszeiten werden nicht angegeben, der AN arbeitet selbständig.
+
+image::images/image-2021-12-08-18-02-08-787.png[]
+
+==== 2.3. Pflichten des Arbeitgebers
+
+image::images/image-2021-12-08-18-02-56-518.png[]
+
+===== 2.3.1 Entgeltleistung
+
+Der AG muss dem AN ein *Entgelt* zahlen. Die höhe des *Entgelts* richtet sich in erster Linie nach den Vereinbarungen im *Arbeitsvertrag*.
+
+===== 2.3.2 Entgeltfortzahlung im Krankheitsfall
+
+Der AN hat eine Mitteilungspflicht und Nachweispflicht gegenüber dem AG.
+
+image::images/image-2021-12-08-18-06-18-087.png[]
+
+===== 2.3.2 Entgeltfortzahlung im Urlaub
+
+Der AN hat Anspruch auf den gesetzlich vorgeschriebenen Mindesturlaub. In dem Zeitraum muss der AG dem AN das Entgelt weiterbezahlen.
+
+Der AN muss sich mit dem AG den Urlaubsantritt ausmachen und kann es nicht selbständig machen.
+
+*Wichtig*: eine Erkrankung unterbricht den Urlaub.
+
+===== 2.3.3 Fürsorgepflicht
+
+Der AG hat zu sorgen:
+
+* das Leben und die Gesundheit seiner Mitarbeiter möglichst zu schützen (Schutzkleidung,...)
+* Schutz der Persönlichkeit (Mobbing, Belästigung)
+
+==== 2.4. Pflichten des Arbeitnehmer und der Arbeitnehmerin
+
+===== Arbeitspflicht
+
+image::images/image-2021-12-08-18-17-16-427.png[]
+
+===== Treuepflicht
+
+Der AN hat die betrieblichen und unternehmerischen Interessen der AG zu beachten.
+
+image::images/image-2021-12-08-18-18-14-176.png[]
+
+====== Sorgfalts- und Haftpflicht
+
+image::images/image-2021-12-08-18-18-59-362.png[]
+
+==== 2.5. Beendigung des Arbeitsverhältnisses
+
+image::images/image-2021-12-08-18-35-36-334.png[]
+
+===== Zeitablauf
+
+image::images/image-2021-12-08-18-36-31-576.png[]
+
+===== Auflösung während der Probezeit
+
+image::images/image-2021-12-08-18-37-03-967.png[]
+
+===== Einvernehmliche Lösung
+
+image::images/image-2021-12-08-18-37-42-311.png[]
+
+===== Kündigung
+
+image::images/image-2021-12-08-18-38-14-203.png[]
+
+image::images/image-2021-12-08-18-38-38-515.png[]
+
+===== Entlassung und Austritt
+
+image::images/image-2021-12-08-18-39-20-635.png[]
+
+==== 2.6 Ansprüche währen und nach Beendigung eines Arbeitsverhältnisses
+
+image::images/image-2021-12-08-18-40-49-648.png[]
